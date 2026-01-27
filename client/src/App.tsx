@@ -5,16 +5,26 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-
+import Layout from "./components/Layout";
+import Telco from "./pages/industries/Telco";
+import NexDT from "./pages/products/NexDT";
+import Company from "./pages/Company";
+import Contact from "./pages/Contact";
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/industries/telco"} component={Telco} />
+        <Route path={"/products/nexdt"} component={NexDT} />
+        <Route path={"/company"} component={Company} />
+        <Route path={"/contact"} component={Contact} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
   );
 }
 
