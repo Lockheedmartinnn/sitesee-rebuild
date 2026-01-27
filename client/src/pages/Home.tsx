@@ -1,49 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Check, ChevronRight, Play, Layers, Cpu, BarChart3, ShieldCheck, Zap, Globe } from "lucide-react";
+import { ArrowRight, Check, ChevronRight, Layers, Cpu, BarChart3, ShieldCheck, Zap, Globe } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-0">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black text-white">
-        {/* Background Image with Overlay */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image with Strong Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower.jpg" 
+            src="/images/hero-drone-tower-v2.jpg" 
             alt="Drone inspecting cell tower" 
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-          <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+          {/* Strong dark overlay for text contrast */}
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <div className="container relative z-10 pt-20">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm animate-fade-in-up">
+        <div className="container relative z-10 pt-20 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-mono tracking-wider uppercase">Next Gen Digital Twin Ecosystem</span>
+              <span className="text-xs font-mono tracking-wider uppercase text-white font-semibold">Next Generation Digital Twin</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-[0.9] animate-fade-in-up delay-100">
-              AI-POWERED <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">DIGITAL TWIN</span>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.95] text-white">
+              The Operating System <br />
+              <span className="text-primary">for Telecom Infrastructure</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed animate-fade-in-up delay-200">
-              Transforming critical infrastructure by predicting performance and driving revenue through precision data.
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
+              SiteSee is how modern tower companies design, validate, deploy, and govern network assets — digitally, accurately, and at scale.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 animate-fade-in-up delay-300">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <Link href="/contact">
-                <Button size="lg" className="rounded-none h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-white border-0">
+                <Button size="lg" className="rounded-none h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-white border-0 font-semibold">
                   Request Demo <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/products/nexdt">
-                <Button variant="outline" size="lg" className="rounded-none h-14 px-8 text-lg border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent backdrop-blur-sm">
-                  Explore NexDT
+                <Button variant="outline" size="lg" className="rounded-none h-14 px-8 text-lg border-white/50 text-white hover:bg-white/20 hover:text-white bg-transparent backdrop-blur-sm font-semibold">
+                  Explore NextDT
                 </Button>
               </Link>
             </div>
@@ -51,172 +51,185 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
           <ChevronDownIcon className="w-8 h-8" />
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      {/* Why SiteSee Section */}
+      <section className="py-24 md:py-32 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
-                Transforming the <br />
-                <span className="text-primary">Cell Tower Industry</span>
+          <div className="max-w-3xl space-y-12">
+            <div className="space-y-4">
+              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight text-foreground">
+                Why SiteSee
               </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  At SiteSee, we're on a mission to revolutionize the tower industry by transforming the speed, accuracy, and cost-effectiveness of co-location and asset management processes.
-                </p>
-                <p>
-                  Our vision is backed by close collaboration with major tower operators, resulting in the creation of the ground-breaking "Next Generation Digital Twin Ecosystem" – <strong className="text-foreground">NexDT</strong>.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-6 pt-4">
-                <StatCard number="10x" label="Faster Inspections" />
-                <StatCard number="99.9%" label="Data Accuracy" />
-                <StatCard number="50%" label="Cost Reduction" />
-                <StatCard number="0" label="Repeat Site Visits" />
-              </div>
+              <p className="text-2xl font-light text-foreground/80 leading-relaxed">
+                Telecom infrastructure is no longer simple.
+              </p>
             </div>
-            
-            <div className="relative">
-              <div className="aspect-[4/3] bg-muted relative overflow-hidden border border-border group">
-                <img 
-                  src="/images/ai-analysis-overlay.jpg" 
-                  alt="AI Analysis Overlay" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Tech Overlay UI */}
-                <div className="absolute inset-0 pointer-events-none border-[1px] border-white/10 m-4">
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary" />
-                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary" />
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary" />
-                  
-                  <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md text-white text-xs font-mono p-2 border-l-2 border-primary">
-                    <div>STATUS: ANALYZING</div>
-                    <div className="text-primary">CONFIDENCE: 98.4%</div>
-                  </div>
-                </div>
-              </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <ChallengeItem text="Multi-tenant towers" />
+              <ChallengeItem text="Constant rip & replace cycles" />
+              <ChallengeItem text="Tight regulatory constraints" />
+              <ChallengeItem text="Zero tolerance for rework" />
+            </div>
+
+            <div className="space-y-8 border-l-4 border-primary pl-8">
+              <p className="text-xl text-foreground/70 leading-relaxed">
+                Yet most workflows still rely on PDFs, static drawings, disconnected tools, and manual checks. That gap is where risk lives.
+              </p>
+              <p className="text-3xl font-display font-bold text-foreground">
+                SiteSee closes it.
+              </p>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                We turn physical assets into decision-ready digital twins that engineering, operations, and commercial teams can actually trust.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NexDT Section */}
-      <section className="py-32 bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      {/* NextDT Section */}
+      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         
         <div className="container relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <div className="inline-block border border-primary/50 px-4 py-1 rounded-full bg-primary/10 text-primary font-mono text-sm mb-4">
-              INTRODUCING
-            </div>
-            <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tighter">
-              NexDT Ecosystem
-            </h2>
-            <p className="text-xl text-gray-400">
-              More than just a solution. An extraordinary digital twin ecosystem harnessing the power of AI and data insights.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Layers className="w-10 h-10 text-primary" />}
-              title="Digital Twin Creation"
-              description="Seamless promotion of existing digital twins to a more advanced platform with high-fidelity 3D modeling."
-            />
-            <FeatureCard 
-              icon={<Cpu className="w-10 h-10 text-primary" />}
-              title="AI Validation & Analytics"
-              description="Revolutionize real-time co-location and asset performance prediction with advanced AI algorithms."
-            />
-            <FeatureCard 
-              icon={<BarChart3 className="w-10 h-10 text-primary" />}
-              title="Reporting & Collaboration"
-              description="Centralized platform integrating data, workflows, and communication for all stakeholders."
-            />
-          </div>
-
-          <div className="mt-24 relative rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-            <img 
-              src="/images/digital-twin-dashboard.jpg" 
-              alt="NexDT Dashboard Interface" 
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-              <h3 className="text-3xl font-display font-bold mb-4">Predict Performance for Revenue Growth</h3>
-              <p className="text-gray-300 max-w-2xl mb-8">
-                By integrating advanced features, NexDT enables cell tower designers to produce more accurate, compliant, and efficient designs. This reduces time-to-completion and accelerates site commissioning.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <FeatureTag text="Seamless Collaboration" />
-                <FeatureTag text="Drag & Drop Equipment" />
-                <FeatureTag text="BIM Catalogue" />
-                <FeatureTag text="Predictive Load Analysis" />
+          <div className="max-w-3xl space-y-12">
+            <div className="space-y-4">
+              <div className="inline-block border border-primary/50 px-4 py-1 rounded-full bg-primary/10 text-primary font-mono text-sm font-semibold">
+                INTRODUCING
               </div>
+              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter">
+                NextDT by SiteSee
+              </h2>
+              <p className="text-2xl font-light text-white/80 leading-relaxed">
+                Design. Validate. Approve. Govern.
+              </p>
+            </div>
+
+            <p className="text-xl text-white/70 leading-relaxed border-l-4 border-primary pl-8">
+              NextDT is SiteSee's digital twin platform for pre-as-built design, colocation workflows, and engineering governance. Built for how real towercos operate — not how software vendors think they do.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+              <FeatureCard 
+                title="Confident Design"
+                subtitle="Before steel is touched"
+                description="Model upgrades, swaps, and additions digitally. Understand structural and EME impact before anyone climbs."
+              />
+              <FeatureCard 
+                title="Structured Workflows"
+                subtitle="Clear roles. Clear accountability."
+                description="Colo users design. Engineers validate. Admins govern. Nothing slips through the cracks."
+              />
+              <FeatureCard 
+                title="Engineering Decisions"
+                subtitle="You can stand behind"
+                description="Indicative assessments. Governed approvals. Complete transaction history — in one system."
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-24 bg-background">
+      {/* How NextDT Works */}
+      <section className="py-24 md:py-32 bg-background">
         <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-display font-bold tracking-tight">Industries We Serve</h2>
-              <p className="text-muted-foreground text-lg max-w-xl">
-                Tailored solutions for critical infrastructure owners and operators.
-              </p>
-            </div>
-            <Link href="/industries">
-              <Button variant="outline" className="rounded-none border-primary text-primary hover:bg-primary hover:text-white">
-                View All Industries
-              </Button>
-            </Link>
-          </div>
+          <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight mb-16 text-foreground">
+            How NextDT Works
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <IndustryCard 
-              title="Telco"
-              description="Due to advances in technology and growth in data usage, telecommunication infrastructure professionals are expected to do more with less."
-              image="/images/hero-drone-tower.jpg"
-              href="/industries/telco"
+          <div className="space-y-12">
+            <WorkflowStep 
+              number="1"
+              title="Access & Governance First"
+              description="Every user enters through a secure, MFA-protected environment. Permissions aren't a suggestion. They're enforced by design."
             />
-            <IndustryCard 
-              title="Power"
-              description="Power transmission & distribution professionals have some of the most widely distributed and remote assets to build, maintain and repair."
-              image="/images/collaboration-engineers.jpg"
-              href="/industries/power"
+            <WorkflowStep 
+              number="2"
+              title="Colo Users Design Digitally"
+              description="Create applications to rip existing equipment, replace with new assets, position and align accurately, and run Indicative Engineering Assessments (IEA) — all inside a live 3D environment, not static drawings."
             />
+            <WorkflowStep 
+              number="3"
+              title="Engineers Stay in Control"
+              description="Engineers review designs visually, make override edits, trigger confirmation workflows, and approve only when standards are met. No approval without engineering sign-off. Period."
+            />
+            <WorkflowStep 
+              number="4"
+              title="BIM Data That Actually Matters"
+              description="A governed equipment library with accurate geometry, correct scale & orientation, Effective Sail Area (ESA), and manufacturer-validated EME data. No ghost equipment. No broken models. No guesswork."
+            />
+            <WorkflowStep 
+              number="5"
+              title="Full Auditability. Zero Chaos."
+              description="Every change is logged: Who, What, When, Why, and under which application. This is infrastructure governance — not file sharing."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Built for Towercos Section */}
+      <section className="py-24 md:py-32 bg-muted/50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/engineering-team-office.jpg" 
+            alt="Engineering team" 
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-3xl space-y-8">
+            <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight text-white">
+              Built for Towercos, Not Demos
+            </h2>
+            <p className="text-xl text-white/80 leading-relaxed">
+              NextDT isn't a visualization toy. It's built for high-volume colocation, multi-tenant assets, engineering accountability, and operational repeatability. Hundreds of sites or tens of thousands — the workflow doesn't change.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+              <BenefitBox 
+                title="For Engineering Leads"
+                items={["Clear accountability", "Controlled approvals", "Fewer downstream surprises"]}
+              />
+              <BenefitBox 
+                title="For Operations"
+                items={["Faster turnaround", "Less rework", "Repeatable execution"]}
+              />
+              <BenefitBox 
+                title="For Executives"
+                items={["Lower risk", "Better capital efficiency", "Scalable governance"]}
+              />
+              <BenefitBox 
+                title="Security & Control"
+                items={["Multi-Factor Authentication", "Role-based access control", "Immutable historical records"]}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-32 bg-primary text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/hero-drone-tower.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
         <div className="container relative z-10 text-center space-y-10">
           <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight">
-            Ready to modernize your infrastructure?
+            Ready to Modernise Infrastructure Decisions?
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
-            Join the leading tower operators using SiteSee to predict performance and drive revenue.
+          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto font-light">
+            If you want fewer redesigns, faster approvals, and stronger engineering confidence — you're already thinking like a SiteSee customer.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
             <Link href="/contact">
               <Button size="lg" className="rounded-none h-16 px-10 text-lg bg-white text-primary hover:bg-gray-100 border-0 font-bold">
                 Get Started Now
               </Button>
             </Link>
             <Link href="/demo">
-              <Button variant="outline" size="lg" className="rounded-none h-16 px-10 text-lg border-white text-white hover:bg-white/10 bg-transparent">
+              <Button variant="outline" size="lg" className="rounded-none h-16 px-10 text-lg border-white text-white hover:bg-white/20 bg-transparent">
                 Watch Demo
               </Button>
             </Link>
@@ -246,56 +259,53 @@ function ChevronDownIcon(props: any) {
   );
 }
 
-function StatCard({ number, label }: { number: string; label: string }) {
+function ChallengeItem({ text }: { text: string }) {
   return (
-    <div className="border-l-2 border-primary pl-4">
-      <div className="text-3xl font-display font-bold text-foreground">{number}</div>
-      <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{label}</div>
+    <div className="flex items-start gap-4 p-4 bg-card border border-border rounded-sm hover:border-primary/50 transition-colors">
+      <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+        <div className="w-2 h-2 rounded-full bg-primary" />
+      </div>
+      <span className="text-lg font-medium text-foreground">{text}</span>
     </div>
   );
 }
 
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function FeatureCard({ title, subtitle, description }: { title: string; subtitle: string; description: string }) {
   return (
     <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors duration-300 group">
-      <div className="mb-6 p-3 bg-primary/10 w-fit rounded-sm group-hover:scale-110 transition-transform duration-300">
-        {icon}
+      <h3 className="text-xl font-display font-bold mb-2 text-white">{title}</h3>
+      <p className="text-sm text-primary font-semibold mb-4 uppercase tracking-wider">{subtitle}</p>
+      <p className="text-gray-300 leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
+function WorkflowStep({ number, title, description }: { number: string; title: string; description: string }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-12 border-b border-border last:border-b-0">
+      <div className="md:col-span-2">
+        <div className="text-6xl font-display font-bold text-primary/20 mb-2">{number}</div>
+        <h3 className="text-2xl font-display font-bold text-foreground">{title}</h3>
       </div>
-      <h3 className="text-xl font-display font-bold mb-3">{title}</h3>
-      <p className="text-gray-400 leading-relaxed">{description}</p>
+      <div className="md:col-span-10">
+        <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl">{description}</p>
+      </div>
     </div>
   );
 }
 
-function FeatureTag({ text }: { text: string }) {
+function BenefitBox({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-mono text-gray-300">
-      <Check className="w-3 h-3 text-primary" />
-      {text}
+    <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-sm">
+      <h3 className="text-xl font-display font-bold text-white mb-6">{title}</h3>
+      <ul className="space-y-3">
+        {items.map((item, i) => (
+          <li key={i} className="flex items-center gap-3 text-white/90">
+            <Check className="w-5 h-5 text-primary flex-shrink-0" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
-  );
-}
-
-function IndustryCard({ title, description, image, href }: { title: string; description: string; image: string; href: string }) {
-  return (
-    <Link href={href}>
-      <a className="group relative h-[400px] overflow-hidden block border border-border">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-          <h3 className="text-3xl font-display font-bold text-white mb-3">{title}</h3>
-          <p className="text-gray-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-            {description}
-          </p>
-          <div className="flex items-center text-primary font-medium uppercase tracking-wider text-sm">
-            Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
-          </div>
-        </div>
-      </a>
-    </Link>
   );
 }
