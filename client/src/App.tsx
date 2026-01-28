@@ -10,6 +10,7 @@ import Telco from "./pages/industries/Telco";
 import NexDT from "./pages/products/NexDT";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
+import Value from "./pages/Value";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/industries/telco"} component={Telco} />
         <Route path={"/products/nexdt"} component={NexDT} />
+        <Route path={"/value"} component={Value} />
         <Route path={"/company"} component={Company} />
         <Route path={"/contact"} component={Contact} />
         <Route path={"/404"} component={NotFound} />

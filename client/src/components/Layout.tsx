@@ -100,6 +100,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                  <Link href="/value">
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
+                      Value
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <Link href="/company">
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
                       Company
@@ -152,6 +159,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <Link href="/industries/power"><a className="text-lg font-medium hover:text-primary">Power</a></Link>
                   </div>
                   <div className="h-px bg-border w-full" />
+                  <Link href="/value"><a className="text-lg font-medium hover:text-primary">Value</a></Link>
                   <Link href="/company"><a className="text-lg font-medium hover:text-primary">Company</a></Link>
                   <Link href="/resources"><a className="text-lg font-medium hover:text-primary">Resources</a></Link>
                   <div className="flex flex-col gap-3 mt-4">
