@@ -251,7 +251,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <p className="text-2xl font-bold text-red-600 pt-8">
+              <p className="text-2xl font-bold text-foreground pt-8">
                 That gap is where risk, cost, and delay live.
               </p>
             </div>
