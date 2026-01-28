@@ -37,8 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group">
               <div className="relative w-8 h-8 bg-primary flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white relative z-10">
@@ -49,7 +48,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <span className="font-display font-bold text-xl tracking-tight">SiteSee</span>
             </a>
-          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -100,25 +98,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/value">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
-                      Value
-                    </NavigationMenuLink>
-                  </Link>
+                  <a href="/value" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
+                    Value
+                  </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/company">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
-                      Company
-                    </NavigationMenuLink>
-                  </Link>
+                  <a href="/company" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
+                    Company
+                  </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/resources">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
-                      Resources
-                    </NavigationMenuLink>
-                  </Link>
+                  <a href="/resources" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
+                    Resources
+                  </a>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -126,14 +118,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/login">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Login</a>
-            </Link>
-            <Link href="/contact">
-              <Button className="rounded-none font-medium px-6 border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                Contact Us
-              </Button>
-            </Link>
+            <a href="/login" className="text-sm font-medium hover:text-primary transition-colors">Login</a>
+            <a href="/contact" className="rounded-none font-medium px-6 border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2">
+              Contact Us
+            </a>
           </div>
 
           {/* Mobile Menu */}
@@ -148,20 +136,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <nav className="flex flex-col gap-6 mt-10">
                   <div className="flex flex-col gap-2">
                     <h3 className="font-display font-medium text-sm text-muted-foreground uppercase tracking-wider mb-2">Products</h3>
-                    <Link href="/products/nexdt"><a className="text-lg font-medium hover:text-primary">NexDT Platform</a></Link>
-                    <Link href="/products/capture"><a className="text-lg font-medium hover:text-primary">Capture</a></Link>
-                    <Link href="/products/ai-analysis"><a className="text-lg font-medium hover:text-primary">AI Analysis</a></Link>
+                    <a href="/products/nexdt" className="text-lg font-medium hover:text-primary">NexDT Platform</a>
+                    <a href="/products/capture" className="text-lg font-medium hover:text-primary">Capture</a>
+                    <a href="/products/ai-analysis" className="text-lg font-medium hover:text-primary">AI Analysis</a>
                   </div>
                   <div className="h-px bg-border w-full" />
                   <div className="flex flex-col gap-2">
                     <h3 className="font-display font-medium text-sm text-muted-foreground uppercase tracking-wider mb-2">Industries</h3>
-                    <Link href="/industries/telco"><a className="text-lg font-medium hover:text-primary">Telco</a></Link>
-                    <Link href="/industries/power"><a className="text-lg font-medium hover:text-primary">Power</a></Link>
+                    <a href="/industries/telco" className="text-lg font-medium hover:text-primary">Telco</a>
+                    <a href="/industries/power" className="text-lg font-medium hover:text-primary">Power</a>
                   </div>
                   <div className="h-px bg-border w-full" />
-                  <Link href="/value"><a className="text-lg font-medium hover:text-primary">Value</a></Link>
-                  <Link href="/company"><a className="text-lg font-medium hover:text-primary">Company</a></Link>
-                  <Link href="/resources"><a className="text-lg font-medium hover:text-primary">Resources</a></Link>
+                  <a href="/value" className="text-lg font-medium hover:text-primary">Value</a>
+                  <a href="/company" className="text-lg font-medium hover:text-primary">Company</a>
+                  <a href="/resources" className="text-lg font-medium hover:text-primary">Resources</a>
                   <div className="flex flex-col gap-3 mt-4">
                     <Link href="/login">
                       <Button variant="outline" className="w-full rounded-none border-border">Login</Button>
