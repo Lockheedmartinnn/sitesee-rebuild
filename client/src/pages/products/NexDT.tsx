@@ -1,175 +1,184 @@
-import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Lock, Users, CheckCircle2, Zap, Shield, Database, Eye } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 
 export default function NexDT() {
   return (
     <div className="flex flex-col">
-      <PageHeader 
-        title="NextDT: Design. Validate. Approve. Govern." 
-        subtitle="NextDT is SiteSee's digital twin platform for pre-as-built design, colocation workflows, and engineering governance. Built for how real towercos operate — not how software vendors think they do."
-        backgroundImage="/images/digital-interface-clean.jpg"
-      >
-        <Link href="/contact">
-          <Button size="lg" className="rounded-none bg-primary text-white hover:bg-primary/90 border-0 font-semibold">
-            Request Demo <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-        </Link>
-      </PageHeader>
-
-      {/* What NextDT Enables */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container">
-          <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight mb-16 text-foreground">
-            What NextDT Enables
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <EnablementCard 
-              title="Confident Design"
-              subtitle="Before steel is touched"
-              description="Model upgrades, swaps, and additions digitally. Understand structural and EME impact before anyone climbs."
-            />
-            <EnablementCard 
-              title="Structured Colocation"
-              subtitle="Clear roles. Clear accountability."
-              description="Colo users design. Engineers validate. Admins govern. Nothing slips through the cracks."
-            />
-            <EnablementCard 
-              title="Engineering Decisions"
-              subtitle="You can stand behind"
-              description="Indicative assessments. Governed approvals. Complete transaction history — in one system."
-            />
-          </div>
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/hero-drone-tower-v2.jpg" 
+            alt="NexDT Platform" 
+            className="w-full h-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
         </div>
-      </section>
 
-      {/* How NextDT Works */}
-      <section className="py-24 md:py-32 bg-muted/50">
-        <div className="container">
-          <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight mb-16 text-foreground">
-            How NextDT Works
-          </h2>
-
-          <div className="space-y-16">
-            <WorkflowStep 
-              number="1"
-              icon={<Lock className="w-8 h-8" />}
-              title="Access & Governance First"
-              description="Every user enters through a secure, MFA-protected environment. Permissions aren't a suggestion. They're enforced by design."
-            />
-            <WorkflowStep 
-              number="2"
-              icon={<Users className="w-8 h-8" />}
-              title="Colo Users Design Digitally"
-              description="Create applications to rip existing equipment, replace with new assets, position and align accurately, and run Indicative Engineering Assessments (IEA) — all inside a live 3D environment, not static drawings."
-            />
-            <WorkflowStep 
-              number="3"
-              icon={<Eye className="w-8 h-8" />}
-              title="Engineers Stay in Control"
-              description="Engineers review designs visually, make override edits, trigger confirmation workflows, and approve only when standards are met. No approval without engineering sign-off. Period."
-            />
-            <WorkflowStep 
-              number="4"
-              icon={<Database className="w-8 h-8" />}
-              title="BIM Data That Actually Matters"
-              description="A governed equipment library with accurate geometry, correct scale & orientation, Effective Sail Area (ESA), and manufacturer-validated EME data. No ghost equipment. No broken models. No guesswork."
-            />
-            <WorkflowStep 
-              number="5"
-              icon={<CheckCircle2 className="w-8 h-8" />}
-              title="Full Auditability. Zero Chaos."
-              description="Every change is logged: Who, What, When, Why, and under which application. This is infrastructure governance — not file sharing."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Engineering Tools */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container">
-          <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight mb-16 text-foreground">
-            Engineering Tools That Fit Reality
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <ToolCard 
-              title="Indicative Engineering Assessment (IEA)"
-              items={[
-                "Run on demand",
-                "Compare existing vs proposed load",
-                "Inform decisions early",
-                "Kill rework before it starts"
-              ]}
-            />
-            <ToolCard 
-              title="Electromagnetic Energy (EME)"
-              items={[
-                "Catalog-driven",
-                "Configuration-aware",
-                "Designed for real compliance workflows",
-                "Not spreadsheets. Not assumptions."
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Stakeholder Benefits */}
-      <section className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-        <div className="container relative z-10">
-          <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight mb-16">
-            One Platform. Many Stakeholders.
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <StakeholderCard 
-              title="Engineering Leads"
-              items={["Clear accountability", "Controlled approvals", "Fewer downstream surprises"]}
-            />
-            <StakeholderCard 
-              title="Operations"
-              items={["Faster turnaround", "Less rework", "Repeatable execution"]}
-            />
-            <StakeholderCard 
-              title="Executives"
-              items={["Lower risk", "Better capital efficiency", "Scalable governance"]}
-            />
-            <StakeholderCard 
-              title="Security & Control"
-              items={["Multi-Factor Authentication", "Role-based access control", "Immutable historical records"]}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Training & Support */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight text-foreground">
-                Training & Enablement Built In
-              </h2>
-              <p className="text-xl text-foreground/70 leading-relaxed">
-                SiteSee supports adoption through role-based learning paths, scenario-driven assessments, certification & refreshers, and in-app guidance. Because tools only work when people know how to use them properly.
-              </p>
+        <div className="container relative z-10 py-32">
+          <div className="max-w-2xl space-y-12">
+            <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
+              NexDT Platform
+            </h1>
+            
+            <p className="text-2xl text-white/80 leading-relaxed">
+              Design. Validate. Approve. Govern. The complete digital twin ecosystem for telecom infrastructure.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 pt-8">
               <Link href="/contact">
-                <Button size="lg" className="rounded-none bg-primary text-white hover:bg-primary/90 border-0 font-semibold">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                <Button className="h-14 px-8 text-base bg-white text-black hover:bg-gray-100 border-0 font-bold rounded-none">
+                  Request Demo
                 </Button>
               </Link>
             </div>
-            <div className="relative">
-              <div className="aspect-video bg-muted border border-border rounded-sm overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/engineering-team-office.jpg" 
-                  alt="Team collaboration" 
-                  className="w-full h-full object-cover"
-                />
+          </div>
+        </div>
+      </section>
+
+      {/* Core Capabilities */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container">
+          <div className="space-y-16">
+            <div className="max-w-2xl">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                How NexDT Works
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">1</div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Access & Governance First</h3>
+                    <p className="text-slate-600 text-lg">MFA-protected. Role-based. Enforced by design.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">2</div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Colo Users Design Digitally</h3>
+                    <p className="text-slate-600 text-lg">Rip. Replace. Position. Assess — inside a live 3D environment.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">3</div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Engineers Stay in Control</h3>
+                    <p className="text-slate-600 text-lg">Visual review. Overrides. Standards-based approvals.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">4</div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">BIM Data That Matters</h3>
+                    <p className="text-slate-600 text-lg">Validated geometry, ESA, EME-ready equipment libraries.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">5</div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Full Auditability</h3>
+                    <p className="text-slate-600 text-lg">Every change logged. No ambiguity.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
+                  <img 
+                    src="/images/digital-interface-clean.jpg" 
+                    alt="NexDT Interface" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features - Dark Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-b from-slate-900 to-black text-white">
+        <div className="container">
+          <div className="space-y-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1]">
+              Enterprise-Grade Features
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                { title: "Pre-as-built Design", desc: "Design equipment placement before physical installation" },
+                { title: "Colocation Workflows", desc: "Streamline multi-tenant coordination and approvals" },
+                { title: "3D Visualization", desc: "Immersive digital twin environment for all stakeholders" },
+                { title: "Equipment Library", desc: "Pre-configured, standards-compliant component database" },
+                { title: "Compliance Tracking", desc: "Automated regulatory and safety compliance checks" },
+                { title: "Integration Ready", desc: "APIs for seamless integration with existing systems" },
+              ].map((feature, idx) => (
+                <div key={idx} className="space-y-4 p-8 bg-white/5 border border-white/10 rounded-sm hover:bg-white/10 transition-colors">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                      <p className="text-white/70">{feature.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container">
+          <div className="space-y-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+              Built for Real Workflows
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="space-y-6 p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-foreground">Tower Operators</h3>
+                <p className="text-slate-600 leading-relaxed">Manage portfolio-scale approvals, reduce site visits, accelerate revenue.</p>
+                <Link href="/industries/telco">
+                  <a className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </a>
+                </Link>
+              </div>
+
+              <div className="space-y-6 p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-foreground">Engineering Teams</h3>
+                <p className="text-slate-600 leading-relaxed">Enforce standards, maintain control, improve RFT through visual review.</p>
+                <a href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+                  Learn more <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              <div className="space-y-6 p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold text-foreground">Colocation Partners</h3>
+                <p className="text-slate-600 leading-relaxed">Design in 3D, get instant feedback, reduce rework cycles.</p>
+                <a href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+                  Learn more <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -177,79 +186,29 @@ export default function NexDT() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-primary text-white">
-        <div className="container text-center space-y-8">
-          <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tight">
-            From Capture to Decision
-          </h2>
-          <p className="text-2xl font-light max-w-2xl mx-auto">
-            Capture → Model → Design → Validate → Approve → Deploy. No handoffs. No data loss. No ambiguity.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="rounded-none bg-white text-primary hover:bg-gray-100 border-0 font-bold h-14 px-10 text-lg">
-              Get Started with NextDT
-            </Button>
-          </Link>
+      <section className="py-32 md:py-48 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="/images/hero-drone-tower-v2.jpg" 
+            alt="Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="container relative z-10">
+          <div className="max-w-3xl space-y-12">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1]">
+              Ready to transform your infrastructure workflows?
+            </h2>
+
+            <Link href="/contact">
+              <Button className="h-14 px-8 text-base bg-white text-blue-600 hover:bg-gray-100 border-0 font-bold rounded-none">
+                Request a Demo
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
-  );
-}
-
-function EnablementCard({ title, subtitle, description }: { title: string; subtitle: string; description: string }) {
-  return (
-    <div className="bg-card border border-border p-8 hover:border-primary/50 transition-colors">
-      <h3 className="text-2xl font-display font-bold mb-2 text-foreground">{title}</h3>
-      <p className="text-sm text-primary font-semibold mb-4 uppercase tracking-wider">{subtitle}</p>
-      <p className="text-foreground/70 leading-relaxed">{description}</p>
-    </div>
-  );
-}
-
-function WorkflowStep({ number, icon, title, description }: { number: string; icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pb-12 border-b border-border last:border-b-0">
-      <div className="md:col-span-2 space-y-4">
-        <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-          {icon}
-        </div>
-        <h3 className="text-2xl font-display font-bold text-foreground">{title}</h3>
-      </div>
-      <div className="md:col-span-10">
-        <p className="text-lg text-foreground/70 leading-relaxed">{description}</p>
-      </div>
-    </div>
-  );
-}
-
-function ToolCard({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="bg-card border border-border p-8">
-      <h3 className="text-2xl font-display font-bold mb-6 text-foreground">{title}</h3>
-      <ul className="space-y-3">
-        {items.map((item, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-            <span className="text-foreground/70">{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function StakeholderCard({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
-      <h3 className="text-xl font-display font-bold mb-6 text-white">{title}</h3>
-      <ul className="space-y-3">
-        {items.map((item, i) => (
-          <li key={i} className="flex items-center gap-3 text-white/80">
-            <div className="w-2 h-2 rounded-full bg-primary" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
