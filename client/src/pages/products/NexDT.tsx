@@ -1,147 +1,314 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { Link } from "wouter";
+import { Play } from "lucide-react";
+import { useState } from "react";
 
 export default function NexDT() {
+  const [activeVideo, setActiveVideo] = useState<number | null>(null);
+
+  const videos = [
+    {
+      id: 1,
+      title: "Platform Overview",
+      description: "See how NexDT transforms design workflows with integrated analysis and compliance",
+      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    },
+    {
+      id: 2,
+      title: "Design in the Digital Twin",
+      description: "Drag-and-drop BIM design directly in the digital twin with real-world context",
+      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    },
+    {
+      id: 3,
+      title: "Predictive Analysis",
+      description: "Run structural and EME analysis in minutes to validate designs before implementation",
+      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    },
+  ];
+
   return (
     <div className="flex flex-col">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
             src="/images/hero-drone-tower-v2.jpg" 
             alt="NexDT Platform" 
-            className="w-full h-full object-cover opacity-35"
+            className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
         </div>
 
         <div className="container relative z-10 py-32">
-          <div className="max-w-2xl space-y-12">
+          <div className="max-w-3xl space-y-8">
             <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-              NexDT Platform
+              NexDT
             </h1>
             
-            <p className="text-2xl text-white/80 leading-relaxed">
-              Design. Validate. Approve. Govern. The complete digital twin ecosystem for telecom infrastructure.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <Link href="/contact">
-                <Button className="h-14 px-8 text-base bg-white text-black hover:bg-gray-100 border-0 font-bold rounded-none">
-                  Request Demo
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Capabilities */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container">
-          <div className="space-y-16">
-            <div className="max-w-2xl">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
-                How NexDT Works
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">1</div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Access & Governance First</h3>
-                    <p className="text-slate-600 text-lg">MFA-protected. Role-based. Enforced by design.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">2</div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Colo Users Design Digitally</h3>
-                    <p className="text-slate-600 text-lg">Rip. Replace. Position. Assess — inside a live 3D environment.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">3</div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Engineers Stay in Control</h3>
-                    <p className="text-slate-600 text-lg">Visual review. Overrides. Standards-based approvals.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">4</div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">BIM Data That Matters</h3>
-                    <p className="text-slate-600 text-lg">Validated geometry, ESA, EME-ready equipment libraries.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white font-bold">5</div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Full Auditability</h3>
-                    <p className="text-slate-600 text-lg">Every change logged. No ambiguity.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
-                  <img 
-                    src="/images/digital-interface-clean.jpg" 
-                    alt="NexDT Interface" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features - Dark Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-slate-900 to-black text-white">
-        <div className="container">
-          <div className="space-y-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1]">
-              Enterprise-Grade Features
+            <h2 className="text-3xl md:text-4xl text-blue-400 font-bold">
+              Predictive Asset Performance — Built Into the Design Process
             </h2>
+            
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl">
+              NexDT transforms the digital twin from a static representation into a predictive decision engine. By unifying design, engineering analysis, and compliance inside a single governed platform, NexDT enables teams to understand site performance before steel is touched.
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { title: "Pre-as-built Design", desc: "Design equipment placement before physical installation" },
-                { title: "Colocation Workflows", desc: "Streamline multi-tenant coordination and approvals" },
-                { title: "3D Visualization", desc: "Immersive digital twin environment for all stakeholders" },
-                { title: "Equipment Library", desc: "Pre-configured, standards-compliant component database" },
-                { title: "Compliance Tracking", desc: "Automated regulatory and safety compliance checks" },
-                { title: "Integration Ready", desc: "APIs for seamless integration with existing systems" },
-              ].map((feature, idx) => (
-                <div key={idx} className="space-y-4 p-8 bg-white/5 border border-white/10 rounded-sm hover:bg-white/10 transition-colors">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                      <p className="text-white/70">{feature.desc}</p>
+            <div className="pt-8">
+              <p className="text-lg text-white/70 italic">
+                This is not post-design validation. This is performance intelligence embedded at the point of design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Videos Section */}
+      <section className="py-24 md:py-32 bg-slate-50">
+        <div className="container">
+          <div className="space-y-16">
+            <div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                See NexDT in Action
+              </h2>
+              <p className="text-xl text-slate-600 mt-6">
+                Explore how NexDT streamlines design workflows, analysis, and compliance
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {videos.map((video) => (
+                <div key={video.id} className="group cursor-pointer">
+                  <div 
+                    className="relative bg-black rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 aspect-video flex items-center justify-center"
+                    onClick={() => setActiveVideo(video.id)}
+                  >
+                    <img 
+                      src="/images/digital-interface-clean.jpg" 
+                      alt={video.title}
+                      className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors">
+                        <Play className="w-8 h-8 text-white fill-white" />
+                      </div>
                     </div>
                   </div>
+                  <h3 className="text-xl font-bold text-foreground mt-6">{video.title}</h3>
+                  <p className="text-slate-600 mt-2">{video.description}</p>
                 </div>
               ))}
             </div>
+
+            {/* Video Player Modal */}
+            {activeVideo && (
+              <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+                <div className="w-full max-w-4xl">
+                  <div className="relative bg-black rounded-sm overflow-hidden aspect-video">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={videos.find(v => v.id === activeVideo)?.embedUrl}
+                      title="NexDT Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <button
+                    onClick={() => setActiveVideo(null)}
+                    className="mt-4 px-6 py-2 bg-slate-700 text-white rounded-sm hover:bg-slate-600 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Integrated Design & Analysis */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                Integrated Design & Analysis
+              </h2>
+
+              <p className="text-xl text-slate-600">
+                Traditional workflows separate design, engineering, compliance, and approval into disconnected steps. NexDT collapses these into a single continuous workflow.
+              </p>
+
+              <div className="space-y-4">
+                <div className="p-6 bg-blue-50 rounded-sm border-l-4 border-blue-600">
+                  <h3 className="font-bold text-lg text-foreground mb-2">Fewer handoffs</h3>
+                  <p className="text-slate-600">Designs are created directly inside the digital twin and evaluated in real time using integrated engineering and compliance tools.</p>
+                </div>
+                <div className="p-6 bg-blue-50 rounded-sm border-l-4 border-blue-600">
+                  <h3 className="font-bold text-lg text-foreground mb-2">Higher accuracy</h3>
+                  <p className="text-slate-600">All stakeholders work from a single source of truth, eliminating version conflicts and interpretation errors.</p>
+                </div>
+                <div className="p-6 bg-blue-50 rounded-sm border-l-4 border-blue-600">
+                  <h3 className="font-bold text-lg text-foreground mb-2">No late-stage surprises</h3>
+                  <p className="text-slate-600">Issues are surfaced early in the design process, when they are cheapest to resolve.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/engineering-team-office.jpg" 
+                  alt="Integrated workflow" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Predictive Asset Performance */}
+      <section className="py-24 md:py-32 bg-slate-50">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/digital-interface-clean.jpg" 
+                  alt="Predictive analysis" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-8 order-1 lg:order-2">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                Predictive Asset Performance
+              </h2>
+
+              <p className="text-xl text-slate-600">
+                NexDT enables the creation of high-fidelity digital twins that reflect the real-world geometry, configuration, and constraints of each site. Design scenarios can be simulated before implementation to:
+              </p>
+
+              <ul className="space-y-4">
+                {[
+                  "Identify structural risk",
+                  "Assess EME exposure",
+                  "Validate upgrade feasibility",
+                  "Compare design alternatives"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-4">
+                    <span className="text-blue-600 font-bold text-xl">✓</span>
+                    <span className="text-lg text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-lg text-slate-600 italic">
+                Issues are surfaced early, when they are cheapest to resolve.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Without Friction */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                Compliance Without Friction
+              </h2>
+
+              <p className="text-xl text-slate-600">
+                Regulatory compliance is embedded, not bolted on. NexDT simplifies EME / RF hazard assessments by allowing teams to visualise electromagnetic field distributions and run indicative EME prediction scenarios.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-foreground">Visualise EME Fields</h3>
+                    <p className="text-slate-600">See electromagnetic field distributions in real-time</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-foreground">Run Scenarios</h3>
+                    <p className="text-slate-600">Validate compliance during design, not after submission</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">3</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-foreground">Faster Approvals</h3>
+                    <p className="text-slate-600">Lower compliance risk and greater stakeholder confidence</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/tower-structural-detail.jpg" 
+                  alt="Compliance" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Capabilities */}
+      <section className="py-24 md:py-32 bg-slate-900 text-white">
+        <div className="container">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1] mb-16">
+            Key Capabilities
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Dynamic BIM Catalogue",
+                description: "Governed, dynamic BIM library designed specifically for telecom infrastructure with correctly scaled and oriented equipment"
+              },
+              {
+                title: "Customisable Equipment Libraries",
+                description: "Maintain tailored BIM libraries aligned to approved vendors, preferred configurations, and internal engineering standards"
+              },
+              {
+                title: "Collaboration With Accountability",
+                description: "Centralised, governed environment for collaboration with full traceability across all design decisions and approvals"
+              },
+              {
+                title: "Transparency That Builds Trust",
+                description: "Every design decision, assessment, and approval is supported by visual evidence, predictive analysis, and logged actions"
+              },
+              {
+                title: "AI-Powered Analysis",
+                description: "AI-enhanced 3D reconstruction, equipment detection, rust detection, and missing bolt detection for automated validation"
+              },
+              {
+                title: "End-to-End Integration",
+                description: "Integrates directly with asset management and operational workflows for efficient post-implementation acceptance"
+              }
+            ].map((capability, idx) => (
+              <div key={idx} className="p-8 bg-slate-800 rounded-sm border border-slate-700 hover:border-blue-500 transition-colors">
+                <h3 className="text-xl font-bold mb-4">{capability.title}</h3>
+                <p className="text-slate-300">{capability.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -149,63 +316,51 @@ export default function NexDT() {
       {/* Use Cases */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container">
-          <div className="space-y-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
-              Built for Real Workflows
-            </h2>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1] mb-16">
+            Supported Use Cases
+          </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="space-y-6 p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-foreground">Tower Operators</h3>
-                <p className="text-slate-600 leading-relaxed">Manage portfolio-scale approvals, reduce site visits, accelerate revenue.</p>
-                <Link href="/industries/telco">
-                  <a className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
-                    Learn more <ArrowRight className="w-4 h-4" />
-                  </a>
-                </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Tower and rooftop upgrades",
+              "Equipment rip and replace",
+              "Equipment upgrades",
+              "Mount upgrades",
+              "Shelter upgrades",
+              "Greenfield site scoping",
+              "Colocation applications",
+              "Multi-technology deployments",
+              "Capacity planning"
+            ].map((useCase, idx) => (
+              <div key={idx} className="p-6 bg-blue-50 rounded-sm border-l-4 border-blue-600">
+                <p className="text-lg font-semibold text-foreground">{useCase}</p>
               </div>
+            ))}
+          </div>
 
-              <div className="space-y-6 p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-foreground">Engineering Teams</h3>
-                <p className="text-slate-600 leading-relaxed">Enforce standards, maintain control, improve RFT through visual review.</p>
-                <a href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-
-              <div className="space-y-6 p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-foreground">Colocation Partners</h3>
-                <p className="text-slate-600 leading-relaxed">Design in 3D, get instant feedback, reduce rework cycles.</p>
-                <a href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
+          <div className="mt-16 p-12 bg-slate-50 rounded-sm border-2 border-blue-600">
+            <p className="text-2xl font-bold text-foreground text-center">
+              One platform. All lifecycle stages.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 md:py-48 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img 
-            src="/images/hero-drone-tower-v2.jpg" 
-            alt="Background" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        
-        <div className="container relative z-10">
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-black text-white">
+        <div className="container">
           <div className="max-w-3xl space-y-12">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1]">
-              Ready to transform your infrastructure workflows?
+              Ready to transform your design workflows?
             </h2>
 
-            <Link href="/contact">
-              <Button className="h-14 px-8 text-base bg-white text-blue-600 hover:bg-gray-100 border-0 font-bold rounded-none">
-                Request a Demo
-              </Button>
-            </Link>
+            <p className="text-xl text-white/80">
+              NexDT enables faster decisions, fewer redesigns, lower operating costs, and higher engineering confidence. Not by working harder — but by working inside a system designed for reality.
+            </p>
+
+            <a href="/contact" className="h-14 px-8 text-base bg-white text-black hover:bg-gray-100 border-0 font-bold rounded-none inline-flex items-center gap-2">
+              Request a Demo
+            </a>
           </div>
         </div>
       </section>

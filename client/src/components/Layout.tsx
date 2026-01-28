@@ -91,9 +91,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       <ListItem href="/industries/telco" title="Telco">
                         For tower companies and mobile network operators.
                       </ListItem>
-                      <ListItem href="/industries/power" title="Power">
-                        For transmission and distribution infrastructure.
-                      </ListItem>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -144,7 +141,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <div className="flex flex-col gap-2">
                     <h3 className="font-display font-medium text-sm text-muted-foreground uppercase tracking-wider mb-2">Industries</h3>
                     <a href="/industries/telco" className="text-lg font-medium hover:text-primary">Telco</a>
-                    <a href="/industries/power" className="text-lg font-medium hover:text-primary">Power</a>
                   </div>
                   <div className="h-px bg-border w-full" />
                   <a href="/value" className="text-lg font-medium hover:text-primary">Value</a>

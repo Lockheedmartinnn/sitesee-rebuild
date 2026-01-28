@@ -315,9 +315,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Closing CTA - Dark with Impact */}
-      <section className="py-32 md:py-48 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      {/* Closing CTA - Dark with Impact      {/* Trusted By - Customer Logos */}
+      <section className="py-24 md:py-32 bg-slate-900 text-white">
+        <div className="container">
+          <div className="space-y-16">
+            <div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1] mb-4">
+                Trusted by:
+              </h2>
+              <div className="w-24 h-1 bg-blue-500"></div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {[
+                { name: 'Fortysouth', placeholder: true },
+                { name: 'PhilPower', placeholder: true },
+                { name: 'Telstra', placeholder: true },
+                { name: 'Reliance Jio', placeholder: true },
+                { name: 'American Tower', placeholder: true },
+                { name: 'Vodafone', placeholder: true },
+                { name: 'Titanict', placeholder: true },
+                { name: 'Cornerstone', placeholder: true },
+              ].map((company) => (
+                <div key={company.name} className="bg-white rounded-sm p-8 flex items-center justify-center min-h-[200px] shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="text-center">
+                    <p className="text-slate-400 font-semibold text-lg">{company.name}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA - Dark Section */}
+      <section className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img 
             src="/images/hero-drone-tower-v2.jpg" 
             alt="Background" 
