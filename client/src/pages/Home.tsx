@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import CustomerMap from "@/components/CustomerMap";
 
 export default function Home() {
   return (
@@ -29,16 +30,12 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                <Link href="/contact">
-                  <Button className="h-14 px-8 text-base bg-white text-black hover:bg-gray-100 border-0 font-bold rounded-none">
-                    Contact Us
-                  </Button>
-                </Link>
-                <Link href="/products/nexdt">
-                  <Button className="h-14 px-8 text-base bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 rounded-none font-bold">
-                    Explore NexDT
-                  </Button>
-                </Link>
+                <a href="/contact" className="h-14 px-8 text-base bg-white text-black hover:bg-gray-100 border-0 font-bold rounded-none inline-flex items-center gap-2">
+                  Contact Us
+                </a>
+                <a href="/products/nexdt" className="h-14 px-8 text-base bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 rounded-none font-bold inline-flex items-center gap-2">
+                  Explore NexDT
+                </a>
               </div>
             </div>
 
@@ -52,6 +49,69 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Black KPI Cards Section */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container">
+          <div className="space-y-16">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+              Save With SiteSee
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
+                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">$12M+</div>
+                <p className="text-base leading-relaxed">Operating cost reduction across portfolio</p>
+              </div>
+              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
+                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">97%</div>
+                <p className="text-base leading-relaxed">Right-First-Time (RFT) improvement</p>
+              </div>
+              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
+                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">65%</div>
+                <p className="text-base leading-relaxed">Reduction in site visit costs annually</p>
+              </div>
+              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
+                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">3.2x</div>
+                <p className="text-base leading-relaxed">Faster approval cycles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Customer Map Section */}
+      <section className="py-24 md:py-32 bg-slate-50">
+        <div className="container">
+          <div className="space-y-16">
+            <div className="max-w-2xl">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                Trusted Globally
+              </h2>
+              <p className="text-xl text-slate-600 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
+            </div>
+
+            <CustomerMap />
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {[
+                { name: 'USA', customers: '12+' },
+                { name: 'UK', customers: '8+' },
+                { name: 'Australia', customers: '6+' },
+                { name: 'Philippines', customers: '4+' },
+                { name: 'Malaysia', customers: '3+' },
+                { name: 'Oman', customers: '2+' },
+              ].map((region) => (
+                <div key={region.name} className="text-center p-6 bg-white rounded-sm border border-slate-200 hover:border-blue-300 transition-colors">
+                  <p className="text-sm font-semibold text-slate-600 mb-2">REGION</p>
+                  <p className="text-2xl font-bold text-foreground mb-1">{region.name}</p>
+                  <p className="text-lg text-blue-600 font-bold">{region.customers} Operators</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -248,11 +308,9 @@ export default function Home() {
               NexDT is SiteSee's digital twin platform for pre-as-built design, colocation workflows, engineering governance, and portfolio-scale decision making. Built for how real towercos operate, not demos.
             </p>
 
-            <Link href="/products/nexdt">
-              <Button className="h-14 px-8 text-base bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-none">
-                Learn More <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
+            <a href="/products/nexdt" className="h-14 px-8 text-base bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-none inline-flex items-center gap-2">
+              Learn More <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -277,11 +335,9 @@ export default function Home() {
               Then the conversation is overdue.
             </p>
 
-            <Link href="/contact">
-              <Button className="h-14 px-8 text-base bg-white text-blue-600 hover:bg-gray-100 border-0 font-bold rounded-none">
-                Let's Talk
-              </Button>
-            </Link>
+            <a href="/contact" className="h-14 px-8 text-base bg-white text-blue-600 hover:bg-gray-100 border-0 font-bold rounded-none inline-flex items-center gap-2">
+              Let's Talk
+            </a>
           </div>
         </div>
       </section>
