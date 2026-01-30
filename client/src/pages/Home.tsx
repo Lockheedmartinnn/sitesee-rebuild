@@ -54,6 +54,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Executive Context Section */}
+      <section className="py-24 md:py-32 bg-slate-950 text-white">
+        <div className="container max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm font-semibold text-blue-400 mb-4">EXECUTIVE CONTEXT</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                Most digital twins don't move the numbers.
+              </h2>
+              
+              <p className="text-lg text-slate-300 mb-6">
+                They improve visibility. They reduce some site visits. They make inspection easier. But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.
+              </p>
+              
+              <p className="text-lg text-slate-300 mb-8 font-semibold">
+                NexDT was built to address that gap.
+              </p>
+              
+              <p className="text-lg text-slate-300 mb-6">
+                NexDT is a next-generation digital twin designed to reduce operating cost, accelerate revenue, and enable wireless infrastructure portfolios to scale without proportional increases in complexity or headcount.
+              </p>
+              
+              <p className="text-lg text-slate-300">
+                Unlike first-generation digital twins that stop at visualisation, NexDT is embedded directly into upgrade, colocation, engineering, and compliance workflows.
+              </p>
+            </div>
+            
+            <div className="relative h-96 md:h-full">
+              <img 
+                src="/images/engineering-team-office.jpg" 
+                alt="Engineering Team"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Black KPI Cards Section */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container">
@@ -315,7 +353,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Closing CTA - Dark with Impact      {/* Trusted By - Customer Logos */}
+      {/* Trusted By - Customer Logos */}
       <section className="py-24 md:py-32 bg-slate-900 text-white">
         <div className="container">
           <div className="space-y-16">
@@ -361,7 +399,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-3xl space-y-12">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1]">
-              If your priorities include efficiency, precision, and governance at scale—
+              If your priorities include efficiency, precision, and governance at scale -
             </h2>
 
             <p className="text-3xl font-bold">
