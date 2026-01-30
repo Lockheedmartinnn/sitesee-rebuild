@@ -1,122 +1,127 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 import CustomerMap from "@/components/CustomerMap";
+import FlightsCounter from "@/components/FlightsCounter";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Bentley Style with Image */}
+      {/* Hero Section - Bolder, Modern, High Impact */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-        {/* Background Image */}
+        {/* Background Image with Modern Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/images/hero-drone-tower-v2.jpg" 
             alt="Drone inspecting tower" 
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
         </div>
 
         <div className="container relative z-10 py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-                The operating system for telecom infrastructure
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-xl">
-                Design, validate, deploy, and govern network assets — digitally, accurately, and at scale.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                <a href="/contact" className="h-14 px-8 text-base bg-white text-black hover:bg-gray-100 border-0 font-bold rounded-none inline-flex items-center gap-2">
-                  Contact Us
-                </a>
-                <a href="/products/nexdt" className="h-14 px-8 text-base bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 rounded-none font-bold inline-flex items-center gap-2">
-                  Explore NexDT
-                </a>
-              </div>
+          <div className="max-w-4xl space-y-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Trusted by 36,000+ towers globally</span>
             </div>
 
-            {/* Hero Image Right */}
-            <div className="hidden lg:block relative">
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/engineering-team-office.jpg" 
-                  alt="Engineering team" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              </div>
+            <h1 className="text-white text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.95]">
+              The operating system for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">telecom infrastructure</span>
+            </h1>
+            
+            <p className="text-2xl md:text-3xl text-slate-300 font-light leading-relaxed max-w-2xl">
+              Design, validate, deploy, and govern network assets — digitally, accurately, and at scale.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 pt-8">
+              <a href="/contact" className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
+                Talk to us <ArrowRight className="w-5 h-5" />
+              </a>
+              <a href="/products/nexdt" className="h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold inline-flex items-center gap-3">
+                See NexDT in action
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Executive Context Section */}
-      <section className="py-24 md:py-32 bg-slate-950 text-white">
-        <div className="container max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-sm font-semibold text-blue-400 mb-4">EXECUTIVE CONTEXT</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Most digital twins don't move the numbers.
-              </h2>
+      {/* Animated Flights Counter Section */}
+      <FlightsCounter />
+
+      {/* Executive Context - High Contrast & Asymmetric */}
+      <section className="py-32 bg-white text-black overflow-hidden">
+        <div className="container">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-7 space-y-12">
+              <div className="space-y-6">
+                <p className="text-sm font-bold tracking-[0.2em] text-blue-600 uppercase">The Problem</p>
+                <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.9]">
+                  Most digital twins don't move the numbers.
+                </h2>
+              </div>
               
-              <p className="text-lg text-slate-300 mb-6">
-                They improve visibility. They reduce some site visits. They make inspection easier. But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.
-              </p>
-              
-              <p className="text-lg text-slate-300 mb-8 font-semibold">
-                NexDT was built to address that gap.
-              </p>
-              
-              <p className="text-lg text-slate-300 mb-6">
-                NexDT is a next-generation digital twin designed to reduce operating cost, accelerate revenue, and enable wireless infrastructure portfolios to scale without proportional increases in complexity or headcount.
-              </p>
-              
-              <p className="text-lg text-slate-300">
-                Unlike first-generation digital twins that stop at visualisation, NexDT is embedded directly into upgrade, colocation, engineering, and compliance workflows.
-              </p>
+              <div className="space-y-8 text-xl md:text-2xl font-light leading-relaxed text-slate-600">
+                <p>
+                  They improve visibility. They reduce some site visits. They make inspection easier. <strong className="text-black font-semibold">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
+                </p>
+                
+                <div className="pl-8 border-l-4 border-blue-600">
+                  <p className="text-black font-medium italic">
+                    "Better pictures alone do not reduce cost or accelerate revenue."
+                  </p>
+                </div>
+                
+                <p>
+                  NexDT is different. It's a next-generation digital twin designed to reduce operating cost, accelerate revenue, and enable wireless infrastructure portfolios to scale without proportional increases in complexity or headcount.
+                </p>
+              </div>
             </div>
             
-            <div className="relative h-96 md:h-full">
-              <img 
-                src="/images/engineering-team-office.jpg" 
-                alt="Engineering Team"
-                className="w-full h-full object-cover rounded-lg"
-              />
+            <div className="lg:col-span-5 relative">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
+                <img 
+                  src="/images/engineering-team-office.jpg" 
+                  alt="Engineering Team"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-8 left-8 right-8 text-white">
+                  <p className="text-lg font-medium">Embedded in upgrade, colocation, engineering, and compliance workflows.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Black KPI Cards Section */}
-      <section className="py-24 md:py-32 bg-white">
+      {/* High Impact Metrics - Dark Mode Grid */}
+      <section className="py-32 bg-slate-950 text-white">
         <div className="container">
-          <div className="space-y-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
-              Save With SiteSee
-            </h2>
+          <div className="space-y-20">
+            <div className="max-w-3xl">
+              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-6">
+                Proven at scale.
+              </h2>
+              <p className="text-xl text-slate-400">
+                NexDT is used in live production environments by customers managing more than <span className="text-white font-bold">36,000 towers and rooftops globally</span>.
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
-                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">$12M+</div>
-                <p className="text-base leading-relaxed">Operating cost reduction across portfolio</p>
-              </div>
-              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
-                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">97%</div>
-                <p className="text-base leading-relaxed">Right-First-Time (RFT) improvement</p>
-              </div>
-              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
-                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">65%</div>
-                <p className="text-base leading-relaxed">Reduction in site visit costs annually</p>
-              </div>
-              <div className="bg-black text-white p-8 rounded-sm space-y-6 hover:shadow-2xl transition-shadow">
-                <div className="text-5xl md:text-6xl font-display font-bold tracking-tighter">3.2x</div>
-                <p className="text-base leading-relaxed">Faster approval cycles</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { label: "Upgrade Approval", value: "44 Days", sub: "Reduced from 8 months", color: "text-blue-400" },
+                { label: "First Time Right", value: "80%", sub: "Improved from 32%", color: "text-green-400" },
+                { label: "CO₂ Avoided", value: "5K+ Tonnes", sub: "Across the estate", color: "text-purple-400" },
+                { label: "Climbs Avoided", value: "30K+", sub: "High-risk climbs", color: "text-orange-400" }
+              ].map((metric, idx) => (
+                <div key={idx} className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+                  <div className={`text-5xl font-bold tracking-tighter mb-4 ${metric.color}`}>{metric.value}</div>
+                  <div className="text-lg font-medium text-white mb-2">{metric.label}</div>
+                  <div className="text-sm text-slate-400">{metric.sub}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -155,54 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof at Scale - Dark Section with Visual */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-black to-slate-900 text-white">
-        <div className="container">
-          <div className="space-y-24">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
-              <div className="space-y-4">
-                <div className="text-7xl md:text-8xl font-display font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                  5,372
-                </div>
-                <p className="text-sm font-semibold tracking-widest uppercase text-white/70">Site Capture Surveys</p>
-              </div>
-              <div className="space-y-4">
-                <div className="text-7xl md:text-8xl font-display font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                  97%
-                </div>
-                <p className="text-sm font-semibold tracking-widest uppercase text-white/70">Right-First-Time</p>
-              </div>
-              <div className="space-y-4">
-                <div className="text-7xl md:text-8xl font-display font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                  1,641
-                </div>
-                <p className="text-sm font-semibold tracking-widest uppercase text-white/70">Climbs Avoided</p>
-              </div>
-            </div>
 
-            <div className="max-w-2xl">
-              <p className="text-xl md:text-2xl text-white/90 italic border-l-4 border-blue-500 pl-8 font-light">
-                These aren't projections. They're operational results.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-              <div className="space-y-4">
-                <div className="text-6xl md:text-7xl font-display font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                  2,736
-                </div>
-                <p className="text-sm font-semibold tracking-widest uppercase text-white/70">rMSV Projects</p>
-              </div>
-              <div className="space-y-4">
-                <div className="text-6xl md:text-7xl font-display font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                  694K kg
-                </div>
-                <p className="text-sm font-semibold tracking-widest uppercase text-white/70">CO₂ Emissions Reduced</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Industry Reality - Asymmetric Layout */}
       <section className="py-24 md:py-32 bg-white">
