@@ -41,7 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src="/images/sitesee-logo.png" 
                 alt="SiteSee" 
-                className="h-12 w-auto object-contain" 
+                className="h-20 w-auto object-contain" 
               />
             </a>
 
