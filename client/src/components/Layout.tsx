@@ -38,15 +38,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
-              <div className="relative w-8 h-8 bg-primary flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white relative z-10">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight">SiteSee</span>
+              <img 
+                src="/images/sitesee-logo.png" 
+                alt="SiteSee" 
+                className="h-8 w-auto object-contain"
+              />
             </a>
 
           {/* Desktop Navigation */}
@@ -208,14 +204,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-primary flex items-center justify-center">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <span className="font-display font-bold text-lg tracking-tight">SiteSee</span>
+                <img 
+                  src="/images/sitesee-logo.png" 
+                  alt="SiteSee" 
+                  className="h-6 w-auto object-contain brightness-0 invert opacity-80"
+                />
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-xs">
                 Transforming critical infrastructure by predicting performance and driving revenue through AI-powered digital twins.

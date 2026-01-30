@@ -23,9 +23,13 @@ export default function NexDT() {
               <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Next-Generation Digital Twin</span>
             </div>
 
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.9]">
-              NexDT
-            </h1>
+            <div className="mb-8">
+              <img 
+                src="/images/nexdt-logo.png" 
+                alt="NexDT" 
+                className="h-32 md:h-40 lg:h-48 w-auto object-contain brightness-0 invert"
+              />
+            </div>
             
             <p className="text-3xl md:text-4xl font-light text-slate-300 leading-tight max-w-3xl">
               The economics of tower portfolios, <span className="text-white font-medium">transformed.</span>
