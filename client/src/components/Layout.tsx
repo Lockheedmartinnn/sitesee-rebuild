@@ -56,79 +56,68 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 font-medium">Products</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="flex w-[600px] p-0 bg-[#00AEEF] text-white">
-                      {/* Left Column - Main Categories */}
-                      <div className="w-1/3 py-4 flex flex-col">
-                        <div className="group/item relative">
-                          <a href="/products/nexdt" className="flex items-center justify-between px-6 py-3 text-sm font-bold hover:bg-white/10 transition-colors uppercase tracking-wider">
-                            NexDT
-                            <ChevronDown className="w-4 h-4 -rotate-90" />
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+                      <li className="row-span-4">
+                        <NavigationMenuLink asChild>
+                          <a
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                            href="/products/nexdt"
+                          >
+                            <div className="mb-2 mt-4 text-lg font-medium font-display">
+                              NexDT Ecosystem
+                            </div>
+                            <p className="text-sm leading-tight text-muted-foreground">
+                              The Next Generation Digital Twin Ecosystem for critical infrastructure.
+                            </p>
                           </a>
-                          {/* Submenu for NexDT */}
-                          <div className="hidden group-hover/item:block absolute left-full top-0 w-[200px] bg-[#00AEEF] py-2 -ml-1">
-                            <a href="/products/nexdt" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">NEXT GEN</a>
-                            <a href="/products/iea" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">IEA</a>
-                            <a href="/products/ieme" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">IEME</a>
-                            <a href="/products/bim" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">BIM</a>
-                          </div>
+                        </NavigationMenuLink>
+                      </li>
+                      
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="space-y-3">
+                          <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2">Next Gen</h4>
+                          <ListItem href="/products/nexdt" title="NexDT">
+                            Digital Twin Platform
+                          </ListItem>
+                          <ListItem href="/products/iea" title="IEA">
+                            Engineering Audit
+                          </ListItem>
+                          <ListItem href="/products/ieme" title="IEME">
+                            EME Analysis
+                          </ListItem>
+                          <ListItem href="/products/bim" title="BIM">
+                            BIM Catalogue
+                          </ListItem>
                         </div>
 
-                        <div className="group/item relative">
-                          <a href="/products/capture" className="flex items-center justify-between px-6 py-3 text-sm font-bold hover:bg-white/10 transition-colors uppercase tracking-wider">
-                            Capture
-                            <ChevronDown className="w-4 h-4 -rotate-90" />
-                          </a>
-                          {/* Submenu for Capture */}
-                          <div className="hidden group-hover/item:block absolute left-full top-0 w-[200px] bg-[#00AEEF] py-2 -ml-1">
-                            <a href="/products/capture" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">MISSION PLANNER</a>
-                          </div>
-                        </div>
-
-                        <div className="group/item relative">
-                          <a href="/products/3d-modeling" className="flex items-center justify-between px-6 py-3 text-sm font-bold hover:bg-white/10 transition-colors uppercase tracking-wider">
-                            3D Modeling
-                            <ChevronDown className="w-4 h-4 -rotate-90" />
-                          </a>
-                          {/* Submenu for 3D Modeling */}
-                          <div className="hidden group-hover/item:block absolute left-full top-0 w-[200px] bg-[#00AEEF] py-2 -ml-1">
-                            <a href="/products/3d-modeling" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">TOWERSEE</a>
-                            <a href="/products/3d-modeling" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">TOWERSEE MAX</a>
-                            <a href="/products/ai-boost" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">AI BOOST ENGINE</a>
-                          </div>
-                        </div>
-
-                        <div className="group/item relative">
-                          <a href="/products/ai-analysis" className="flex items-center justify-between px-6 py-3 text-sm font-bold hover:bg-white/10 transition-colors uppercase tracking-wider">
-                            AI Analysis
-                            <ChevronDown className="w-4 h-4 -rotate-90" />
-                          </a>
-                          {/* Submenu for AI Analysis */}
-                          <div className="hidden group-hover/item:block absolute left-full top-0 w-[200px] bg-[#00AEEF] py-2 -ml-1">
-                            <a href="/products/ai-analysis" className="block px-6 py-2 text-sm hover:bg-white/10 transition-colors text-right">AI AUDIT ENGINE</a>
-                          </div>
+                        <div className="space-y-3">
+                          <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2">Capture</h4>
+                          <ListItem href="/products/capture" title="Mission Planner">
+                            Drone Capture
+                          </ListItem>
+                          
+                          <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2 pt-2">AI Analysis</h4>
+                          <ListItem href="/products/ai-analysis" title="AI Audit Engine">
+                            Defect Detection
+                          </ListItem>
                         </div>
                       </div>
 
-                      {/* Right Column - Featured Image/Content */}
-                      <div className="w-2/3 relative overflow-hidden bg-black">
-                        <img 
-                          src="/images/hero-drone-tower-v2.jpg" 
-                          alt="NexDT Ecosystem" 
-                          className="absolute inset-0 w-full h-full object-cover opacity-60"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                        <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                          <div className="mb-4">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white mb-4">
-                              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                            <h3 className="text-4xl font-display font-bold text-white tracking-tight">NexDT</h3>
-                          </div>
+                      <div className="col-span-2 pt-2 border-t border-border mt-2">
+                        <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2 mb-2">3D Modeling</h4>
+                        <div className="grid grid-cols-3 gap-3">
+                          <ListItem href="/products/3d-modeling" title="TowerSee">
+                            Standard Modeling
+                          </ListItem>
+                          <ListItem href="/products/3d-modeling" title="TowerSee MAX">
+                            High Fidelity
+                          </ListItem>
+                          <ListItem href="/products/ai-boost" title="AI Boost Engine">
+                            Performance
+                          </ListItem>
                         </div>
                       </div>
-                    </div>
+                    </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
