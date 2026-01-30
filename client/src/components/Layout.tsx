@@ -41,7 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src="/images/sitesee-logo.png" 
                 alt="SiteSee" 
-                className="h-8 w-auto object-contain"
+                className="h-12 w-auto object-contain" 
               />
             </a>
 
@@ -59,8 +59,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                             href="/products/nexdt"
                           >
-                            <div className="mb-2 mt-4 text-lg font-medium font-display">
-                              NexDT Ecosystem
+                            <div className="mb-2 mt-4">
+                              <img 
+                                src="/images/nexdt-logo.png" 
+                                alt="NexDT" 
+                                className="h-8 w-auto object-contain brightness-0 invert"
+                              />
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
                               The Next Generation Digital Twin Ecosystem for critical infrastructure.
