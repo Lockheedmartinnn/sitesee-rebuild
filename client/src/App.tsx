@@ -8,6 +8,10 @@ import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Telco from "./pages/industries/Telco";
 import NexDT from "./pages/products/NexDT";
+import IEA from "./pages/products/IEA";
+import IEME from "./pages/products/IEME";
+import BIM from "./pages/products/BIM";
+import AIAnalysis from "./pages/products/AIAnalysis";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
 import Value from "./pages/Value";
@@ -19,6 +23,11 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/industries/telco"} component={Telco} />
         <Route path={"/products/nexdt"} component={NexDT} />
+        <Route path={"/products/iea"} component={IEA} />
+        <Route path={"/products/ieme"} component={IEME} />
+        <Route path={"/products/bim"} component={BIM} />
+        <Route path={"/products/ai-analysis"} component={AIAnalysis} />
+        <Route path={"/products/3d-modeling"} component={BIM} /> {/* Redirect 3D Modeling to BIM for now as they share context */}
         <Route path={"/value"} component={Value} />
         <Route path={"/company"} component={Company} />
         <Route path={"/contact"} component={Contact} />
