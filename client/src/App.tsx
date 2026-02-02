@@ -17,6 +17,7 @@ import AIBoost from "./pages/products/AIBoost";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
 import Value from "./pages/Value";
+import ROICalculator from "./pages/ROICalculator";
 
 function Router() {
   return (
@@ -33,6 +34,7 @@ function Router() {
         <Route path={"/products/ai-boost"} component={AIBoost} />
         <Route path={"/products/3d-modeling"} component={BIM} /> {/* Redirect 3D Modeling to BIM for now as they share context */}
         <Route path={"/value"} component={Value} />
+        <Route path={"/roi-calculator"} component={ROICalculator} />
         <Route path={"/company"} component={Company} />
         <Route path={"/contact"} component={Contact} />
         <Route path={"/404"} component={NotFound} />
