@@ -240,30 +240,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h4 className="font-display font-bold text-lg mb-6">Products</h4>
               <ul className="space-y-3">
-                <li><Link href="/products/nexdt"><a className="text-muted-foreground hover:text-primary transition-colors">NexDT Ecosystem</a></Link></li>
-                <li><Link href="/products/capture"><a className="text-muted-foreground hover:text-primary transition-colors">DroneSee Mission Planner</a></Link></li>
-                <li><Link href="/products/ai-analysis"><a className="text-muted-foreground hover:text-primary transition-colors">AI Audit Engine</a></Link></li>
-                <li><Link href="/products/3d-modeling"><a className="text-muted-foreground hover:text-primary transition-colors">TowerSee MAX</a></Link></li>
-                <li><Link href="/products/bim"><a className="text-muted-foreground hover:text-primary transition-colors">BIM Catalogue</a></Link></li>
+                <li><Link href="/products/nexdt" className="text-muted-foreground hover:text-primary transition-colors">NexDT Ecosystem</Link></li>
+                <li><Link href="/products/capture" className="text-muted-foreground hover:text-primary transition-colors">DroneSee Mission Planner</Link></li>
+                <li><Link href="/products/ai-analysis" className="text-muted-foreground hover:text-primary transition-colors">AI Audit Engine</Link></li>
+                <li><Link href="/products/3d-modeling" className="text-muted-foreground hover:text-primary transition-colors">TowerSee MAX</Link></li>
+                <li><Link href="/products/bim" className="text-muted-foreground hover:text-primary transition-colors">BIM Catalogue</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-display font-bold text-lg mb-6">Company</h4>
               <ul className="space-y-3">
-                <li><Link href="/company"><a className="text-muted-foreground hover:text-primary transition-colors">About Us</a></Link></li>
-                <li><Link href="/careers"><a className="text-muted-foreground hover:text-primary transition-colors">Careers</a></Link></li>
-                <li><Link href="/resources"><a className="text-muted-foreground hover:text-primary transition-colors">Resources</a></Link></li>
-                <li><Link href="/blog"><a className="text-muted-foreground hover:text-primary transition-colors">Blog</a></Link></li>
-                <li><Link href="/contact"><a className="text-muted-foreground hover:text-primary transition-colors">Contact</a></Link></li>
+                <li><Link href="/company" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+                <li><Link href="/careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>
+                <li><Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors">Resources</Link></li>
+                <li><Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
+                <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-display font-bold text-lg mb-6">Legal</h4>
               <ul className="space-y-3">
-                <li><Link href="/terms"><a className="text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</a></Link></li>
-                <li><Link href="/privacy"><a className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></Link></li>
+                <li><Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</Link></li>
+                <li><Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
                 <li className="text-muted-foreground pt-4">
                   <div className="font-mono text-xs">ABN 76 615 057 844</div>
                   <div className="font-mono text-xs mt-1">ISO27001:2022 Certified</div>
@@ -291,19 +291,14 @@ const ListItem = ({ className, title, children, href, ...props }: any) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <Link href={href}>
-          <a
-            className={cn(
+        <Link href={href} className={cn(
               "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className
-            )}
-            {...props}
-          >
+            )} {...props}>
             <div className="text-sm font-medium leading-none font-display">{title}</div>
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
             </p>
-          </a>
         </Link>
       </NavigationMenuLink>
     </li>
