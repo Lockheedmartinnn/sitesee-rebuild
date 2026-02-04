@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Value() {
   return (
@@ -152,6 +153,9 @@ export default function Value() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Where the ROI Comes From */}
       <section className="py-24 md:py-32 bg-gradient-to-b from-slate-900 to-black text-white">

@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 import CustomerMap from "@/components/CustomerMap";
 import FlightsCounter from "@/components/FlightsCounter";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -126,6 +127,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Global Customer Map Section */}
       <section className="py-24 md:py-32 bg-slate-50">
