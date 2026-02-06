@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import CustomerMap from "@/components/CustomerMap";
 import FlightsCounter from "@/components/FlightsCounter";
 import { Testimonials } from "@/components/Testimonials";
+import { VideoTestimonial } from "@/components/VideoTestimonial";
 
 export default function Home() {
   return (
@@ -127,6 +128,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Testimonial Section */}
+      <VideoTestimonial />
 
       {/* Testimonials Section */}
       <Testimonials />

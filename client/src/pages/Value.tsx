@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Testimonials } from "@/components/Testimonials";
+import { VideoTestimonial } from "@/components/VideoTestimonial";
 
 export default function Value() {
   return (
@@ -153,6 +154,9 @@ export default function Value() {
           </div>
         </div>
       </section>
+
+      {/* Video Testimonial Section */}
+      <VideoTestimonial />
 
       {/* Testimonials Section */}
       <Testimonials />
