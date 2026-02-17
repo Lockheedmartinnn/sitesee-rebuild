@@ -133,7 +133,7 @@ export default function BIM() {
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/dBsBaNzZYLrvFFPM.jpg" 
                   alt="Real-Time Design Interface" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500 scale-[1.02] origin-center"
                 />
               </div>
               

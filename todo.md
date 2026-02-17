@@ -1,6 +1,6 @@
-- [ ] Remove top borders from slide images on all pages
-- [ ] Remove YouTube video embeds from BIM, IEME, and IEA pages
-- [ ] Expand text content on BIM page to be more detailed
-- [ ] Expand text content on IEME page to be more detailed
-- [ ] Expand text content on IEA page to be more detailed
-- [ ] Ensure full slide content is visible without cropping essential information
+- [ ] Remove white borders from slide images on Home page
+- [ ] Remove white borders from slide images on BIM page
+- [ ] Remove white borders from slide images on IEME page
+- [ ] Remove white borders from slide images on IEA page
+- [ ] Remove white borders from slide images on NexDT page
+- [ ] Verify all slide images are clean and borderless

@@ -77,7 +77,7 @@ export default function NexDT() {
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Engineering Team"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-[1.02] origin-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">

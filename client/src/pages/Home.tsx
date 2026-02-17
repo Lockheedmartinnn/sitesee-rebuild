@@ -65,7 +65,7 @@ export default function Home() {
             <img 
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/BkdzXaQhAVbmUHXb.jpg" 
               alt="Global Customer Base" 
-              className="w-full h-auto"
+              className="w-full h-auto scale-[1.02] origin-center"
             />
           </div>
         </div>
