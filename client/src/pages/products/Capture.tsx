@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Plane, Map, Crosshair } from "lucide-react";
 import { Link } from "wouter";
 import ScalePointSection from "@/components/ScalePointSection";
 import PilotCompanionSection from "@/components/PilotCompanionSection";
+import RooftopPlannerSection from "@/components/RooftopPlannerSection";
 
 export default function Capture() {
   return (
@@ -44,6 +45,7 @@ export default function Capture() {
 
       <ScalePointSection />
       <PilotCompanionSection />
+      <RooftopPlannerSection />
 
       {/* Key Features Grid */}
       <section className="py-24 bg-white">
