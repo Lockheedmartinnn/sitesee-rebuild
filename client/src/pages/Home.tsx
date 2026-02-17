@@ -360,21 +360,22 @@ export default function Home() {
           <img 
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-40"
           />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl space-y-12">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1]">
+          <div className="max-w-4xl space-y-12">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter leading-[1.1] text-white drop-shadow-lg">
               If your priorities include efficiency, precision, and governance at scale -
             </h2>
 
-            <p className="text-3xl font-bold">
+            <p className="text-3xl font-bold text-white drop-shadow-md">
               Then the conversation is overdue.
             </p>
 
-            <a href="/contact" className="h-14 px-8 text-base bg-white text-blue-600 hover:bg-gray-100 border-0 font-bold rounded-none inline-flex items-center gap-2">
+            <a href="/contact" className="h-14 px-8 text-base bg-white text-blue-600 hover:bg-gray-100 border-0 font-bold rounded-none inline-flex items-center gap-2 shadow-lg">
               Let's Talk
             </a>
           </div>

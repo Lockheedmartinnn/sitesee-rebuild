@@ -1,3 +1,2 @@
-- [ ] Add meta description and keywords to index.html
-- [ ] Add alt text to all images in Home.tsx and its components
-- [ ] Verify SEO improvements with a check
+- [ ] Fix text transparency issue in "If your priorities include..." section on Home.tsx
+- [ ] Ensure text is solid and readable against the background
