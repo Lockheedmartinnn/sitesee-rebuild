@@ -174,6 +174,129 @@ export default function NexDT() {
         </div>
       </section>
 
+      {/* Feature Deep Dive - Alternating Layout */}
+      <section className="py-24 bg-white text-black">
+        <div className="container">
+          <div className="space-y-32">
+            
+            {/* Feature 1: Compliance */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6 text-blue-600" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">
+                  Confirm Compliance Distances
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Instantly verify ICNIRP and EME compliance with precise 3D measurements. Visualize safety zones and ensure regulatory adherence without leaving your desk.
+                </p>
+                <ul className="space-y-3 pt-4">
+                  {[
+                    "Measure to check ICNIRP compliance",
+                    "Visualize EME plumes in 3D",
+                    "Verify safety distances instantly",
+                    "Generate compliance reports"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-slate-700">
+                      <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity blur-xl" />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+                  <img 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/pcvPqMRbMMuYAdEk.png" 
+                    alt="Confirming compliance distances interface" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Feature 2: Real-time Design */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1 relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity blur-xl" />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+                  <img 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/ePACTEfDomYdCXhe.png" 
+                    alt="Adding a new mount and antenna in real time" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-purple-600" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">
+                  Real-Time Design & Optioneering
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Drag and drop new mounts and antennas directly into the digital twin. Test different configurations, check clearances, and validate designs in real-time before any site visit.
+                </p>
+                <ul className="space-y-3 pt-4">
+                  {[
+                    "Add new mounts and antennas instantly",
+                    "Visual clash detection",
+                    "Precise positioning and orientation",
+                    "Rapid scenario testing"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-slate-700">
+                      <CheckCircle2 className="w-5 h-5 text-purple-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Feature 3: Equipment Management */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                  <Layers className="w-6 h-6 text-green-600" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">
+                  Full Equipment Lifecycle Management
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Add, move, and delete equipment as required. Update port specifications for EME/ICNIRP calculations and maintain a living, breathing record of your asset's evolution.
+                </p>
+                <ul className="space-y-3 pt-4">
+                  {[
+                    "Update equipment port specifications",
+                    "Manage equipment lifecycle",
+                    "Maintain accurate asset records",
+                    "Seamless integration with engineering workflows"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-slate-700">
+                      <CheckCircle2 className="w-5 h-5 text-green-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity blur-xl" />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+                  <img 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/bKvoOCDEDbfbaHie.png" 
+                    alt="Equipment management interface" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* What Makes Next-Gen */}
       <section className="py-20 md:py-32 bg-slate-900 text-white">
         <div className="container max-w-6xl mx-auto px-4">
