@@ -31,8 +31,7 @@ function Router() {
         <Route path={"/products/bim"} component={BIM} />
         <Route path={"/products/ai-analysis"} component={AIAnalysis} />
         <Route path={"/products/capture"} component={Capture} />
-        <Route path={"/products/ai-boost"} component={AIBoost} />
-        <Route path={"/products/3d-modeling"} component={BIM} /> {/* Redirect 3D Modeling to BIM for now as they share context */}
+
         <Route path={"/value"} component={Value} />
         <Route path={"/roi-calculator"} component={ROICalculator} />
         <Route path={"/company"} component={Company} />

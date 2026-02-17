@@ -103,20 +103,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         </div>
                       </div>
 
-                      <div className="col-span-2 pt-2 border-t border-border mt-2">
-                        <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2 mb-2">3D Modeling</h4>
-                        <div className="grid grid-cols-3 gap-3">
-                          <ListItem href="/products/3d-modeling" title="TowerSee">
-                            Standard Modeling
-                          </ListItem>
-                          <ListItem href="/products/3d-modeling" title="TowerSee MAX">
-                            High Fidelity
-                          </ListItem>
-                          <ListItem href="/products/ai-boost" title="AI Boost Engine">
-                            Performance
-                          </ListItem>
-                        </div>
-                      </div>
+
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
