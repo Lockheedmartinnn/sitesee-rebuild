@@ -1,5 +1,5 @@
-- [ ] Generate high-quality UI mockup for Pilot Companion App
-- [ ] Update PilotCompanionSection.tsx with new image
+- [ ] Remove "What makes a digital twin truly next generation" section from NexDT.tsx (retry with correct content)
+- [ ] Update footer products list in Footer.tsx
 - [ ] Compress and resize large images to WebP format
 - [ ] Implement lazy loading for all images below the fold
 - [ ] Verify website loading speed after optimization

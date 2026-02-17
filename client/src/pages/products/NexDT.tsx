@@ -187,59 +187,7 @@ export default function NexDT() {
         </div>
       </section>
 
-      {/* What Makes Next-Gen */}
-      <section className="py-20 md:py-32 bg-slate-900 text-white">
-        <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            What makes a digital twin truly next generation
-          </h2>
-          
-          <p className="text-xl text-slate-300 mb-12 font-light">
-            A next-generation digital twin is not defined by visual fidelity.
-          </p>
-          
-          <p className="text-xl text-slate-300 mb-6 font-light">
-            It is defined by where it sits in the operating model.
-          </p>
-          
-          <p className="text-xl text-slate-300 mb-12 font-semibold">
-            A true next-generation digital twin:
-          </p>
-          
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
-            {[
-              {
-                title: "Is embedded directly into upgrade, colocation, and compliance workflows",
-                icon: "🔗"
-              },
-              {
-                title: "Shifts feasibility, engineering, and risk decisions earlier",
-                icon: "⏱️"
-              },
-              {
-                title: "Replaces physical effort with digital certainty",
-                icon: "✓"
-              },
-              {
-                title: "Compresses the path from customer intent to revenue",
-                icon: "→"
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-blue-600/20 border border-blue-500/50 rounded-xl p-6">
-                <p className="text-lg font-semibold text-white">{item.title}</p>
-              </div>
-            ))}
-          </div>
-          
-          <p className="text-lg text-slate-300 mb-8">
-            Rather than acting as a reference artifact, it becomes an operational system.
-          </p>
-          
-          <p className="text-lg text-slate-300">
-            This change in timing is what unlocks value. When decisions move earlier, cost, risk, and delay are structurally reduced rather than managed downstream.
-          </p>
-        </div>
-      </section>
+
 
       {/* Financial Lever - Dark Mode Asymmetric */}
       <section className="py-32 bg-slate-950 text-white overflow-hidden">
