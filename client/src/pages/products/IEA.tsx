@@ -128,20 +128,6 @@ export default function IEA() {
             </div>
 
             <div className="relative space-y-8">
-              {/* Video Embed */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/6T1gNUHfjWY" 
-                  title="IEA Admin Demo" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-
               {/* Lifecycle Management Image */}
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
@@ -149,6 +135,27 @@ export default function IEA() {
                   alt="Lifecycle Management Interface" 
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
+              </div>
+              
+              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-white mb-4">Engineering-Grade Accuracy</h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  IEA bridges the gap between digital twin visualization and structural engineering. Unlike simple visual models, our platform integrates with industry-standard engineering tools to provide instant feedback on structural capacity. This allows engineering teams to assess the viability of new equipment installations in minutes rather than weeks, significantly reducing the time-to-market for network upgrades.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Instant structural capacity checks</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Wind load simulation integration</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Mount analysis automation</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

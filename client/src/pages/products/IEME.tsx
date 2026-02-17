@@ -128,20 +128,6 @@ export default function IEME() {
             </div>
 
             <div className="relative space-y-8">
-              {/* Video Embed */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/67lJY3MZ_ZI" 
-                  title="Indicative EME Demo" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-
               {/* Compliance Image */}
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
@@ -149,6 +135,27 @@ export default function IEME() {
                   alt="Compliance and ICNIRP Analysis Interface" 
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
+              </div>
+              
+              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-white mb-4">Proactive Risk Management</h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Traditional EME compliance is reactive and often requires costly site visits. Our digital twin approach allows you to model electromagnetic fields before any equipment is installed. By visualizing exclusion zones and potential hazards in 3D, you can optimize antenna placement for both performance and safety, ensuring full compliance with ICNIRP guidelines and local regulations.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Visual exclusion zone mapping</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Multi-carrier interference analysis</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Automated compliance reporting</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

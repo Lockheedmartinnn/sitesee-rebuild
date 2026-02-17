@@ -128,20 +128,6 @@ export default function BIM() {
             </div>
 
             <div className="relative space-y-8">
-              {/* Video Embed */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/emsPpio3gpE" 
-                  title="BIM Admin Tool Demo" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-
               {/* Real-Time Design Image */}
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
@@ -150,8 +136,27 @@ export default function BIM() {
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
               </div>
-
-
+              
+              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Asset Intelligence</h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Our BIM solution goes beyond simple 3D visualization. It creates a semantic, queryable database of your physical assets, enabling automated analysis and reporting. Every component is tagged with metadata including manufacturer specifications, installation dates, and maintenance history.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Automated bill of materials generation</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Structural load calculation integration</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-slate-300">Regulatory compliance tracking</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
