@@ -12,7 +12,7 @@ export default function PilotCompanionSection() {
               <div className="absolute -inset-4 bg-blue-500/20 rounded-[3rem] blur-xl animate-pulse" />
               <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-slate-800 shadow-2xl bg-slate-950">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/qKFtpdNipuUBuTvr.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GKGMvaxUYJQJneUf.png" 
                   alt="SiteSee Pilot Companion App Interface" 
                   className="w-full h-auto object-cover"
                 />
