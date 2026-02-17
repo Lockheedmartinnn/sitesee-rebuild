@@ -209,7 +209,7 @@ export default function NexDT() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity blur-xl" />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
                   <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/pcvPqMRbMMuYAdEk.png" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/rKvqfJaYdRkWWovg.png" 
                     alt="Confirming compliance distances interface" 
                     className="w-full h-auto"
                   />
@@ -223,7 +223,7 @@ export default function NexDT() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity blur-xl" />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
                   <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/ePACTEfDomYdCXhe.png" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/FIxfwsSHLCUrvBvJ.png" 
                     alt="Adding a new mount and antenna in real time" 
                     className="w-full h-auto"
                   />
@@ -285,7 +285,7 @@ export default function NexDT() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-3xl opacity-50 group-hover:opacity-70 transition-opacity blur-xl" />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
                   <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/bKvoOCDEDbfbaHie.png" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/SiPqUNsukhxiAXhR.png" 
                     alt="Equipment management interface" 
                     className="w-full h-auto"
                   />

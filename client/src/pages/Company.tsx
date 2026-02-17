@@ -86,7 +86,7 @@ export default function Company() {
                 <div className="relative flex justify-center">
                   <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white p-8 max-w-md w-full">
                     <img 
-                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/qLzURLKwvSMWGNbl.png" 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/iwmyHhHFYZruiQwI.png" 
                       alt="ISO 27001 Certification Badge" 
                       className="w-full h-auto object-contain"
                     />

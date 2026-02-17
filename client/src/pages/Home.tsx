@@ -57,7 +57,7 @@ export default function Home() {
           </div>
           <div className="relative rounded-2xl overflow-hidden bg-slate-900/50 border border-slate-800 p-8">
             <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/vJrCippTTUbZTKST.png" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/KIuuzGZHdNPPmiXu.png" 
               alt="Global Customer Base including Cellnex, Optus, Reliance Jio, Vodafone, American Tower" 
               className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
