@@ -127,18 +127,35 @@ export default function BIM() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative space-y-8">
+              {/* Real-Time Design Image */}
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
-                  alt="BIM Interface" 
-                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/FIxfwsSHLCUrvBvJ.png" 
+                  alt="Real-Time Design Interface" 
+                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="bg-black/50 backdrop-blur-md p-6 rounded-xl border border-white/10">
-                    <p className="text-sm font-mono text-blue-400 mb-2">LIBRARY STATUS</p>
-                    <p className="text-white font-medium">BIM Catalogue Updated</p>
+                    <p className="text-sm font-mono text-blue-400 mb-2">REAL-TIME DESIGN</p>
+                    <p className="text-white font-medium">Adding New Mount & Antenna</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Equipment Lifecycle Image */}
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/SiPqUNsukhxiAXhR.png" 
+                  alt="Equipment Lifecycle Interface" 
+                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="bg-black/50 backdrop-blur-md p-6 rounded-xl border border-white/10">
+                    <p className="text-sm font-mono text-blue-400 mb-2">LIFECYCLE MANAGEMENT</p>
+                    <p className="text-white font-medium">Add, Move & Delete Equipment</p>
                   </div>
                 </div>
               </div>
