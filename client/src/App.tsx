@@ -13,6 +13,8 @@ import IEME from "./pages/products/IEME";
 import BIM from "./pages/products/BIM";
 import AIAnalysis from "./pages/products/AIAnalysis";
 import Capture from "./pages/products/Capture";
+import ScalePoints from "./pages/products/ScalePoints";
+import PilotCompanion from "./pages/products/PilotCompanion";
 import AIBoost from "./pages/products/AIBoost";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
@@ -31,6 +33,8 @@ function Router() {
         <Route path={"/products/bim"} component={BIM} />
         <Route path={"/products/ai-analysis"} component={AIAnalysis} />
         <Route path={"/products/capture"} component={Capture} />
+        <Route path={"/products/scale-points"} component={ScalePoints} />
+        <Route path={"/products/pilot-companion"} component={PilotCompanion} />
 
         <Route path={"/value"} component={Value} />
         <Route path={"/roi-calculator"} component={ROICalculator} />

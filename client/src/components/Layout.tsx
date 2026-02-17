@@ -95,6 +95,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           <ListItem href="/products/capture" title="Mission Planner">
                             Drone Capture
                           </ListItem>
+                          <ListItem href="/products/pilot-companion" title="Pilot Companion">
+                            Field App
+                          </ListItem>
+                          <ListItem href="/products/scale-points" title="ScalePoint">
+                            Precision Scaling
+                          </ListItem>
                           
                           <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2 pt-2">AI Analysis</h4>
                           <ListItem href="/products/ai-analysis" title="AI Audit Engine">
