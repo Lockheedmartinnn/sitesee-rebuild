@@ -5,8 +5,6 @@ import CustomerMap from "@/components/CustomerMap";
 import FlightsCounter from "@/components/FlightsCounter";
 import { Testimonials } from "@/components/Testimonials";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
-import AnimatedCounter from "@/components/AnimatedCounter";
-import ROICalculator from "@/components/ROICalculator";
 
 export default function Home() {
   return (
@@ -119,13 +117,11 @@ export default function Home() {
               {[
                 { label: "Upgrade Approval", value: "44 Days", sub: "Reduced from 8 months", color: "text-blue-400" },
                 { label: "First Time Right", value: "80%", sub: "Improved from 32%", color: "text-green-400" },
-                { label: "CO₂ Avoided", value: "5,000+ Tonnes", sub: "Across the estate", color: "text-purple-400" },
-                { label: "Climbs Avoided", value: "30,000+", sub: "High-risk climbs", color: "text-orange-400" }
+                { label: "CO₂ Avoided", value: "5K+ Tonnes", sub: "Across the estate", color: "text-purple-400" },
+                { label: "Climbs Avoided", value: "30K+", sub: "High-risk climbs", color: "text-orange-400" }
               ].map((metric, idx) => (
                 <div key={idx} className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
-                  <div className={`text-5xl font-bold tracking-tighter mb-4 ${metric.color}`}>
-                    <AnimatedCounter value={metric.value} className={metric.color} />
-                  </div>
+                  <div className={`text-5xl font-bold tracking-tighter mb-4 ${metric.color}`}>{metric.value}</div>
                   <div className="text-lg font-medium text-white mb-2">{metric.label}</div>
                   <div className="text-sm text-slate-400">{metric.sub}</div>
                 </div>
@@ -134,9 +130,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ROI Calculator Section */}
-      <ROICalculator />
 
       {/* Video Testimonial Section */}
       <VideoTestimonial />
@@ -176,6 +169,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       {/* Industry Reality - Asymmetric Layout */}
       <section className="py-24 md:py-32 bg-white">

@@ -1,6 +1,2 @@
-- [ ] Restore Global Customer Map section in Home.tsx
-- [ ] Implement animated counting for "Proven at Scale" metrics
-- [ ] Create and integrate ROI Calculator component
-- [ ] Compress and resize large images to WebP format
-- [ ] Implement lazy loading for all images below the fold
-- [ ] Verify website loading speed after optimization
+- [ ] Remove Global Customer Base section from Home.tsx
+- [ ] Verify Home page layout after removal
