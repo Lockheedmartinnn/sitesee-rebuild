@@ -49,27 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Global Customer Base Section */}
-      <section className="py-24 bg-white border-b border-slate-100">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
-              Global Customer Base
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Delivering value to enterprise customers with portfolios from 1,000 to 20,000+ towers worldwide.
-            </p>
-          </div>
-          
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
-            <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/BkdzXaQhAVbmUHXb.jpg" 
-              alt="Global Customer Base" 
-              className="w-full h-auto scale-[1.02] origin-center"
-            />
-          </div>
-        </div>
-      </section>
+
 
       {/* Animated Flights Counter Section */}
       <FlightsCounter />
