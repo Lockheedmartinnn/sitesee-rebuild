@@ -50,21 +50,23 @@ export default function Home() {
       </section>
 
       {/* Global Customer Base Section */}
-      <section className="py-16 bg-slate-950 border-b border-slate-900">
-        <div className="container">
-          <div className="text-center mb-10">
-            <p className="text-sm font-medium text-slate-400 uppercase tracking-widest">Trusted by Global Leaders</p>
+      <section className="py-24 bg-white border-b border-slate-100">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
+              Global Customer Base
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Delivering value to enterprise customers with portfolios from 1,000 to 20,000+ towers worldwide.
+            </p>
           </div>
-          <div className="relative rounded-2xl overflow-hidden bg-slate-900/50 border border-slate-800 p-8">
+          
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
             <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/KIuuzGZHdNPPmiXu.png" 
-              alt="Global Customer Base including Cellnex, Optus, Reliance Jio, Vodafone, American Tower" 
-              className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/BkdzXaQhAVbmUHXb.jpg" 
+              alt="Global Customer Base" 
+              className="w-full h-auto"
             />
-            <div className="mt-8 flex items-center justify-center gap-3 text-blue-400 bg-blue-950/30 py-3 px-6 rounded-full w-fit mx-auto border border-blue-900/50">
-              <CheckCircle2 className="w-5 h-5" />
-              <span className="font-medium">Delivering value to enterprise customers with portfolios from 1,000 to 20,000+ towers worldwide.</span>
-            </div>
           </div>
         </div>
       </section>

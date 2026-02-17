@@ -127,20 +127,28 @@ export default function IEME() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+            <div className="relative space-y-8">
+              {/* Video Embed */}
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/67lJY3MZ_ZI" 
+                  title="Indicative EME Demo" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+
+              {/* Compliance Image */}
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/rKvqfJaYdRkWWovg.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JZxhoxtdYgmxgZgF.jpg" 
                   alt="Compliance and ICNIRP Analysis Interface" 
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="bg-black/50 backdrop-blur-md p-6 rounded-xl border border-white/10">
-                    <p className="text-sm font-mono text-blue-400 mb-2">COMPLIANCE CHECK</p>
-                    <p className="text-white font-medium">ICNIRP & EME Safety Zones Verified</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
