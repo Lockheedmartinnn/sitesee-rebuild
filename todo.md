@@ -1,3 +1,5 @@
-- [ ] Adjust "Why it matters" section in ScalePoints.tsx to avoid covering image
-- [ ] Darken the background/overlay in ScalePoints.tsx to reduce brightness
-- [ ] Verify layout and readability on Scale Points page
+- [ ] Generate improved Pilot Companion App image preserving UI content
+- [ ] Update PilotCompanionSection.tsx with new image
+- [ ] Compress and resize large images to WebP format
+- [ ] Implement lazy loading for all images below the fold
+- [ ] Verify website loading speed after optimization
