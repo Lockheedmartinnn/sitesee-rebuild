@@ -1,5 +1,2 @@
-- [ ] Generate improved Pilot Companion App image preserving UI content
-- [ ] Update PilotCompanionSection.tsx with new image
-- [ ] Compress and resize large images to WebP format
-- [ ] Implement lazy loading for all images below the fold
-- [ ] Verify website loading speed after optimization
+- [ ] Save checkpoint with updated Pilot Companion image
+- [ ] Verify website functionality after image update
