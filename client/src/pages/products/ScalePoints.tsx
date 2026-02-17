@@ -58,16 +58,18 @@ export default function ScalePoints() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/wLMJzVLQwtXPiNdV.jpg" 
                   alt="SiteSee ScalePoint Reference" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent pointer-events-none" />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 max-w-xs">
-                <p className="font-display font-bold text-slate-900 mb-2">Why it matters</p>
-                <p className="text-sm text-slate-600">
+              {/* Moved to side to avoid covering image */}
+              <div className="absolute -bottom-12 right-0 md:-right-12 bg-slate-900 p-6 rounded-xl shadow-2xl border border-slate-800 max-w-xs z-10">
+                <p className="font-display font-bold text-white mb-2">Why it matters</p>
+                <p className="text-sm text-slate-400 italic">
                   "In about fifteen minutes you have a high-confidence view on whether it’s going to work."
                 </p>
               </div>
