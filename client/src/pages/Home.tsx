@@ -137,38 +137,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <Testimonials />
 
-      {/* Global Customer Map Section */}
-      <section className="py-24 md:py-32 bg-slate-50">
-        <div className="container">
-          <div className="space-y-16">
-            <div className="max-w-2xl">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
-                Trusted Globally
-              </h2>
-              <p className="text-xl text-slate-600 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
-            </div>
 
-            <CustomerMap />
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {[
-                { name: 'USA', customers: '12+' },
-                { name: 'UK', customers: '8+' },
-                { name: 'Australia', customers: '6+' },
-                { name: 'Philippines', customers: '4+' },
-                { name: 'Malaysia', customers: '3+' },
-                { name: 'Oman', customers: '2+' },
-              ].map((region) => (
-                <div key={region.name} className="text-center p-6 bg-white rounded-sm border border-slate-200 hover:border-blue-300 transition-colors">
-                  <p className="text-sm font-semibold text-slate-600 mb-2">REGION</p>
-                  <p className="text-2xl font-bold text-foreground mb-1">{region.name}</p>
-                  <p className="text-lg text-blue-600 font-bold">{region.customers} Operators</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
