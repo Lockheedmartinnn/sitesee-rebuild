@@ -1,5 +1,5 @@
-- [ ] Remove "What makes a digital twin truly next generation" section from NexDT.tsx (retry with correct content)
-- [ ] Update footer products list in Footer.tsx
+- [ ] Remove empty white section from NexDT.tsx
+- [ ] Verify seamless transition between dark sections on NexDT page
 - [ ] Compress and resize large images to WebP format
 - [ ] Implement lazy loading for all images below the fold
 - [ ] Verify website loading speed after optimization

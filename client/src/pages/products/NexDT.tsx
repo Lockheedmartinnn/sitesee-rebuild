@@ -174,18 +174,7 @@ export default function NexDT() {
         </div>
       </section>
 
-      {/* Feature Deep Dive - Alternating Layout */}
-      <section className="py-24 bg-white text-black">
-        <div className="container">
-          <div className="space-y-32">
-            
 
-
-
-
-          </div>
-        </div>
-      </section>
 
 
 
