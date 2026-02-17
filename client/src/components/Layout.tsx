@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
@@ -167,6 +167,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px] border-l border-border bg-background/95 backdrop-blur-xl">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <SheetDescription className="sr-only">
+                  Main navigation menu for mobile devices
+                </SheetDescription>
                 <nav className="flex flex-col gap-6 mt-10">
                   <div className="flex flex-col gap-2">
                     <h3 className="font-display font-medium text-sm text-muted-foreground uppercase tracking-wider mb-2">Products</h3>

@@ -1,2 +1,2 @@
-- [ ] Search for all "Request a Demo" buttons/links
-- [ ] Update href to "/contact" for all instances
+- [ ] Locate Dialog component in Capture.tsx
+- [ ] Add DialogTitle (visually hidden if needed) to fix accessibility error
