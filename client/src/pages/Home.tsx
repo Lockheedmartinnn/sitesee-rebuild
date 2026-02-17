@@ -5,6 +5,8 @@ import CustomerMap from "@/components/CustomerMap";
 import FlightsCounter from "@/components/FlightsCounter";
 import { Testimonials } from "@/components/Testimonials";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
+import AnimatedCounter from "@/components/AnimatedCounter";
+import ROICalculator from "@/components/ROICalculator";
 
 export default function Home() {
   return (
@@ -117,11 +119,13 @@ export default function Home() {
               {[
                 { label: "Upgrade Approval", value: "44 Days", sub: "Reduced from 8 months", color: "text-blue-400" },
                 { label: "First Time Right", value: "80%", sub: "Improved from 32%", color: "text-green-400" },
-                { label: "CO₂ Avoided", value: "5K+ Tonnes", sub: "Across the estate", color: "text-purple-400" },
-                { label: "Climbs Avoided", value: "30K+", sub: "High-risk climbs", color: "text-orange-400" }
+                { label: "CO₂ Avoided", value: "5,000+ Tonnes", sub: "Across the estate", color: "text-purple-400" },
+                { label: "Climbs Avoided", value: "30,000+", sub: "High-risk climbs", color: "text-orange-400" }
               ].map((metric, idx) => (
                 <div key={idx} className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
-                  <div className={`text-5xl font-bold tracking-tighter mb-4 ${metric.color}`}>{metric.value}</div>
+                  <div className={`text-5xl font-bold tracking-tighter mb-4 ${metric.color}`}>
+                    <AnimatedCounter value={metric.value} className={metric.color} />
+                  </div>
                   <div className="text-lg font-medium text-white mb-2">{metric.label}</div>
                   <div className="text-sm text-slate-400">{metric.sub}</div>
                 </div>
@@ -131,15 +135,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ROI Calculator Section */}
+      <ROICalculator />
+
       {/* Video Testimonial Section */}
       <VideoTestimonial />
 
       {/* Testimonials Section */}
       <Testimonials />
 
+      {/* Global Customer Map Section */}
+      <section className="py-24 md:py-32 bg-slate-50">
+        <div className="container">
+          <div className="space-y-16">
+            <div className="max-w-2xl">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+                Trusted Globally
+              </h2>
+              <p className="text-xl text-slate-600 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
+            </div>
 
+            <CustomerMap />
 
-
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {[
+                { name: 'USA', customers: '12+' },
+                { name: 'UK', customers: '8+' },
+                { name: 'Australia', customers: '6+' },
+                { name: 'Philippines', customers: '4+' },
+                { name: 'Malaysia', customers: '3+' },
+                { name: 'Oman', customers: '2+' },
+              ].map((region) => (
+                <div key={region.name} className="text-center p-6 bg-white rounded-sm border border-slate-200 hover:border-blue-300 transition-colors">
+                  <p className="text-sm font-semibold text-slate-600 mb-2">REGION</p>
+                  <p className="text-2xl font-bold text-foreground mb-1">{region.name}</p>
+                  <p className="text-lg text-blue-600 font-bold">{region.customers} Operators</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Industry Reality - Asymmetric Layout */}
       <section className="py-24 md:py-32 bg-white">
