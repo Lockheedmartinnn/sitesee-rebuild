@@ -1,2 +1,2 @@
-- [ ] Fix text transparency issue in "If your priorities include..." section on Home.tsx
-- [ ] Ensure text is solid and readable against the background
+- [ ] Search for all "Request a Demo" buttons/links
+- [ ] Update href to "/contact" for all instances
