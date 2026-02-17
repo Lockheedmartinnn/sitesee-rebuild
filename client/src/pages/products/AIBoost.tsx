@@ -9,7 +9,7 @@ export default function AIBoost() {
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/digital-interface-clean.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
             alt="AI Boost Engine" 
             className="w-full h-full object-cover opacity-60"
           />

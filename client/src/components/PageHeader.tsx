@@ -11,7 +11,7 @@ interface PageHeaderProps {
 export default function PageHeader({ 
   title, 
   subtitle, 
-  backgroundImage = "/images/hero-drone-tower.jpg",
+  backgroundImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/mItwEHtgdHfmlgKd.jpg",
   className,
   children 
 }: PageHeaderProps) {

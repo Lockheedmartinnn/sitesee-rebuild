@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Plane, Map, Crosshair } from "lucide-react";
 import { Link } from "wouter";
+import ScalePointSection from "@/components/ScalePointSection";
 
 export default function Capture() {
   return (
@@ -9,7 +10,7 @@ export default function Capture() {
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="DroneSee Mission Planner" 
             className="w-full h-full object-cover opacity-60"
           />
@@ -39,6 +40,8 @@ export default function Capture() {
           </div>
         </div>
       </section>
+
+      <ScalePointSection />
 
       {/* Key Features Grid */}
       <section className="py-24 bg-white">

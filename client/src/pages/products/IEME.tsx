@@ -9,7 +9,7 @@ export default function IEME() {
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="IEME Analysis" 
             className="w-full h-full object-cover opacity-60"
           />
@@ -130,7 +130,7 @@ export default function IEME() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
-                  src="/images/tower-structural-detail.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
                   alt="IEME Visualization" 
                   className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                 />

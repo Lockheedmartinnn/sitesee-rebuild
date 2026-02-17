@@ -10,7 +10,7 @@ export default function Value() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="Tower infrastructure" 
             className="w-full h-full object-cover opacity-30"
           />
@@ -262,7 +262,7 @@ export default function Value() {
             <div className="relative">
               <div className="aspect-square rounded-lg overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/engineering-team-office.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Customer success" 
                   className="w-full h-full object-cover"
                 />
@@ -325,7 +325,7 @@ export default function Value() {
             <div className="relative">
               <div className="aspect-square rounded-lg overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/tower-structural-detail.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
                   alt="Tower infrastructure" 
                   className="w-full h-full object-cover"
                 />
@@ -341,7 +341,7 @@ export default function Value() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 md:h-full">
               <img 
-                src="/images/digital-interface-clean.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
                 alt="Executive conclusion"
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -374,7 +374,7 @@ export default function Value() {
       <section className="py-32 md:py-48 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="Background" 
             className="w-full h-full object-cover"
           />

@@ -14,7 +14,7 @@ export default function Home() {
         {/* Background Image with Modern Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="Drone inspecting tower" 
             className="w-full h-full object-cover opacity-50"
           />
@@ -84,7 +84,7 @@ export default function Home() {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
-                  src="/images/engineering-team-office.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Engineering Team"
                   className="w-full h-full object-cover"
                 />
@@ -205,7 +205,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/tower-structural-detail.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
                   alt="Tower structural detail" 
                   className="w-full h-full object-cover"
                 />
@@ -222,7 +222,7 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/digital-interface-clean.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
                   alt="Digital interface" 
                   className="w-full h-full object-cover"
                 />
@@ -356,7 +356,7 @@ export default function Home() {
       <section className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="Background" 
             className="w-full h-full object-cover"
           />

@@ -9,7 +9,7 @@ export default function Company() {
       <PageHeader 
         title="About SiteSee" 
         subtitle="We're on a mission to revolutionise the tower industry by transforming the speed, accuracy, and cost-effectiveness of co-location and asset management processes."
-        backgroundImage="/images/collaboration-engineers.jpg"
+        backgroundImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/iOdJUdViceUhyKRS.jpg"
       />
 
       <section className="py-24 bg-background">

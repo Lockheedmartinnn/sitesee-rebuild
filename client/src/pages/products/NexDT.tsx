@@ -8,7 +8,7 @@ export default function NexDT() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero-drone-tower-v2.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
             alt="NexDT Platform"
             className="w-full h-full object-cover opacity-40"
           />
@@ -75,7 +75,7 @@ export default function NexDT() {
             <div className="relative">
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
-                  src="/images/engineering-team-office.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Engineering Team"
                   className="w-full h-full object-cover"
                 />
@@ -127,7 +127,7 @@ export default function NexDT() {
             <div className="lg:col-span-5 relative order-2 lg:order-1">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
-                  src="/images/tower-structural-detail.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
                   alt="Drone Capture"
                   className="w-full h-full object-cover"
                 />
@@ -235,7 +235,7 @@ export default function NexDT() {
             <div className="relative order-2 lg:order-1">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
-                  src="/images/digital-interface-clean.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
                   alt="Financial Impact"
                   className="w-full h-full object-cover"
                 />
@@ -346,7 +346,7 @@ export default function NexDT() {
             <div className="relative h-96 md:h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 rounded-2xl"></div>
               <img 
-                src="/images/hero-drone-tower-v2.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
                 alt="ROI Visualization"
                 className="w-full h-full object-cover rounded-2xl mix-blend-overlay"
               />
@@ -464,7 +464,7 @@ export default function NexDT() {
             
             <div className="relative h-96 md:h-full">
               <img 
-                src="/images/engineering-team-office.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                 alt="Customer Success"
                 className="w-full h-full object-cover rounded-2xl"
               />
@@ -479,7 +479,7 @@ export default function NexDT() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-full">
               <img 
-                src="/images/digital-interface-clean.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
                 alt="SiteSee Platform"
                 className="w-full h-full object-cover rounded-2xl"
               />
@@ -529,7 +529,7 @@ export default function NexDT() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-full">
               <img 
-                src="/images/hero-drone-tower-v2.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
                 alt="Executive Conclusion"
                 className="w-full h-full object-cover rounded-2xl"
               />
