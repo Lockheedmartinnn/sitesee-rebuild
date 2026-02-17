@@ -13,11 +13,11 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* Background Image with Modern Gradient Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
-            alt="Drone inspecting tower" 
-            className="w-full h-full object-cover opacity-50"
-          />
+            <img 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
+              alt="Drone inspecting a telecom tower against a dark sky" 
+              className="w-full h-full object-cover opacity-50"
+            />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
         </div>
@@ -87,7 +87,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
-                  alt="Engineering Team"
+                  alt="Engineering team collaborating on a digital twin project"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -208,7 +208,7 @@ export default function Home() {
               <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
-                  alt="Tower structural detail" 
+                  alt="Close-up of complex telecom tower structural details" 
                   className="w-full h-full object-cover"
                 />
               </div>

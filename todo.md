@@ -1,2 +1,3 @@
-- [ ] Save checkpoint with updated Pilot Companion image
-- [ ] Verify website functionality after image update
+- [ ] Add meta description and keywords to index.html
+- [ ] Add alt text to all images in Home.tsx and its components
+- [ ] Verify SEO improvements with a check
