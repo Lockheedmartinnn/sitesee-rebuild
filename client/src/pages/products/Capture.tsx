@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Plane, Map, Crosshair } from "lucide-react";
 import { Link } from "wouter";
 import ScalePointSection from "@/components/ScalePointSection";
+import PilotCompanionSection from "@/components/PilotCompanionSection";
 
 export default function Capture() {
   return (
@@ -42,6 +43,7 @@ export default function Capture() {
       </section>
 
       <ScalePointSection />
+      <PilotCompanionSection />
 
       {/* Key Features Grid */}
       <section className="py-24 bg-white">
