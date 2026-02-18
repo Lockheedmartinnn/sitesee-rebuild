@@ -1,2 +1,6 @@
 - [ ] Locate Dialog component in Capture.tsx
 - [ ] Add DialogTitle (visually hidden if needed) to fix accessibility error
+- [ ] Create EBITDA & Enterprise Value Calculator component
+- [ ] Add dynamic inputs for Number of Sites, Rent, Margin, Acceleration Days, etc.
+- [ ] Implement real-time calculation logic for EBITDA and EV Uplift
+- [ ] Integrate calculator into the website (e.g., on ROI Calculator page or a new page)
