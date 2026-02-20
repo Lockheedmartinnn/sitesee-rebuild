@@ -1,160 +1,341 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Radio, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertTriangle, Building2, Activity, Users, FileText, ShieldCheck, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 export default function IEME() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
+      {/* Hero Section - Video Background */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
-            alt="IEME Analysis" 
-            className="w-full h-full object-cover opacity-60"
-          />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover opacity-40"
+          >
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/WaXdEnMZWNHYAYsd.mov" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
 
         <div className="container relative z-10 py-32">
           <div className="max-w-4xl space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-800/50 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">EME/RF Hazard Assessment</span>
+              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">EME Compliance Analysis</span>
             </div>
 
-            <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-              EME/RF Hazard <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Assessment</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              Ensuring ICNIRP Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Before Installation</span>
             </h1>
             
-            <p className="text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
-              Integrated into the NexDT ecosystem to produce indicative distribution of electromagnetic fields (EME) for effortless compliance.
+            <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
+              You can't move forward with upgrades, colocation, or site commissioning if you're not ICNIRP compliant. SiteSee's EME Analysis eliminates the bottleneck by generating compliant exclusion zones digitally, before site access, before climbs, before delays.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <a href="/contact" className="h-14 px-8 text-base bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
-                Request Demo <ArrowRight className="w-5 h-5" />
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button size="lg" className="h-14 px-8 text-lg rounded-full shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
+                Book Technical Demo <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full bg-white/5 border-white/20 text-white hover:bg-white/10 hover:text-white">
+                Download Sample IEA Report
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Features Grid */}
+      {/* The Regulatory Reality Section */}
       <section className="py-24 bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <ShieldCheck className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                  The Regulatory Reality: <br/>
+                  <span className="text-red-600">No Compliance = No Approval</span>
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  ACMA, state regulators, local councils, and building owners all require demonstrated compliance with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold font-display">Effortless Compliance</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Eliminate the complexities of EME compliance with intuitive design capabilities within the nexDT framework.
-              </p>
+
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-amber-500" />
+                  Traditional EME Friction
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span><strong>Site visit dependency:</strong> Requires physical access, often with climbers, adding weeks to timelines.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span><strong>Post-installation validation:</strong> Problems discovered after equipment is ordered and installed.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span><strong>Manual calculation errors:</strong> Spreadsheet-based assessments prone to input errors and conservative over-margins.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Radio className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+            {/* Video Overlay Section */}
+            <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-slate-900 group">
+              {/* Video Background */}
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/WaXdEnMZWNHYAYsd.mov" type="video/mp4" />
+              </video>
+              
+              {/* Overlay Content */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+              
+              <div className="absolute bottom-0 left-0 right-0 p-8 pointer-events-none">
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-green-500/20 rounded-lg">
+                      <ShieldCheck className="w-6 h-6 text-green-400" />
+                    </div>
+                    <h3 className="text-white font-bold text-xl">ARPANSA S-1 Compliant</h3>
+                  </div>
+                  <p className="text-slate-200 text-sm mb-4 leading-relaxed">
+                    Visualizing exclusion zones in 3D relative to occupied spaces. Red zones indicate occupational limits; orange zones indicate general public limits.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-xs text-slate-300">
+                    <div>
+                      <span className="block text-slate-400 uppercase tracking-wider text-[10px]">Standard</span>
+                      ARPANSA S-1 (2021)
+                    </div>
+                    <div>
+                      <span className="block text-slate-400 uppercase tracking-wider text-[10px]">Frequency</span>
+                      100 kHz - 300 GHz
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold font-display">Precise Distributions</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Delivers precise distributions of electromagnetic fields (EME) for accurate hazard assessment.
-              </p>
-            </div>
-
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Zap className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
-              </div>
-              <h3 className="text-2xl font-bold font-display">Real-time Visualization</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Enable precise, real-time visualization of electromagnetic emissions for seamless compliance.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Content Section */}
-      <section className="py-24 bg-slate-950 text-white overflow-hidden">
+      {/* Compliance Framework Section */}
+      <section className="py-24 bg-slate-900 text-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-12">
-              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter leading-[1.1]">
-                Enhance EME Compliance with Digital Twins
-              </h2>
-              
-              <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
-                <p>
-                  Revolutionise your cell tower design process with the power of digital twins. Our cutting-edge technology enables precise, real-time visualization of electromagnetic emissions, allowing for seamless EME compliance.
-                </p>
-                <p>
-                  By simulating various design scenarios digitally, you can quickly identify and address potential compliance issues before physical deployment. This advanced approach accelerates the design cycle, ensures regulatory adherence, and minimizes risks.
-                </p>
-              </div>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Digital EME Modeling to ARPANSA S-1 & ICNIRP 2020
+            </h2>
+            <p className="text-lg text-slate-400">
+              SiteSee's EME Analysis generates Indicative Electromagnetic Energy (IEA) Reports that comply with the strictest Australian and international standards.
+            </p>
+          </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Predict EME Plumes</h4>
-                    <p className="text-sm text-slate-400">Unparalleled accuracy</p>
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                <FileText className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Regulatory Standards</h3>
+              <ul className="space-y-3 text-slate-400 text-sm">
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span>ARPANSA RPS S-1 (2021) Table 4</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span>ICNIRP 2020 Guidelines</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span>100 kHz to 300 GHz Range</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                <Activity className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Exposure Limits</h3>
+              <ul className="space-y-3 text-slate-400 text-sm">
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span><strong>General Public:</strong> 0.08 W/kg Whole-Body SAR</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span><strong>Occupational:</strong> 0.4 W/kg Whole-Body SAR</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span>6-minute averaging time</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                <Zap className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Exclusion Zones</h3>
+              <ul className="space-y-3 text-slate-400 text-sm">
+                <li className="flex gap-2">
+                  <span className="w-3 h-3 rounded-full bg-red-500 shrink-0 mt-1" />
+                  <span><strong>Red (Occupational):</strong> Restricted to trained personnel only</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="w-3 h-3 rounded-full bg-orange-500 shrink-0 mt-1" />
+                  <span><strong>Orange (General Public):</strong> Restricted to RF workers</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                  <span>Calculated per antenna specs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Advantages Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Technical Advantages
+            </h2>
+            <p className="text-lg text-slate-600">
+              Why SiteSee's digital approach outperforms traditional manual assessments.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Measurement-Grade Input Geometry</h3>
+              <p className="text-slate-600 mb-6">
+                Equipment position and bearing measurements from autonomous drone capture achieve tolerances well within margins required for conservative modeling:
+              </p>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="p-4 bg-slate-50 rounded-xl">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">2.9%</div>
+                  <div className="text-xs text-slate-500 font-medium">Position Error</div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Manage Exclusion Zones</h4>
-                    <p className="text-sm text-slate-400">Optimize safety</p>
-                  </div>
+                <div className="p-4 bg-slate-50 rounded-xl">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">2.6°</div>
+                  <div className="text-xs text-slate-500 font-medium">Bearing Error</div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Refine Designs</h4>
-                    <p className="text-sm text-slate-400">For optimal performance</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">BIM Integration</h4>
-                    <p className="text-sm text-slate-400">Use BIM catalogue for verification</p>
-                  </div>
+                <div className="p-4 bg-slate-50 rounded-xl">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">1.9°</div>
+                  <div className="text-xs text-slate-500 font-medium">Tilt Error</div>
                 </div>
               </div>
             </div>
 
-            <div className="relative space-y-8">
-              {/* Compliance Image */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JZxhoxtdYgmxgZgF.jpg" 
-                  alt="Compliance and ICNIRP Analysis Interface" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500 scale-[1.02] origin-center"
-                />
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Complex Multi-Tenant Sites</h3>
+              <p className="text-slate-600 mb-6">
+                IEA modeling accounts for cumulative exposure from all antennas simultaneously across multiple operators and technologies.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-slate-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  <span>Multiple panel antennas from different manufacturers</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  <span>Mixed frequency bands (700 MHz to 5G mmWave)</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  <span>Variable tilts and orientations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Comparison Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
+              Why This Matters to Your Deployment Timeline
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Traditional Timeline */}
+              <div className="p-8 rounded-2xl border border-slate-200 bg-slate-50 opacity-70">
+                <h3 className="text-xl font-bold text-slate-500 mb-6">Traditional EME Assessment</h3>
+                <div className="space-y-4 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-200">
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 0</div>
+                    <div className="text-sm text-slate-500">Request site access</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 2-3</div>
+                    <div className="text-sm text-slate-500">Climber audit scheduled</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 4</div>
+                    <div className="text-sm text-slate-500">Manual EME calculation</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 8</div>
+                    <div className="text-sm text-slate-500">Approval received</div>
+                  </div>
+                </div>
+                <div className="mt-8 pt-6 border-t border-slate-200 text-center">
+                  <div className="text-3xl font-bold text-slate-400">8 Weeks</div>
+                  <div className="text-sm text-slate-500">Total Time</div>
+                </div>
               </div>
-              
-              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-white mb-4">Proactive Risk Management</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Traditional EME compliance is reactive and often requires costly site visits. Our digital twin approach allows you to model electromagnetic fields before any equipment is installed. By visualizing exclusion zones and potential hazards in 3D, you can optimize antenna placement for both performance and safety, ensuring full compliance with ICNIRP guidelines and local regulations.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Visual exclusion zone mapping</span>
+
+              {/* SiteSee Timeline */}
+              <div className="p-8 rounded-2xl border-2 border-blue-100 bg-blue-50/30 shadow-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">
+                  6X FASTER
+                </div>
+                <h3 className="text-xl font-bold text-blue-900 mb-6">SiteSee Digital EME</h3>
+                <div className="space-y-4 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-blue-200">
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Day 0</div>
+                    <div className="text-sm text-blue-700">Request DroneSee capture</div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Multi-carrier interference analysis</span>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Day 1</div>
+                    <div className="text-sm text-blue-700">Input RF parameters</div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Automated compliance reporting</span>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Day 2</div>
+                    <div className="text-sm text-blue-700">IEA Report generated</div>
                   </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Week 2</div>
+                    <div className="text-sm text-blue-700">Approval received</div>
+                  </div>
+                </div>
+                <div className="mt-8 pt-6 border-t border-blue-200 text-center">
+                  <div className="text-3xl font-bold text-blue-600">2 Weeks</div>
+                  <div className="text-sm text-blue-700">Total Time</div>
                 </div>
               </div>
             </div>
@@ -163,18 +344,19 @@ export default function IEME() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-blue-600 text-white">
-        <div className="container text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
-              Ensure safety and compliance with ease.
-            </h2>
-            <p className="text-xl text-blue-100">
-              Leverage SiteSee IEME for precise hazard assessment and regulatory adherence.
-            </p>
-            <a href="/contact" className="h-14 px-10 text-lg bg-white text-blue-600 hover:bg-blue-50 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-lg">
-              Get Started Now
-            </a>
+      <section className="py-24 bg-slate-900 text-white text-center">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Get ARPANSA S-1 Compliant Faster</h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            Stop waiting weeks for site access. Generate IEA Reports digitally and move modifications through approval in days, not months.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-blue-600 hover:bg-blue-700">
+              Book Technical Demo
+            </Button>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-slate-600 hover:bg-slate-800 text-white">
+              Download Sample IEA Report
+            </Button>
           </div>
         </div>
       </section>
