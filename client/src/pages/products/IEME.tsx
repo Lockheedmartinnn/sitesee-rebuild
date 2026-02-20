@@ -263,12 +263,12 @@ export default function IEME() {
                   </div>
                   <div className="relative pl-8">
                     <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
-                    <div className="font-bold text-slate-700">Week 8</div>
+                    <div className="font-bold text-slate-700">Month 2</div>
                     <div className="text-sm text-slate-500">Approval received</div>
                   </div>
                 </div>
                 <div className="mt-8 pt-6 border-t border-slate-200 text-center">
-                  <div className="text-3xl font-bold text-slate-400">8 Weeks</div>
+                  <div className="text-3xl font-bold text-slate-400">2 Months</div>
                   <div className="text-sm text-slate-500">Total Time</div>
                 </div>
               </div>
@@ -297,12 +297,12 @@ export default function IEME() {
                   </div>
                   <div className="relative pl-8">
                     <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
-                    <div className="font-bold text-blue-900">Week 2</div>
+                    <div className="font-bold text-blue-900">Day 5</div>
                     <div className="text-sm text-blue-700">Approval received</div>
                   </div>
                 </div>
                 <div className="mt-8 pt-6 border-t border-blue-200 text-center">
-                  <div className="text-3xl font-bold text-blue-600">2 Weeks</div>
+                  <div className="text-3xl font-bold text-blue-600">5 Days</div>
                   <div className="text-sm text-blue-700">Total Time</div>
                 </div>
               </div>
