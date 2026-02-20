@@ -67,29 +67,7 @@ export default function IEME() {
               {/* Overlay Content */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
               
-              <div className="absolute bottom-0 left-0 right-0 p-8 pointer-events-none">
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-green-500/20 rounded-lg">
-                      <ShieldCheck className="w-6 h-6 text-green-400" />
-                    </div>
-                    <h3 className="text-white font-bold text-xl">Measurement Grade Input Geometry</h3>
-                  </div>
-                  <p className="text-slate-200 text-sm mb-4 leading-relaxed">
-                    Visualizing exclusion zones in 3D relative to occupied spaces. Red zones indicate occupational limits; orange zones indicate general public limits.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 text-xs text-slate-300">
-                    <div>
-                      <span className="block text-slate-400 uppercase tracking-wider text-[10px]">Standard</span>
-                      ARPANSA S-1 (2021)
-                    </div>
-                    <div>
-                      <span className="block text-slate-400 uppercase tracking-wider text-[10px]">Frequency</span>
-                      100 kHz - 300 GHz
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Overlay content removed as requested */}
             </div>
 
             <div className="space-y-8 order-1 lg:order-2">
