@@ -233,6 +233,84 @@ export default function IEME() {
         </div>
       </section>
 
+      {/* Timeline Comparison Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
+              Why This Matters to Your Deployment Timeline
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Traditional Timeline */}
+              <div className="p-8 rounded-2xl border border-slate-200 bg-slate-50 opacity-70">
+                <h3 className="text-xl font-bold text-slate-500 mb-6">Traditional EME Assessment</h3>
+                <div className="space-y-4 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-200">
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 0</div>
+                    <div className="text-sm text-slate-500">Request site access</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 2-3</div>
+                    <div className="text-sm text-slate-500">Climber audit scheduled</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 4</div>
+                    <div className="text-sm text-slate-500">Manual EME calculation</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
+                    <div className="font-bold text-slate-700">Week 8</div>
+                    <div className="text-sm text-slate-500">Approval received</div>
+                  </div>
+                </div>
+                <div className="mt-8 pt-6 border-t border-slate-200 text-center">
+                  <div className="text-3xl font-bold text-slate-400">8 Weeks</div>
+                  <div className="text-sm text-slate-500">Total Time</div>
+                </div>
+              </div>
+
+              {/* SiteSee Timeline */}
+              <div className="p-8 rounded-2xl border-2 border-blue-100 bg-blue-50/30 shadow-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">
+                  6X FASTER
+                </div>
+                <h3 className="text-xl font-bold text-blue-900 mb-6">SiteSee Digital EME</h3>
+                <div className="space-y-4 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-blue-200">
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Day 0</div>
+                    <div className="text-sm text-blue-700">Request DroneSee capture</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Day 1</div>
+                    <div className="text-sm text-blue-700">Input RF parameters</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Day 2</div>
+                    <div className="text-sm text-blue-700">IEA Report generated</div>
+                  </div>
+                  <div className="relative pl-8">
+                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                    <div className="font-bold text-blue-900">Week 2</div>
+                    <div className="text-sm text-blue-700">Approval received</div>
+                  </div>
+                </div>
+                <div className="mt-8 pt-6 border-t border-blue-200 text-center">
+                  <div className="text-3xl font-bold text-blue-600">2 Weeks</div>
+                  <div className="text-sm text-blue-700">Total Time</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 bg-blue-600 text-white">
         <div className="container text-center">
