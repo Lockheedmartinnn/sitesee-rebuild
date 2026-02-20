@@ -5,46 +5,16 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import Layout from "./components/Layout";
-import Telco from "./pages/industries/Telco";
-import NexDT from "./pages/products/NexDT";
-import IEA from "./pages/products/IEA";
-import IEME from "./pages/products/IEME";
-import BIM from "./pages/products/BIM";
-import AIAnalysis from "./pages/products/AIAnalysis";
-import Capture from "./pages/products/Capture";
-import ScalePoints from "./pages/products/ScalePoints";
-import PilotCompanion from "./pages/products/PilotCompanion";
-import AIBoost from "./pages/products/AIBoost";
-import Company from "./pages/Company";
-import Contact from "./pages/Contact";
-import Value from "./pages/Value";
-import ROICalculator from "./pages/ROICalculator";
+
 
 function Router() {
   return (
-    <Layout>
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/industries/telco"} component={Telco} />
-        <Route path={"/products/nexdt"} component={NexDT} />
-        <Route path={"/products/iea"} component={IEA} />
-        <Route path={"/products/ieme"} component={IEME} />
-        <Route path={"/products/bim"} component={BIM} />
-        <Route path={"/products/ai-analysis"} component={AIAnalysis} />
-        <Route path={"/products/capture"} component={Capture} />
-        <Route path={"/products/scale-points"} component={ScalePoints} />
-        <Route path={"/products/pilot-companion"} component={PilotCompanion} />
-
-        <Route path={"/value"} component={Value} />
-        <Route path={"/roi-calculator"} component={ROICalculator} />
-        <Route path={"/company"} component={Company} />
-        <Route path={"/contact"} component={Contact} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <Switch>
+      <Route path={"/"} component={Home} />
+      <Route path={"/404"} component={NotFound} />
+      {/* Final fallback route */}
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 

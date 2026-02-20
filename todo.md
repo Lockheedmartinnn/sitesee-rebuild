@@ -1,2 +1,0 @@
-- [ ] Locate Dialog component in Capture.tsx
-- [ ] Add DialogTitle (visually hidden if needed) to fix accessibility error
