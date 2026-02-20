@@ -1,0 +1,5 @@
+- [ ] Generate high-quality UI mockup for Pilot Companion App
+- [ ] Update PilotCompanionSection.tsx with new image
+- [ ] Compress and resize large images to WebP format
+- [ ] Implement lazy loading for all images below the fold
+- [ ] Verify website loading speed after optimization

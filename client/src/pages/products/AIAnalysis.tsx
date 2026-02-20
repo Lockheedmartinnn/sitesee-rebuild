@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Radio, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Scan, AlertTriangle, FileText } from "lucide-react";
 import { Link } from "wouter";
 
-export default function IEME() {
+export default function AIAnalysis() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -10,7 +10,7 @@ export default function IEME() {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
-            alt="IEME Analysis" 
+            alt="AI Analysis" 
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
@@ -20,15 +20,15 @@ export default function IEME() {
           <div className="max-w-4xl space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">EME/RF Hazard Assessment</span>
+              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Artificial Intelligence Audit Engine</span>
             </div>
 
             <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-              EME/RF Hazard <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Assessment</span>
+              Automated Defect <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Detection & Classification</span>
             </h1>
             
             <p className="text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
-              Integrated into the NexDT ecosystem to produce indicative distribution of electromagnetic fields (EME) for effortless compliance.
+              The most advanced AI Audit engine for real world infrastructure. Automatically detect classification and position of equipment without human intervention.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
@@ -46,31 +46,31 @@ export default function IEME() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <ShieldCheck className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+                <Scan className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Effortless Compliance</h3>
+              <h3 className="text-2xl font-bold font-display">AI Equipment Audit</h3>
               <p className="text-slate-600 leading-relaxed">
-                Eliminate the complexities of EME compliance with intuitive design capabilities within the nexDT framework.
+                Detect all emitting and non emitting equipment with all their measurements and their 3D position using Shapefitting™ technology.
               </p>
             </div>
 
             <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Radio className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+                <AlertTriangle className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Precise Distributions</h3>
+              <h3 className="text-2xl font-bold font-display">AI Corrosion Audit</h3>
               <p className="text-slate-600 leading-relaxed">
-                Delivers precise distributions of electromagnetic fields (EME) for accurate hazard assessment.
+                Detect corrosion and classify corrosion severity with its 3D position. Results available in 3D model and reports.
               </p>
             </div>
 
             <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Zap className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+                <FileText className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Real-time Visualization</h3>
+              <h3 className="text-2xl font-bold font-display">Exception Reporting</h3>
               <p className="text-slate-600 leading-relaxed">
-                Enable precise, real-time visualization of electromagnetic emissions for seamless compliance.
+                Compare actual AI detected as-built equipment list with customer equipment list to identify discrepancies.
               </p>
             </div>
           </div>
@@ -83,15 +83,15 @@ export default function IEME() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
               <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter leading-[1.1]">
-                Enhance EME Compliance with Digital Twins
+                Powered by Advanced Machine Learning
               </h2>
               
               <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
                 <p>
-                  Revolutionise your cell tower design process with the power of digital twins. Our cutting-edge technology enables precise, real-time visualization of electromagnetic emissions, allowing for seamless EME compliance.
+                  The heavy lift is provided by Machine Learning and implementation of several Convolution Neural Networks (CNN). The end results is your infrastructure is automatically detected and classified through an end to end automated process without any human intervention.
                 </p>
                 <p>
-                  By simulating various design scenarios digitally, you can quickly identify and address potential compliance issues before physical deployment. This advanced approach accelerates the design cycle, ensures regulatory adherence, and minimizes risks.
+                  By combining our advanced machine learning and Shapefitting™ technology, we deliver the most accurate equipment audit. Audit results are made readily available in the 3D model and through PDF and CSV reports.
                 </p>
               </div>
 
@@ -99,61 +99,46 @@ export default function IEME() {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
                   <div>
-                    <h4 className="font-bold text-white mb-1">Predict EME Plumes</h4>
-                    <p className="text-sm text-slate-400">Unparalleled accuracy</p>
+                    <h4 className="font-bold text-white mb-1">Automated Detection</h4>
+                    <p className="text-sm text-slate-400">No human intervention required</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
                   <div>
-                    <h4 className="font-bold text-white mb-1">Manage Exclusion Zones</h4>
-                    <p className="text-sm text-slate-400">Optimize safety</p>
+                    <h4 className="font-bold text-white mb-1">Shapefitting™ Tech</h4>
+                    <p className="text-sm text-slate-400">Most accurate equipment audit</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
                   <div>
-                    <h4 className="font-bold text-white mb-1">Refine Designs</h4>
-                    <p className="text-sm text-slate-400">For optimal performance</p>
+                    <h4 className="font-bold text-white mb-1">Multi-format Reports</h4>
+                    <p className="text-sm text-slate-400">3D model, PDF, and CSV</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
                   <div>
-                    <h4 className="font-bold text-white mb-1">BIM Integration</h4>
-                    <p className="text-sm text-slate-400">Use BIM catalogue for verification</p>
+                    <h4 className="font-bold text-white mb-1">Corrosion Severity</h4>
+                    <p className="text-sm text-slate-400">Classified with 3D position</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative space-y-8">
-              {/* Compliance Image */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JZxhoxtdYgmxgZgF.jpg" 
-                  alt="Compliance and ICNIRP Analysis Interface" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500 scale-[1.02] origin-center"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
+                  alt="AI Analysis Interface" 
+                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                 />
-              </div>
-              
-              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-white mb-4">Proactive Risk Management</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Traditional EME compliance is reactive and often requires costly site visits. Our digital twin approach allows you to model electromagnetic fields before any equipment is installed. By visualizing exclusion zones and potential hazards in 3D, you can optimize antenna placement for both performance and safety, ensuring full compliance with ICNIRP guidelines and local regulations.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Visual exclusion zone mapping</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Multi-carrier interference analysis</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Automated compliance reporting</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="bg-black/50 backdrop-blur-md p-6 rounded-xl border border-white/10">
+                    <p className="text-sm font-mono text-blue-400 mb-2">AI ENGINE</p>
+                    <p className="text-white font-medium">Processing Complete: 99.8% Accuracy</p>
                   </div>
                 </div>
               </div>
@@ -167,10 +152,10 @@ export default function IEME() {
         <div className="container text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
-              Ensure safety and compliance with ease.
+              Experience the power of AI automation.
             </h2>
             <p className="text-xl text-blue-100">
-              Leverage SiteSee IEME for precise hazard assessment and regulatory adherence.
+              Transform your asset auditing with SiteSee's AI Audit Engine.
             </p>
             <a href="/contact" className="h-14 px-10 text-lg bg-white text-blue-600 hover:bg-blue-50 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-lg">
               Get Started Now
