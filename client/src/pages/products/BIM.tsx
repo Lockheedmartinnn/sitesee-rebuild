@@ -1,16 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Box, Layers, Database } from "lucide-react";
+import { ArrowRight, CheckCircle2, Box, Layers, Database, FileCode, Share2, Settings } from "lucide-react";
 import { Link } from "wouter";
 
 export default function BIM() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
+      {/* Hero Section - Technical Focus */}
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
-            alt="BIM Catalogue" 
+            alt="BIM Model View" 
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
@@ -18,163 +18,193 @@ export default function BIM() {
 
         <div className="container relative z-10 py-32">
           <div className="max-w-4xl space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Building Information Modelling</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-800/50">
+              <span className="w-2 h-2 rounded-full bg-blue-500" />
+              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">Building Information Modeling</span>
             </div>
 
-            <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-              Transform Your Tower Assets with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">NexDT's BIM Catalogue</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Structured BIM Data for Telecom
             </h1>
             
-            <p className="text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
-              Enhance your design accuracy and efficiency with NexDT’s evolving BIM solutions. Seamlessly integrate structured, multi-disciplinary data into the NexDT ecosystem.
+            <p className="text-xl text-slate-300 max-w-3xl">
+              Convert point cloud data into classified, intelligent BIM objects. SiteSee generates industry-standard IFC models compatible with major engineering software.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <a href="/contact" className="h-14 px-8 text-base bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
-                Request Demo <ArrowRight className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <a href="/contact" className="h-14 px-8 text-lg bg-blue-600 text-white hover:bg-blue-700 font-semibold rounded-md inline-flex items-center gap-2 transition-colors">
+                Request Sample File <ArrowRight className="w-5 h-5" />
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Features Grid */}
-      <section className="py-24 bg-white">
+      {/* Technical Capabilities Grid */}
+      <section className="py-24 bg-white text-black">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Box className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-4">BIM Capabilities</h2>
+            <p className="text-lg text-slate-600">Technical specifications of the BIM generation process.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Capability 1 */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                <Box className="w-6 h-6 text-slate-700" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Realistic Representation</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Highly configurable representation of tower equipment and accessories, more than just 3D CAD objects.
+              <h3 className="text-xl font-bold">Object Classification</h3>
+              <p className="text-slate-600">
+                Automated recognition and tagging of structural members (legs, bracing), mounts, and ancillary equipment.
               </p>
+              <ul className="text-sm text-slate-500 space-y-1 mt-2">
+                <li>• Steel sections (L-angle, pipe, solid rod)</li>
+                <li>• Antenna models & dimensions</li>
+                <li>• Mount types (sector frame, headframe)</li>
+              </ul>
             </div>
 
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Layers className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+            {/* Capability 2 */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                <Settings className="w-6 h-6 text-slate-700" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Drag and Drop</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Effortlessly add and arrange components within the digital twin environment with intuitive functionality.
+              <h3 className="text-xl font-bold">Level of Detail (LOD)</h3>
+              <p className="text-slate-600">
+                Configurable output detail based on project requirements.
               </p>
+              <ul className="text-sm text-slate-500 space-y-1 mt-2">
+                <li>• <strong>LOD 200:</strong> General geometric shape & location</li>
+                <li>• <strong>LOD 300:</strong> Precise geometry & specific dimensions</li>
+                <li>• <strong>LOD 350:</strong> Detailed connections & interfaces</li>
+              </ul>
             </div>
 
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Database className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+            {/* Capability 3 */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                <Database className="w-6 h-6 text-slate-700" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Dynamic Library</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Continually updated library featuring antennas, microwave dishes, mounts, shelters, and fences.
+              <h3 className="text-xl font-bold">Metadata Enrichment</h3>
+              <p className="text-slate-600">
+                Objects are populated with non-geometric data for downstream analysis.
               </p>
+              <ul className="text-sm text-slate-500 space-y-1 mt-2">
+                <li>• Effective Projected Area (EPA/ESA)</li>
+                <li>• Weight & material properties</li>
+                <li>• Asset ID & installation date</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Content Section */}
-      <section className="py-24 bg-slate-950 text-white overflow-hidden">
+      {/* Interoperability Section - Dark */}
+      <section className="py-24 bg-slate-900 text-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-12">
-              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter leading-[1.1]">
-                Ready Enabled for Advanced Analysis
-              </h2>
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Software Interoperability</h2>
+              <p className="text-lg text-slate-300 mb-8">
+                SiteSee BIM models are designed to work with your existing engineering stack. We support open standards and proprietary formats.
+              </p>
               
-              <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
-                <p>
-                  The BIM equipment is ready enabled to be used with Indicative Engineering Analysis (IEA). The BIM equipment allows for Effect Sail Area (ESA) values. These can be either vendor derived to customer specific.
-                </p>
-                <p>
-                  The BIM equipment is also ready enabled to be used with Indicative EME analysis (IEME). The radio patterns can be attached to the BIM equipment using either SiteSee vast pattern Database OR customer specific patterns can be provided in MSI format.
-                </p>
-              </div>
+              <div className="space-y-6">
+                <div className="border border-slate-700 rounded-lg p-6 bg-slate-800/50">
+                  <div className="flex items-center gap-3 mb-4">
+                    <FileCode className="w-6 h-6 text-blue-400" />
+                    <h4 className="font-bold text-lg">Export Formats</h4>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 text-sm text-slate-300">
+                    <div>• IFC 2x3 / IFC 4</div>
+                    <div>• Autodesk Revit (.RVT)</div>
+                    <div>• AutoCAD (.DWG, .DXF)</div>
+                    <div>• SketchUp (.SKP)</div>
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Personalized Library</h4>
-                    <p className="text-sm text-slate-400">Tailored to specific needs</p>
+                <div className="border border-slate-700 rounded-lg p-6 bg-slate-800/50">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Share2 className="w-6 h-6 text-green-400" />
+                    <h4 className="font-bold text-lg">Direct Integrations</h4>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Up-to-date Equipment</h4>
-                    <p className="text-sm text-slate-400">Relevant and current</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">ESA Values</h4>
-                    <p className="text-sm text-slate-400">Vendor derived or customer specific</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Radio Patterns</h4>
-                    <p className="text-sm text-slate-400">SiteSee DB or MSI format</p>
+                  <p className="text-sm text-slate-300 mb-2">
+                    Geometry and loading data can be exported directly to structural analysis engines:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-slate-700 rounded text-xs font-mono">TNX Tower</span>
+                    <span className="px-3 py-1 bg-slate-700 rounded text-xs font-mono">RISA-3D</span>
+                    <span className="px-3 py-1 bg-slate-700 rounded text-xs font-mono">OpenTower</span>
+                    <span className="px-3 py-1 bg-slate-700 rounded text-xs font-mono">MSTower</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative space-y-8">
-              {/* Real-Time Design Image */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+            <div className="relative">
+              <div className="aspect-video rounded-lg overflow-hidden border border-slate-700 bg-slate-800">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/dBsBaNzZYLrvFFPM.jpg" 
-                  alt="Real-Time Design Interface" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500 scale-[1.02] origin-center"
+                  alt="BIM Integration Diagram" 
+                  className="w-full h-full object-cover opacity-90"
                 />
               </div>
-              
-              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Asset Intelligence</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Our BIM solution goes beyond simple 3D visualization. It creates a semantic, queryable database of your physical assets, enabling automated analysis and reporting. Every component is tagged with metadata including manufacturer specifications, installation dates, and maintenance history.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Automated bill of materials generation</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Structural load calculation integration</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Regulatory compliance tracking</span>
-                  </div>
-                </div>
+              <div className="mt-4 text-sm text-slate-400 font-mono">
+                Figure 1: Automated conversion from Point Cloud to IFC Structural Model.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-blue-600 text-white">
-        <div className="container text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
-              Start building your digital twin today.
-            </h2>
-            <p className="text-xl text-blue-100">
-              Explore the full potential of NexDT's BIM Catalogue for your infrastructure.
+      {/* Library Management */}
+      <section className="py-24 bg-white text-black">
+        <div className="container">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold mb-6">Component Library</h2>
+            <p className="text-lg text-slate-600 mb-8">
+              The platform maintains a centralized catalog of telecom equipment to ensure model accuracy.
             </p>
-            <a href="/contact" className="h-14 px-10 text-lg bg-white text-blue-600 hover:bg-blue-50 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-lg">
-              Get Started Now
-            </a>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex gap-4">
+                <CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0" />
+                <div>
+                  <h4 className="font-bold mb-2">Vendor Database</h4>
+                  <p className="text-slate-600 text-sm">
+                    Pre-built 3D assets for major antenna and radio manufacturers (Kathrein, CommScope, Ericsson, Huawei, Nokia).
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0" />
+                <div>
+                  <h4 className="font-bold mb-2">Custom Mounts</h4>
+                  <p className="text-slate-600 text-sm">
+                    Ability to define custom steelwork configurations and save them to your tenant library for reuse.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0" />
+                <div>
+                  <h4 className="font-bold mb-2">RF Pattern Mapping</h4>
+                  <p className="text-slate-600 text-sm">
+                    Link MSI/NSMA antenna pattern files to BIM objects for downstream RF safety analysis.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0" />
+                <div>
+                  <h4 className="font-bold mb-2">Version Control</h4>
+                  <p className="text-slate-600 text-sm">
+                    Track changes to the site model over time. Compare "As-Built" vs "As-Designed" states.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

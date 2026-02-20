@@ -1,16 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Wind, Activity, BarChart3 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wind, Activity, BarChart3, Calculator, FileCheck, AlertTriangle } from "lucide-react";
 import { Link } from "wouter";
 
 export default function IEA() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
+      {/* Hero Section - Technical Focus */}
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
-            alt="IEA Analysis" 
+            alt="Structural Analysis Model" 
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
@@ -18,21 +18,21 @@ export default function IEA() {
 
         <div className="container relative z-10 py-32">
           <div className="max-w-4xl space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Predictive Load Analysis</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-800/50">
+              <span className="w-2 h-2 rounded-full bg-blue-500" />
+              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">Structural Engineering</span>
             </div>
 
-            <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-              Indicative Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Analysis (IEA)</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Automated Structural Analysis
             </h1>
             
-            <p className="text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
-              Validate design changes fast and accurately within the digital twin. Facilitate cell tower load analysis through drag and drop scenarios.
+            <p className="text-xl text-slate-300 max-w-3xl">
+              Indicative Engineering Analysis (IEA) provides real-time load calculations for tower structures. Assess capacity utilization for legs, bracing, and foundations before deploying new equipment.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <a href="/contact" className="h-14 px-8 text-base bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <a href="/contact" className="h-14 px-8 text-lg bg-blue-600 text-white hover:bg-blue-700 font-semibold rounded-md inline-flex items-center gap-2 transition-colors">
                 Request Demo <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -40,121 +40,129 @@ export default function IEA() {
         </div>
       </section>
 
-      {/* Key Features Grid */}
-      <section className="py-24 bg-white">
+      {/* Technical Capabilities Grid */}
+      <section className="py-24 bg-white text-black">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Activity className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-4">Analysis Metrics</h2>
+            <p className="text-lg text-slate-600">Key structural performance indicators calculated by the platform.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Capability 1 */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                <Activity className="w-6 h-6 text-slate-700" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Structure Load</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Maximum utilisation of the leg, bracing or pole where applicable in percent (%).
+              <h3 className="text-xl font-bold">Member Utilization</h3>
+              <p className="text-slate-600">
+                Calculates stress ratios for critical structural components under various load combinations.
               </p>
+              <ul className="text-sm text-slate-500 space-y-1 mt-2">
+                <li>• Leg compression/tension capacity</li>
+                <li>• Bracing member efficiency</li>
+                <li>• Connection bolt shear/tension</li>
+              </ul>
             </div>
 
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <BarChart3 className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+            {/* Capability 2 */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                <BarChart3 className="w-6 h-6 text-slate-700" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Footing Load</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Maximum utilisation of the footing in bending/shear, or hold down bolts, or overturning ratio where applicable.
+              <h3 className="text-xl font-bold">Foundation Analysis</h3>
+              <p className="text-slate-600">
+                Evaluates base reactions against foundation capacity limits.
               </p>
+              <ul className="text-sm text-slate-500 space-y-1 mt-2">
+                <li>• Overturning moment stability</li>
+                <li>• Soil bearing pressure check</li>
+                <li>• Anchor bolt tensile strength</li>
+              </ul>
             </div>
 
-            <div className="space-y-6 p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors group">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <Wind className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+            {/* Capability 3 */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
+                <Wind className="w-6 h-6 text-slate-700" />
               </div>
-              <h3 className="text-2xl font-bold font-display">Tip Rotation</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Rotation of the pole at a defined height above ground level in degrees (°).
+              <h3 className="text-xl font-bold">Deflection & Sway</h3>
+              <p className="text-slate-600">
+                Predicts structural displacement under wind and ice loading conditions.
               </p>
+              <ul className="text-sm text-slate-500 space-y-1 mt-2">
+                <li>• Twist and sway at antenna elevations</li>
+                <li>• Microwave link path alignment</li>
+                <li>• Serviceability limit state checks</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Content Section */}
-      <section className="py-24 bg-slate-950 text-white overflow-hidden">
+      {/* Workflow Section - Dark */}
+      <section className="py-24 bg-slate-900 text-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-12">
-              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter leading-[1.1]">
-                Streamline Tower Upgrades with NexDT
-              </h2>
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Engineering Workflow</h2>
+              <p className="text-lg text-slate-300 mb-8">
+                IEA integrates directly with the digital twin to streamline the structural assessment process.
+              </p>
               
-              <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
-                <p>
-                  Our process ensures that the engineering model, maintained by certified professionals, is consistently used for tower upgrade sign-offs. The model is exported to the NexDT environment, where users can modify tower configurations and accurately predict structural loads.
-                </p>
-                <p>
-                  This streamlined workflow helps determine if changes require engineering modifications. Allowing users to rapidly prototype design scenario submit their design revisions. This approach ensures that all modifications are thoroughly vetted, maintaining high standards of accuracy and safety throughout the upgrade process.
-                </p>
-              </div>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 font-bold text-sm">1</div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Scenario Modeling</h4>
+                    <p className="text-slate-400 text-sm">
+                      Drag and drop new antennas or mounts onto the 3D model. The system automatically updates wind load areas (EPA) and weight distributions.
+                    </p>
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 font-bold text-sm">2</div>
                   <div>
-                    <h4 className="font-bold text-white mb-1">Rapid Prototyping</h4>
-                    <p className="text-sm text-slate-400">Test design scenarios instantly</p>
+                    <h4 className="font-bold text-lg mb-1">Automated Calculation</h4>
+                    <p className="text-slate-400 text-sm">
+                      The solver runs linear static analysis based on defined design codes (TIA-222-H, Eurocode 3, AS 3995).
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0 font-bold text-sm">3</div>
                   <div>
-                    <h4 className="font-bold text-white mb-1">Accurate Prediction</h4>
-                    <p className="text-sm text-slate-400">Reliable structural load data</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Safety First</h4>
-                    <p className="text-sm text-slate-400">Thoroughly vetted modifications</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Certified Models</h4>
-                    <p className="text-sm text-slate-400">Maintained by professionals</p>
+                    <h4 className="font-bold text-lg mb-1">Pass/Fail Reporting</h4>
+                    <p className="text-slate-400 text-sm">
+                      Instant feedback on structural viability. Generate a preliminary structural analysis report (PSAR) for engineering review.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative space-y-8">
-              {/* Lifecycle Management Image */}
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
+            <div className="relative">
+              <div className="aspect-video rounded-lg overflow-hidden border border-slate-700 bg-slate-800">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/WPcvvqPaRohIAxwP.jpg" 
-                  alt="Lifecycle Management Interface" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500 scale-[1.02] origin-center"
+                  alt="Load Analysis Interface" 
+                  className="w-full h-full object-cover opacity-90"
                 />
               </div>
-              
-              <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-white mb-4">Engineering-Grade Accuracy</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  IEA bridges the gap between digital twin visualization and structural engineering. Unlike simple visual models, our platform integrates with industry-standard engineering tools to provide instant feedback on structural capacity. This allows engineering teams to assess the viability of new equipment installations in minutes rather than weeks, significantly reducing the time-to-market for network upgrades.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Instant structural capacity checks</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Wind load simulation integration</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-slate-300">Mount analysis automation</span>
-                  </div>
+              <div className="mt-4 grid grid-cols-3 gap-4 text-center">
+                <div className="bg-slate-800 p-3 rounded border border-slate-700">
+                  <div className="text-2xl font-bold text-green-400">82%</div>
+                  <div className="text-xs text-slate-400 uppercase tracking-wide">Leg Capacity</div>
+                </div>
+                <div className="bg-slate-800 p-3 rounded border border-slate-700">
+                  <div className="text-2xl font-bold text-yellow-400">94%</div>
+                  <div className="text-xs text-slate-400 uppercase tracking-wide">Bracing Capacity</div>
+                </div>
+                <div className="bg-slate-800 p-3 rounded border border-slate-700">
+                  <div className="text-2xl font-bold text-green-400">0.4°</div>
+                  <div className="text-xs text-slate-400 uppercase tracking-wide">Max Twist</div>
                 </div>
               </div>
             </div>
@@ -162,19 +170,33 @@ export default function IEA() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-blue-600 text-white">
-        <div className="container text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
-              Ready to optimize your engineering workflows?
-            </h2>
-            <p className="text-xl text-blue-100">
-              Join leading tower companies using SiteSee IEA for faster, safer upgrades.
+      {/* Standards Compliance */}
+      <section className="py-24 bg-white text-black">
+        <div className="container">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold mb-6">Design Standards</h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Supported international design codes and loading standards.
             </p>
-            <a href="/contact" className="h-14 px-10 text-lg bg-white text-blue-600 hover:bg-blue-50 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-lg">
-              Get Started Now
-            </a>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="p-4 border border-slate-200 rounded text-center hover:border-blue-500 transition-colors">
+                <div className="font-bold text-lg">TIA-222-H</div>
+                <div className="text-sm text-slate-500">USA</div>
+              </div>
+              <div className="p-4 border border-slate-200 rounded text-center hover:border-blue-500 transition-colors">
+                <div className="font-bold text-lg">Eurocode 3</div>
+                <div className="text-sm text-slate-500">Europe</div>
+              </div>
+              <div className="p-4 border border-slate-200 rounded text-center hover:border-blue-500 transition-colors">
+                <div className="font-bold text-lg">AS 3995</div>
+                <div className="text-sm text-slate-500">Australia</div>
+              </div>
+              <div className="p-4 border border-slate-200 rounded text-center hover:border-blue-500 transition-colors">
+                <div className="font-bold text-lg">CSA S37-18</div>
+                <div className="text-sm text-slate-500">Canada</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
