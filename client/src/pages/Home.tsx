@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Bolder, Modern, High Impact */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-transparent">
         {/* Video Background with Modern Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <video 
@@ -18,26 +18,28 @@ export default function Home() {
             loop 
             muted 
             playsInline
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-100"
           >
             <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+          {/* Gradient removed for transparency */}
+          {/* Gradient removed for transparency */}
         </div>
 
         <div className="container relative z-10 py-32">
-          <div className="max-w-4xl space-y-10">
+          <div className="max-w-4xl space-y-10 relative z-10">
+            {/* Subtle backdrop for text readability */}
+            <div className="absolute -inset-8 bg-black/20 blur-3xl -z-10 rounded-full pointer-events-none" />
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Trusted by 36,000+ towers globally</span>
             </div>
 
-            <h1 className="text-white text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.95]">
+            <h1 className="text-white text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.95] drop-shadow-lg">
               The operating system for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">telecom infrastructure</span>
             </h1>
             
-            <p className="text-2xl md:text-3xl text-slate-300 font-light leading-relaxed max-w-2xl">
+            <p className="text-2xl md:text-3xl text-white/90 font-light leading-relaxed max-w-2xl drop-shadow-md">
               Design, validate, deploy, and govern network assets — digitally, accurately, and at scale.
             </p>
             
