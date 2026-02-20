@@ -6,33 +6,33 @@ export default function IEME() {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Video Background */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-transparent">
         <div className="absolute inset-0 z-0">
           <video 
             autoPlay 
             loop 
             muted 
             playsInline
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-100"
           >
             <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+          {/* Gradient removed for transparency */}
         </div>
 
         <div className="container relative z-10 py-32">
           <div className="max-w-4xl space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-800/50 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">EME Compliance Analysis</span>
+              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">EME Consistency Analysis</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              Ensuring ICNIRP Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Before Installation</span>
+              Helping you with EME follows <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Before Installation</span>
             </h1>
             
             <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-              You can't move forward with upgrades, colocation, or site commissioning if you're not ICNIRP compliant. SiteSee's EME Analysis eliminates the bottleneck by generating compliant exclusion zones digitally, before site access, before climbs, before delays.
+              You can't move forward with upgrades, colocation, or site commissioning if you're not ICNIRP consistent. SiteSee's EME Analysis eliminates the bottleneck by generating consistent exclusion zones digitally, before site access, before climbs, before delays.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
@@ -73,7 +73,7 @@ export default function IEME() {
                     <div className="p-2 bg-green-500/20 rounded-lg">
                       <ShieldCheck className="w-6 h-6 text-green-400" />
                     </div>
-                    <h3 className="text-white font-bold text-xl">ARPANSA S-1 Compliant</h3>
+                    <h3 className="text-white font-bold text-xl">Measurement Grade Input Geometry</h3>
                   </div>
                   <p className="text-slate-200 text-sm mb-4 leading-relaxed">
                     Visualizing exclusion zones in 3D relative to occupied spaces. Red zones indicate occupational limits; orange zones indicate general public limits.
@@ -99,7 +99,7 @@ export default function IEME() {
                   <span className="text-red-600">No Compliance = No Approval</span>
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  ACMA, state regulators, local councils, and building owners all require demonstrated compliance with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
+                  ACMA, state regulators, local councils, and building owners all require demonstrated consistency with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
                 </p>
               </div>
 
@@ -128,7 +128,7 @@ export default function IEME() {
         </div>
       </section>
 
-      {/* Compliance Framework Section */}
+      {/* Consistency Framework Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -136,7 +136,7 @@ export default function IEME() {
               Digital EME Modeling to ARPANSA S-1 & ICNIRP 2020
             </h2>
             <p className="text-lg text-slate-400">
-              SiteSee's EME Analysis generates Indicative Electromagnetic Energy (IEA) Reports that comply with the strictest Australian and international standards.
+              SiteSee's EME Analysis generates Indicative Electromagnetic Energy (IEA) Reports that are consistent with the strictest Australian and international standards.
             </p>
           </div>
 
@@ -215,127 +215,39 @@ export default function IEME() {
               Technical Advantages
             </h2>
             <p className="text-lg text-slate-600">
-              Why SiteSee's digital approach outperforms traditional manual assessments.
+              Why leading tower companies choose SiteSee for EME consistency.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Measurement-Grade Input Geometry</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">ARPANSA S-1 Consistent</h3>
               <p className="text-slate-600 mb-6">
-                Equipment position and bearing measurements from autonomous drone capture achieve tolerances well within margins required for conservative modeling:
+                SiteSee's EME Analysis generates Indicative Electromagnetic Energy (IEA) Reports that are consistent with the strictest Australian and international standards.
               </p>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div className="p-4 bg-slate-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">2.9%</div>
-                  <div className="text-xs text-slate-500 font-medium">Position Error</div>
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-green-100 rounded-full">
+                  <ShieldCheck className="w-8 h-8 text-green-600" />
                 </div>
-                <div className="p-4 bg-slate-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">2.6°</div>
-                  <div className="text-xs text-slate-500 font-medium">Bearing Error</div>
-                </div>
-                <div className="p-4 bg-slate-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">1.9°</div>
-                  <div className="text-xs text-slate-500 font-medium">Tilt Error</div>
+                <div>
+                  <div className="text-lg font-bold text-slate-900">ARPANSA S-1 (2021)</div>
+                  <div className="text-sm text-slate-500">Fully Consistent Methodology</div>
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Complex Multi-Tenant Sites</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Multi-Tenant Modeling</h3>
               <p className="text-slate-600 mb-6">
-                IEA modeling accounts for cumulative exposure from all antennas simultaneously across multiple operators and technologies.
+                Accurately model cumulative EME from multiple carriers on shared infrastructure. Identify hot spots where combined emissions exceed limits, even if individual carriers are consistent.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-slate-700">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  <span>Multiple panel antennas from different manufacturers</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-700">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  <span>Mixed frequency bands (700 MHz to 5G mmWave)</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-700">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  <span>Variable tilts and orientations</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Comparison Section */}
-      <section className="py-24 bg-white border-t border-slate-100">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
-              Why This Matters to Your Deployment Timeline
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Traditional Timeline */}
-              <div className="p-8 rounded-2xl border border-slate-200 bg-slate-50 opacity-70">
-                <h3 className="text-xl font-bold text-slate-500 mb-6">Traditional EME Assessment</h3>
-                <div className="space-y-4 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-200">
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
-                    <div className="font-bold text-slate-700">Week 0</div>
-                    <div className="text-sm text-slate-500">Request site access</div>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
-                    <div className="font-bold text-slate-700">Week 2-3</div>
-                    <div className="text-sm text-slate-500">Climber audit scheduled</div>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
-                    <div className="font-bold text-slate-700">Week 4</div>
-                    <div className="text-sm text-slate-500">Manual EME calculation</div>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white" />
-                    <div className="font-bold text-slate-700">Week 8</div>
-                    <div className="text-sm text-slate-500">Approval received</div>
-                  </div>
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-blue-100 rounded-full">
+                  <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <div className="mt-8 pt-6 border-t border-slate-200 text-center">
-                  <div className="text-3xl font-bold text-slate-400">8 Weeks</div>
-                  <div className="text-sm text-slate-500">Total Time</div>
-                </div>
-              </div>
-
-              {/* SiteSee Timeline */}
-              <div className="p-8 rounded-2xl border-2 border-blue-100 bg-blue-50/30 shadow-lg relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">
-                  6X FASTER
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-6">SiteSee Digital EME</h3>
-                <div className="space-y-4 relative before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-[2px] before:bg-blue-200">
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
-                    <div className="font-bold text-blue-900">Day 0</div>
-                    <div className="text-sm text-blue-700">Request DroneSee capture</div>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
-                    <div className="font-bold text-blue-900">Day 1</div>
-                    <div className="text-sm text-blue-700">Input RF parameters</div>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
-                    <div className="font-bold text-blue-900">Day 2</div>
-                    <div className="text-sm text-blue-700">IEA Report generated</div>
-                  </div>
-                  <div className="relative pl-8">
-                    <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
-                    <div className="font-bold text-blue-900">Week 2</div>
-                    <div className="text-sm text-blue-700">Approval received</div>
-                  </div>
-                </div>
-                <div className="mt-8 pt-6 border-t border-blue-200 text-center">
-                  <div className="text-3xl font-bold text-blue-600">2 Weeks</div>
-                  <div className="text-sm text-blue-700">Total Time</div>
+                <div>
+                  <div className="text-lg font-bold text-slate-900">Cumulative Analysis</div>
+                  <div className="text-sm text-slate-500">Total Site Exposure</div>
                 </div>
               </div>
             </div>
@@ -344,18 +256,20 @@ export default function IEME() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-slate-900 text-white text-center">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Get ARPANSA S-1 Compliant Faster</h2>
-          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Stop waiting weeks for site access. Generate IEA Reports digitally and move modifications through approval in days, not months.
+      <section className="py-32 bg-blue-600 text-white">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Ensure Consistency Before You Build
+          </h2>
+          <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+            Stop risking delays and rework. Validate EME consistency digitally with SiteSee.
           </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-blue-600 hover:bg-blue-700">
-              Book Technical Demo
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Button size="lg" variant="secondary" className="h-16 px-10 text-lg rounded-full font-bold">
+              Get Started
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-slate-600 hover:bg-slate-800 text-white">
-              Download Sample IEA Report
+            <Button size="lg" variant="outline" className="h-16 px-10 text-lg rounded-full border-white text-white hover:bg-white hover:text-blue-600 font-bold">
+              Contact Sales
             </Button>
           </div>
         </div>
