@@ -20,7 +20,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover opacity-50"
           >
-            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/WaXdEnMZWNHYAYsd.mov" type="video/mp4" />
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
