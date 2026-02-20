@@ -24,15 +24,15 @@ export default function IEME() {
           <div className="max-w-4xl space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-800/50 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">EME Compliance Analysis</span>
+              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">EME Consistency Analysis</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              Ensuring ICNIRP Compliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Before Installation</span>
+              Helping you with EME follows <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Before Installation</span>
             </h1>
             
             <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-              You can't move forward with upgrades, colocation, or site commissioning if you're not ICNIRP compliant. SiteSee's EME Analysis eliminates the bottleneck by generating compliant exclusion zones digitally, before site access, before climbs, before delays.
+              You can't move forward with upgrades, colocation, or site commissioning if you're not ICNIRP consistent. SiteSee's EME Analysis eliminates the bottleneck by generating consistent exclusion zones digitally, before site access, before climbs, before delays.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
@@ -69,13 +69,7 @@ export default function IEME() {
               
               <div className="absolute bottom-0 left-0 right-0 p-8 pointer-events-none">
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-green-500/20 rounded-lg">
-                      <ShieldCheck className="w-6 h-6 text-green-400" />
-                    </div>
-                    <h3 className="text-white font-bold text-xl">ARPANSA S-1 Compliant</h3>
-                  </div>
-                  <p className="text-slate-200 text-sm mb-4 leading-relaxed">
+                  <div className="flex items-center gap-3 mb-3">\n                    <div className="p-2 bg-green-500/20 rounded-lg">\n                      <ShieldCheck className="w-6 h-6 text-green-400" />\n                    </div>\n                    <h3 className="text-white font-bold text-xl">Measurement Grade Input Geometry</h3>\n                  </div>              <p className="text-slate-200 text-sm mb-4 leading-relaxed">
                     Visualizing exclusion zones in 3D relative to occupied spaces. Red zones indicate occupational limits; orange zones indicate general public limits.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-xs text-slate-300">
@@ -96,10 +90,10 @@ export default function IEME() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                   The Regulatory Reality: <br/>
-                  <span className="text-red-600">No Compliance = No Approval</span>
+                  <span className="text-red-600">No Consistency = No Approval</span>
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  ACMA, state regulators, local councils, and building owners all require demonstrated compliance with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
+                  ACMA, state regulators, local councils, and building owners all require demonstrated consistency with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
                 </p>
               </div>
 
@@ -128,7 +122,7 @@ export default function IEME() {
         </div>
       </section>
 
-      {/* Compliance Framework Section */}
+      {/* Consistency Framework Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -221,7 +215,7 @@ export default function IEME() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Measurement-Grade Input Geometry</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Measurement Grade Input Geometry</h3>
               <p className="text-slate-600 mb-6">
                 Equipment position and bearing measurements from autonomous drone capture achieve tolerances well within margins required for conservative modeling:
               </p>
