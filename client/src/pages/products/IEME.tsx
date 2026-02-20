@@ -51,48 +51,15 @@ export default function IEME() {
       <section className="py-24 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                  The Regulatory Reality: <br/>
-                  <span className="text-red-600">No Compliance = No Approval</span>
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  ACMA, state regulators, local councils, and building owners all require demonstrated compliance with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
-                </p>
-              </div>
-
-              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-amber-500" />
-                  Traditional EME Friction
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-slate-700">
-                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
-                    <span><strong>Site visit dependency:</strong> Requires physical access, often with climbers, adding weeks to timelines.</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-slate-700">
-                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
-                    <span><strong>Post-installation validation:</strong> Problems discovered after equipment is ordered and installed.</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-slate-700">
-                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
-                    <span><strong>Manual calculation errors:</strong> Spreadsheet-based assessments prone to input errors and conservative over-margins.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Video Overlay Section */}
-            <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-slate-900 group">
-              {/* Video Background */}
+            {/* Video Overlay Section - Moved to Left */}
+            <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-slate-900 group order-2 lg:order-1">
+              {/* Video Background - Rotated/Horizontal */}
               <video 
                 autoPlay 
                 loop 
                 muted 
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
               >
                 <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/WaXdEnMZWNHYAYsd.mov" type="video/mp4" />
               </video>
@@ -122,6 +89,39 @@ export default function IEME() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="space-y-8 order-1 lg:order-2">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                  The Regulatory Reality: <br/>
+                  <span className="text-red-600">No Compliance = No Approval</span>
+                </h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  ACMA, state regulators, local councils, and building owners all require demonstrated compliance with ICNIRP RF exposure limits before permitting new installations, upgrades, or tenant colocations.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-amber-500" />
+                  Traditional EME Friction
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span><strong>Site visit dependency:</strong> Requires physical access, often with climbers, adding weeks to timelines.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span><strong>Post-installation validation:</strong> Problems discovered after equipment is ordered and installed.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-700">
+                    <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span><strong>Manual calculation errors:</strong> Spreadsheet-based assessments prone to input errors and conservative over-margins.</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
