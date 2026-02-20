@@ -5,13 +5,24 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-
+import NexDT from "./pages/products/NexDT";
+import BIM from "./pages/products/BIM";
+import IEME from "./pages/products/IEME";
+import IEA from "./pages/products/IEA";
+import Capture from "./pages/products/Capture";
+import ScalePoints from "./pages/products/ScalePoints";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
+      <Route path="/" component={Home} />
+      <Route path="/products/nexdt" component={NexDT} />
+      <Route path="/products/bim" component={BIM} />
+      <Route path="/products/ieme" component={IEME} />
+      <Route path="/products/iea" component={IEA} />
+      <Route path="/products/capture" component={Capture} />
+      <Route path="/products/scalepoints" component={ScalePoints} />
+      <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
