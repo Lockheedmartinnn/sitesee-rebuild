@@ -15,7 +15,7 @@ export default function IEME() {
             playsInline
             className="w-full h-full object-cover opacity-100"
           >
-            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/biGfjkTiGoaMsEoX.mp4" type="video/mp4" />
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hmqsaTwUsXYiOWku.mp4" type="video/mp4" />
           </video>
           {/* Gradient removed for transparency */}
         </div>
@@ -61,7 +61,7 @@ export default function IEME() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
               >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hmqsaTwUsXYiOWku.mp4" type="video/mp4" />
               </video>
               
               {/* Overlay Content */}
