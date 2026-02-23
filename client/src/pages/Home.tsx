@@ -213,7 +213,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/biGfjkTiGoaMsEoX.mp4" 
                   alt="Tower structural detail" 
                   className="w-full h-full object-cover"
                 />

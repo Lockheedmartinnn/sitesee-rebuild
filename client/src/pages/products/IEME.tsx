@@ -15,7 +15,7 @@ export default function IEME() {
             playsInline
             className="w-full h-full object-cover opacity-100"
           >
-            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/biGfjkTiGoaMsEoX.mp4" type="video/mp4" />
           </video>
           {/* Gradient removed for transparency */}
         </div>
