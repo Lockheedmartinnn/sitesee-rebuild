@@ -8,7 +8,7 @@ import { VideoTestimonial } from "@/components/VideoTestimonial";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-black text-white">
+    <div className="flex flex-col bg-white text-slate-900">
       {/* Hero Section - Bolder, Modern, High Impact */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* Video Background with Modern Gradient Overlay */}
@@ -56,24 +56,24 @@ export default function Home() {
       <FlightsCounter />
 
       {/* Executive Context - High Contrast & Asymmetric */}
-      <section className="py-32 bg-black text-white overflow-hidden">
+      <section className="py-32 bg-white text-slate-900 overflow-hidden">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-6">
-                <p className="text-sm font-bold tracking-[0.2em] text-blue-500 uppercase">The Problem</p>
-                <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.9]">
+                <p className="text-sm font-bold tracking-[0.2em] text-blue-600 uppercase">The Problem</p>
+                <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.9] text-slate-900">
                   Most digital twins don't move the numbers.
                 </h2>
               </div>
               
-              <div className="space-y-8 text-xl md:text-2xl font-light leading-relaxed text-slate-400">
+              <div className="space-y-8 text-xl md:text-2xl font-light leading-relaxed text-slate-600">
                 <p>
-                  They improve visibility. They reduce some site visits. They make inspection easier. <strong className="text-white font-semibold">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
+                  They improve visibility. They reduce some site visits. They make inspection easier. <strong className="text-slate-900 font-semibold">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
                 </p>
                 
                 <div className="pl-8 border-l-4 border-blue-600">
-                  <p className="text-white font-medium italic">
+                  <p className="text-slate-800 font-medium italic">
                     "Better pictures alone do not reduce cost or accelerate revenue."
                   </p>
                 </div>
@@ -85,13 +85,13 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out border border-white/10">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out border border-slate-200">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Engineering team working on telecom tower infrastructure"
-                  className="w-full h-full object-cover opacity-80"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
                   <p className="text-lg font-medium">Embedded in upgrade, colocation, engineering, and compliance workflows.</p>
                 </div>
@@ -101,30 +101,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* High Impact Metrics - Dark Mode Grid */}
-      <section className="py-32 bg-slate-950 text-white border-y border-white/5">
+      {/* High Impact Metrics - Light Mode Grid */}
+      <section className="py-32 bg-slate-50 text-slate-900 border-y border-slate-200">
         <div className="container">
           <div className="space-y-20">
             <div className="max-w-3xl">
-              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-6">
+              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-6 text-slate-900">
                 Proven at scale.
               </h2>
-              <p className="text-xl text-slate-400">
-                NexDT is used in live production environments by customers managing more than <span className="text-white font-bold">36,000 towers and rooftops globally</span>.
+              <p className="text-xl text-slate-600">
+                NexDT is used in live production environments by customers managing more than <span className="text-slate-900 font-bold">36,000 towers and rooftops globally</span>.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { label: "Upgrade Approval", value: "44 Days", sub: "Reduced from 8 months", color: "text-blue-400" },
-                { label: "First Time Right", value: "80%", sub: "Improved from 32%", color: "text-green-400" },
-                { label: "CO₂ Avoided", value: "5K+ Tonnes", sub: "Across the estate", color: "text-purple-400" },
-                { label: "Climbs Avoided", value: "30K+", sub: "High-risk climbs", color: "text-orange-400" }
+                { label: "Upgrade Approval", value: "44 Days", sub: "Reduced from 8 months", color: "text-blue-600" },
+                { label: "First Time Right", value: "80%", sub: "Improved from 32%", color: "text-green-600" },
+                { label: "CO₂ Avoided", value: "5K+ Tonnes", sub: "Across the estate", color: "text-purple-600" },
+                { label: "Climbs Avoided", value: "30K+", sub: "High-risk climbs", color: "text-orange-600" }
               ].map((metric, idx) => (
-                <div key={idx} className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+                <div key={idx} className="group p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2">
                   <div className={`text-5xl font-bold tracking-tighter mb-4 ${metric.color}`}>{metric.value}</div>
-                  <div className="text-lg font-medium text-white mb-2">{metric.label}</div>
-                  <div className="text-sm text-slate-400">{metric.sub}</div>
+                  <div className="text-lg font-medium text-slate-900 mb-2">{metric.label}</div>
+                  <div className="text-sm text-slate-500">{metric.sub}</div>
                 </div>
               ))}
             </div>
@@ -139,14 +139,14 @@ export default function Home() {
       <Testimonials />
 
       {/* Global Customer Map Section */}
-      <section className="py-24 md:py-32 bg-black text-white">
+      <section className="py-24 md:py-32 bg-white text-slate-900">
         <div className="container">
           <div className="space-y-16">
             <div className="max-w-2xl">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-white leading-[1.1]">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-slate-900 leading-[1.1]">
                 Trusted Globally
               </h2>
-              <p className="text-xl text-slate-400 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
+              <p className="text-xl text-slate-600 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
             </div>
 
             <CustomerMap />
@@ -160,10 +160,10 @@ export default function Home() {
                 { name: 'Malaysia', customers: '3+' },
                 { name: 'Oman', customers: '2+' },
               ].map((region) => (
-                <div key={region.name} className="text-center p-6 bg-white/5 rounded-sm border border-white/10 hover:border-blue-500/50 transition-colors">
-                  <p className="text-sm font-semibold text-slate-400 mb-2">REGION</p>
-                  <p className="text-2xl font-bold text-white mb-1">{region.name}</p>
-                  <p className="text-lg text-blue-400 font-bold">{region.customers} Operators</p>
+                <div key={region.name} className="text-center p-6 bg-slate-50 rounded-sm border border-slate-200 hover:border-blue-500/50 transition-colors">
+                  <p className="text-sm font-semibold text-slate-500 mb-2">REGION</p>
+                  <p className="text-2xl font-bold text-slate-900 mb-1">{region.name}</p>
+                  <p className="text-lg text-blue-600 font-bold">{region.customers} Operators</p>
                 </div>
               ))}
             </div>
@@ -172,45 +172,45 @@ export default function Home() {
       </section>
 
       {/* Industry Reality - Asymmetric Layout */}
-      <section className="py-24 md:py-32 bg-slate-950 text-white border-t border-white/5">
+      <section className="py-24 md:py-32 bg-slate-50 text-slate-900 border-t border-slate-200">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-white leading-[1.1]">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-slate-900 leading-[1.1]">
                 Telecom infrastructure is no longer simple.
               </h2>
 
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white">The Reality</h3>
+                <h3 className="text-2xl font-bold text-slate-900">The Reality</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-500 font-bold text-xl">•</span>
-                    <span className="text-lg text-slate-300">Multi-tenant towers</span>
+                    <span className="text-blue-600 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-600">Multi-tenant towers</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-500 font-bold text-xl">•</span>
-                    <span className="text-lg text-slate-300">Constant upgrade cycles</span>
+                    <span className="text-blue-600 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-600">Constant upgrade cycles</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-500 font-bold text-xl">•</span>
-                    <span className="text-lg text-slate-300">Tight regulatory constraints</span>
+                    <span className="text-blue-600 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-600">Tight regulatory constraints</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-500 font-bold text-xl">•</span>
-                    <span className="text-lg text-slate-300">Zero tolerance for rework</span>
+                    <span className="text-blue-600 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-600">Zero tolerance for rework</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-white/10">
+              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-slate-200">
                 <video 
                   autoPlay 
                   loop 
                   muted 
                   playsInline
-                  className="w-full h-full object-cover opacity-80"
+                  className="w-full h-full object-cover"
                 >
                   <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hmqsaTwUsXYiOWku.mp4" type="video/mp4" />
                 </video>
@@ -221,11 +221,11 @@ export default function Home() {
       </section>
 
       {/* Current Workflows - Flipped Asymmetric */}
-      <section className="py-24 md:py-32 bg-black text-white">
+      <section className="py-24 md:py-32 bg-white text-slate-900">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
-              <div className="aspect-video rounded-sm overflow-hidden shadow-2xl border border-white/10">
+              <div className="aspect-video rounded-sm overflow-hidden shadow-2xl border border-slate-200">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Telecom engineer performing site inspection" 
@@ -233,18 +233,16 @@ export default function Home() {
                 />
               </div>
             </div>
-            
             <div className="order-1 lg:order-2 space-y-12">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-slate-900 leading-[1.1]">
                 Current workflows are breaking.
               </h2>
-              
               <div className="space-y-8 text-xl text-slate-600 leading-relaxed">
                 <p>
-                  Spreadsheets, shared drives, and PDF reports can't handle the complexity of modern networks. Data is siloed, outdated, and often inaccurate.
+                  Traditional site visits, manual measurements, and disconnected spreadsheets can't keep up with 5G rollout demands.
                 </p>
                 <p>
-                  This leads to costly site revisits, design failures, and safety risks that slow down deployment and increase CapEx.
+                  Every day spent waiting for site access is a day of lost revenue. Every error in manual data entry is a future change order.
                 </p>
               </div>
             </div>
@@ -253,21 +251,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-blue-600 text-white">
-        <div className="container text-center">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter mb-8">
-            Ready to digitize your portfolio?
-          </h2>
-          <p className="text-2xl text-blue-100 mb-12 max-w-2xl mx-auto">
-            Join the world's leading tower companies and MNOs running on SiteSee.
+      <section className="py-32 bg-blue-600 text-white text-center">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to transform your tower operations?</h2>
+          <p className="text-xl md:text-2xl text-blue-100 mb-12">
+            Join the leading tower companies using NexDT to accelerate deployment.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button size="lg" variant="secondary" className="h-16 px-10 text-lg rounded-full font-bold">
-              Book a Demo
-            </Button>
-            <Button size="lg" variant="outline" className="h-16 px-10 text-lg rounded-full border-white text-white hover:bg-white hover:text-blue-600 font-bold">
-              Contact Sales
-            </Button>
+            <Link href="/contact">
+              <a className="h-16 px-12 text-xl bg-white text-blue-600 hover:bg-blue-50 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
+                Request Demo
+              </a>
+            </Link>
           </div>
         </div>
       </section>
