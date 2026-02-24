@@ -76,35 +76,16 @@ export default function RooftopPlannerSection() {
 
           {/* Image Column */}
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/RSpIyJjkkRUeGzxQ.jpg" 
-                alt="SiteSee Rooftop Mission Planner Visualization" 
-                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-              />
-              
-              {/* Floating UI Element */}
-              <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-lg z-20">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <p className="text-xs text-slate-500 font-mono uppercase tracking-wider">Flight Mode</p>
-                    <p className="font-bold text-slate-900">Autonomous Scan</p>
-                  </div>
-                  <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center animate-pulse">
-                    <div className="h-3 w-3 rounded-full bg-green-500" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs text-slate-500">
-                    <span>Buffer Zone</span>
-                    <span className="font-mono font-bold text-blue-600">11.0m</span>
-                  </div>
-                  <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-600 w-[85%]" />
-                  </div>
-                </div>
-              </div>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group aspect-video">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/CiZkQklyOoTWDScE.mp4" type="video/mp4" />
+              </video>
             </div>
             
             {/* Decorative Elements */}
