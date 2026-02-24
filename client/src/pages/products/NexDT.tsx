@@ -8,11 +8,15 @@ export default function NexDT() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
-            alt="NexDT Platform"
-            className="w-full h-full object-cover opacity-40"
-          />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover opacity-60"
+          >
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
         </div>
@@ -47,100 +51,100 @@ export default function NexDT() {
       </section>
 
       {/* The Bottleneck Problem */}
-      <section className="py-32 bg-white text-black overflow-hidden" id="overview">
+      <section className="py-32 bg-black text-white overflow-hidden" id="overview">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10">
               <div className="space-y-6">
-                <p className="text-sm font-bold tracking-[0.2em] text-red-600 uppercase">The Problem</p>
+                <p className="text-sm font-bold tracking-[0.2em] text-red-500 uppercase">The Problem</p>
                 <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter leading-[0.95]">
                   The Tower Modification Bottleneck
                 </h2>
               </div>
               
-              <div className="space-y-6 text-lg text-slate-600">
+              <div className="space-y-6 text-lg text-slate-400">
                 <p>Every equipment change on your infrastructure triggers a cascade of dependencies:</p>
                 <ul className="space-y-4">
                   <li className="flex gap-4">
-                    <span className="font-bold text-black min-w-[140px]">Site access required</span>
+                    <span className="font-bold text-white min-w-[140px]">Site access required</span>
                     <span>Wait 2-4 weeks for scheduling, weather windows, landlord approval</span>
                   </li>
                   <li className="flex gap-4">
-                    <span className="font-bold text-black min-w-[140px]">Manual measurements</span>
+                    <span className="font-bold text-white min-w-[140px]">Manual measurements</span>
                     <span>Climbers document antenna positions, prone to ±5° tilt estimation errors</span>
                   </li>
                   <li className="flex gap-4">
-                    <span className="font-bold text-black min-w-[140px]">Disconnected analysis</span>
+                    <span className="font-bold text-white min-w-[140px]">Disconnected analysis</span>
                     <span>Structural assessment in one tool, EME in another, RF planning in a third</span>
                   </li>
                   <li className="flex gap-4">
-                    <span className="font-bold text-black min-w-[140px]">Sequential workflows</span>
+                    <span className="font-bold text-white min-w-[140px]">Sequential workflows</span>
                     <span>Can't validate EME until structural is complete, can't optimize RF until EME passes</span>
                   </li>
                 </ul>
                 
-                <div className="p-6 bg-red-50 border-l-4 border-red-600 rounded-r-xl mt-8">
-                  <p className="font-bold text-red-900 mb-2">The Result:</p>
-                  <p className="text-red-800">Modifications that should take days stretch into months. Colocation deals lost. 5G rollout delayed. CapEx trapped.</p>
+                <div className="p-6 bg-red-900/20 border-l-4 border-red-600 rounded-r-xl mt-8">
+                  <p className="font-bold text-red-400 mb-2">The Result:</p>
+                  <p className="text-red-300">Modifications that should take days stretch into months. Colocation deals lost. 5G rollout delayed. CapEx trapped.</p>
                 </div>
               </div>
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-slate-100 relative">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-white/5 border border-white/10 relative">
                 {/* Abstract visualization of bottleneck/chaos */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative w-full h-full bg-slate-100 p-8 flex flex-col justify-center">
+                  <div className="relative w-full h-full bg-black/50 p-8 flex flex-col justify-center">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-300" />
                     <div className="flex items-center justify-between mb-8">
-                      <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
+                      <h3 className="text-2xl font-bold text-white flex items-center gap-3">
                         <span className="w-3 h-3 rounded-full bg-red-500" />
                         Traditional
                       </h3>
-                      <div className="px-3 py-1 bg-red-100 text-red-700 text-sm font-bold rounded-full">180 Days</div>
+                      <div className="px-3 py-1 bg-red-900/50 text-red-400 text-sm font-bold rounded-full border border-red-500/30">180 Days</div>
                     </div>
                     
                     <div className="space-y-6 relative">
                       {/* Timeline Line */}
-                      <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-slate-300" />
+                      <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-slate-700" />
                       
                       <div className="relative flex items-start gap-4 opacity-50">
-                        <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center z-10 shrink-0">
-                          <span className="text-slate-400 font-bold">1</span>
+                        <div className="w-10 h-10 rounded-full bg-black border-2 border-slate-700 flex items-center justify-center z-10 shrink-0">
+                          <span className="text-slate-500 font-bold">1</span>
                         </div>
                         <div>
-                          <h4 className="font-bold text-slate-500">Site Access Request</h4>
-                          <p className="text-sm text-slate-400">Wait 2-4 weeks for scheduling</p>
+                          <h4 className="font-bold text-slate-400">Site Access Request</h4>
+                          <p className="text-sm text-slate-500">Wait 2-4 weeks for scheduling</p>
                         </div>
                       </div>
 
                       <div className="relative flex items-start gap-4 opacity-50">
-                        <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center z-10 shrink-0">
-                          <span className="text-slate-400 font-bold">2</span>
+                        <div className="w-10 h-10 rounded-full bg-black border-2 border-slate-700 flex items-center justify-center z-10 shrink-0">
+                          <span className="text-slate-500 font-bold">2</span>
                         </div>
                         <div>
-                          <h4 className="font-bold text-slate-500">Manual Survey</h4>
-                          <p className="text-sm text-slate-400">Climb team measurements</p>
+                          <h4 className="font-bold text-slate-400">Manual Survey</h4>
+                          <p className="text-sm text-slate-500">Climb team measurements</p>
                         </div>
                       </div>
 
                       <div className="relative flex items-start gap-4 opacity-50">
-                        <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center z-10 shrink-0">
-                          <span className="text-slate-400 font-bold">3</span>
+                        <div className="w-10 h-10 rounded-full bg-black border-2 border-slate-700 flex items-center justify-center z-10 shrink-0">
+                          <span className="text-slate-500 font-bold">3</span>
                         </div>
                         <div>
-                          <h4 className="font-bold text-slate-500">Data Processing</h4>
-                          <p className="text-sm text-slate-400">Manual report generation</p>
+                          <h4 className="font-bold text-slate-400">Data Processing</h4>
+                          <p className="text-sm text-slate-500">Manual report generation</p>
                         </div>
                       </div>
 
                       <div className="relative flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-red-100 border-2 border-red-500 flex items-center justify-center z-10 shrink-0 animate-pulse">
-                          <span className="text-red-600 font-bold">!</span>
+                        <div className="w-10 h-10 rounded-full bg-red-900/50 border-2 border-red-500 flex items-center justify-center z-10 shrink-0 animate-pulse">
+                          <span className="text-red-500 font-bold">!</span>
                         </div>
                         <div>
-                          <h4 className="font-bold text-red-600 text-lg">180 Days Total</h4>
-                          <p className="text-sm text-red-500 font-medium">Traditional Workflow</p>
+                          <h4 className="font-bold text-red-500 text-lg">180 Days Total</h4>
+                          <p className="text-sm text-red-400 font-medium">Traditional Workflow</p>
                         </div>
                       </div>
                     </div>

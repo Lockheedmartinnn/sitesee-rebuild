@@ -4,7 +4,7 @@ import { Link } from "wouter";
 
 export default function BIM() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
@@ -50,47 +50,47 @@ export default function BIM() {
       </section>
 
       {/* The Equipment Data Problem */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-black text-white border-t border-white/10">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                   The Equipment Data Problem
                 </h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
+                <p className="text-lg text-slate-400 leading-relaxed">
                   Every tower modification requires technical specifications for every piece of equipment. But data is scattered, outdated, and inconsistent.
                 </p>
               </div>
 
-              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                   <AlertTriangle className="w-5 h-5 text-amber-500" />
                   Current Friction
                 </h3>
                 <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-slate-700">
-                    <FileText className="w-5 h-5 text-slate-400 mt-1 shrink-0" />
+                  <li className="flex items-start gap-3 text-slate-300">
+                    <FileText className="w-5 h-5 text-slate-500 mt-1 shrink-0" />
                     <span><strong>Vendor PDFs:</strong> Specifications buried in 50-page documents, not machine-readable.</span>
                   </li>
-                  <li className="flex items-start gap-3 text-slate-700">
-                    <Box className="w-5 h-5 text-slate-400 mt-1 shrink-0" />
+                  <li className="flex items-start gap-3 text-slate-300">
+                    <Box className="w-5 h-5 text-slate-500 mt-1 shrink-0" />
                     <span><strong>Legacy CAD libraries:</strong> 2D drawings or basic 3D blocks with no embedded technical data.</span>
                   </li>
-                  <li className="flex items-start gap-3 text-slate-700">
-                    <Database className="w-5 h-5 text-slate-400 mt-1 shrink-0" />
+                  <li className="flex items-start gap-3 text-slate-300">
+                    <Database className="w-5 h-5 text-slate-500 mt-1 shrink-0" />
                     <span><strong>Spreadsheet chaos:</strong> ESA values maintained in disconnected Excel files, versions out of sync.</span>
                   </li>
                 </ul>
               </div>
               
-              <p className="text-lg font-medium text-slate-900 border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-r-lg">
+              <p className="text-lg font-medium text-white border-l-4 border-red-500 pl-4 py-2 bg-red-900/20 rounded-r-lg">
                 Result: Design delays. Assessment errors. Rework when equipment doesn't fit.
               </p>
             </div>
 
             <div className="grid gap-6">
-              <div className="bg-slate-900 p-8 rounded-2xl text-white shadow-xl">
+              <div className="bg-white/5 p-8 rounded-2xl text-white shadow-xl border border-white/10">
                 <h3 className="text-xl font-bold mb-6 text-blue-400">Data Requirements</h3>
                 <div className="space-y-6">
                   <div>
@@ -127,24 +127,24 @@ export default function BIM() {
       </section>
 
       {/* BIM-Enabled Equipment Library */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-black text-white border-t border-white/10">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               BIM-Enabled Equipment Library
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-lg text-slate-400">
               NexDT's BIM Catalogue is a continuously updated library of tower equipment with complete technical specifications embedded in each component. Not just 3D geometry—structured, multi-disciplinary data.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+            <div className="bg-white/5 p-8 rounded-2xl shadow-sm border border-white/10 hover:border-blue-500/50 transition-all group">
+              <div className="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-white transition-colors">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">RF Equipment</h3>
-              <ul className="space-y-2 text-slate-600 text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">RF Equipment</h3>
+              <ul className="space-y-2 text-slate-400 text-sm">
                 <li>• Panel antennas (Nokia, Ericsson, Huawei, etc.)</li>
                 <li>• Microwave dishes and backhaul antennas</li>
                 <li>• RRUs and remote radio heads</li>
@@ -152,12 +152,12 @@ export default function BIM() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+            <div className="bg-white/5 p-8 rounded-2xl shadow-sm border border-white/10 hover:border-blue-500/50 transition-all group">
+              <div className="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-white transition-colors">
                 <Settings className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Mounting Hardware</h3>
-              <ul className="space-y-2 text-slate-600 text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Mounting Hardware</h3>
+              <ul className="space-y-2 text-slate-400 text-sm">
                 <li>• Antenna mounts and brackets</li>
                 <li>• Pipe mounts and clamps</li>
                 <li>• Azimuth and tilt adjustment mechanisms</li>
@@ -165,12 +165,12 @@ export default function BIM() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+            <div className="bg-white/5 p-8 rounded-2xl shadow-sm border border-white/10 hover:border-blue-500/50 transition-all group">
+              <div className="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-white transition-colors">
                 <Box className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Support Infrastructure</h3>
-              <ul className="space-y-2 text-slate-600 text-sm">
+              <h3 className="text-xl font-bold text-white mb-4">Support Infrastructure</h3>
+              <ul className="space-y-2 text-slate-400 text-sm">
                 <li>• Equipment shelters and cabinets</li>
                 <li>• Cable trays and ladder systems</li>
                 <li>• Platforms and walkways</li>
@@ -245,47 +245,47 @@ export default function BIM() {
       </section>
 
       {/* Integration Sections */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-black text-white border-t border-white/10">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* IEA Integration */}
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-green-600">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <div className="w-12 h-12 bg-green-900/30 rounded-xl flex items-center justify-center mb-6 text-green-400">
                 <Activity className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Integration with IEA</h3>
-              <p className="text-slate-600 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Integration with IEA</h3>
+              <p className="text-slate-400 mb-6">
                 Every BIM component includes Effective Sail Area (ESA) data ready for Indicative Engineering Analysis.
               </p>
               <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-2">Vendor-Derived ESA</h4>
-                  <p className="text-sm text-slate-500">Sourced from technical specs, wind tunnel data, and standards (AS/NZS 7000, TIA-222).</p>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/10">
+                  <h4 className="font-bold text-white mb-2">Vendor-Derived ESA</h4>
+                  <p className="text-sm text-slate-400">Sourced from technical specs, wind tunnel data, and standards (AS/NZS 7000, TIA-222).</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-2">Customer-Specific ESA</h4>
-                  <p className="text-sm text-slate-500">Override vendor defaults with your own validated values or site-specific calculations.</p>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/10">
+                  <h4 className="font-bold text-white mb-2">Customer-Specific ESA</h4>
+                  <p className="text-sm text-slate-400">Override vendor defaults with your own validated values or site-specific calculations.</p>
                 </div>
               </div>
             </div>
 
             {/* EME Integration */}
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <div className="w-12 h-12 bg-purple-900/30 rounded-xl flex items-center justify-center mb-6 text-purple-400">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Integration with EME</h3>
-              <p className="text-slate-600 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Integration with EME</h3>
+              <p className="text-slate-400 mb-6">
                 Every antenna includes radiation pattern data ready for Indicative EME Assessment.
               </p>
               <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-2">SiteSee Pattern Database</h4>
-                  <p className="text-sm text-slate-500">Extensive library from national databases and manufacturers in standard formats.</p>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/10">
+                  <h4 className="font-bold text-white mb-2">SiteSee Pattern Database</h4>
+                  <p className="text-sm text-slate-400">Extensive library from national databases and manufacturers in standard formats.</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-2">Customer-Specific Patterns</h4>
-                  <p className="text-sm text-slate-500">Upload custom MSI patterns for proprietary or modified equipment.</p>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/10">
+                  <h4 className="font-bold text-white mb-2">Customer-Specific Patterns</h4>
+                  <p className="text-sm text-slate-400">Upload custom MSI patterns for proprietary or modified equipment.</p>
                 </div>
               </div>
             </div>
@@ -294,7 +294,7 @@ export default function BIM() {
       </section>
 
       {/* Personalized Library & Workflow Comparison */}
-      <section className="py-24 bg-slate-950 text-white">
+      <section className="py-24 bg-black text-white border-t border-white/10">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
@@ -347,30 +347,30 @@ export default function BIM() {
       </section>
 
       {/* Technical Advantages */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-black text-white border-t border-white/10">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Technical Advantages
             </h2>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-              <div className="font-bold text-slate-900 mb-2">Measurement-Grade</div>
-              <p className="text-sm text-slate-600">±2mm dimensional tolerance, ±1% ESA accuracy, ±0.5 dB gain accuracy.</p>
+            <div className="bg-white/5 p-6 rounded-xl shadow-sm border border-white/10">
+              <div className="font-bold text-white mb-2">Measurement-Grade</div>
+              <p className="text-sm text-slate-400">±2mm dimensional tolerance, ±1% ESA accuracy, ±0.5 dB gain accuracy.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-              <div className="font-bold text-slate-900 mb-2">Multi-Disciplinary</div>
-              <p className="text-sm text-slate-600">Same component used by Structural, RF, CAD, and Procurement teams.</p>
+            <div className="bg-white/5 p-6 rounded-xl shadow-sm border border-white/10">
+              <div className="font-bold text-white mb-2">Multi-Disciplinary</div>
+              <p className="text-sm text-slate-400">Same component used by Structural, RF, CAD, and Procurement teams.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-              <div className="font-bold text-slate-900 mb-2">Format Compatibility</div>
-              <p className="text-sm text-slate-600">Exports to IFC, Native CAD, JSON/XML, and PDF 3D.</p>
+            <div className="bg-white/5 p-6 rounded-xl shadow-sm border border-white/10">
+              <div className="font-bold text-white mb-2">Format Compatibility</div>
+              <p className="text-sm text-slate-400">Exports to IFC, Native CAD, JSON/XML, and PDF 3D.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-              <div className="font-bold text-slate-900 mb-2">Continuous Evolution</div>
-              <p className="text-sm text-slate-600">Quarterly updates with new releases and specification corrections.</p>
+            <div className="bg-white/5 p-6 rounded-xl shadow-sm border border-white/10">
+              <div className="font-bold text-white mb-2">Continuous Evolution</div>
+              <p className="text-sm text-slate-400">Quarterly updates with new releases and specification corrections.</p>
             </div>
           </div>
         </div>

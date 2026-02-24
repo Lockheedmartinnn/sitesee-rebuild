@@ -8,9 +8,9 @@ import { VideoTestimonial } from "@/components/VideoTestimonial";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-black text-white">
       {/* Hero Section - Bolder, Modern, High Impact */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-transparent">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         {/* Video Background with Modern Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <video 
@@ -18,18 +18,15 @@ export default function Home() {
             loop 
             muted 
             playsInline
-            className="w-full h-full object-cover opacity-100"
+            className="w-full h-full object-cover opacity-60"
           >
             <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/XOOnORGCeeYOqnhD.mov" type="video/mp4" />
           </video>
-          {/* Gradient removed for transparency */}
-          {/* Gradient removed for transparency */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black" />
         </div>
 
         <div className="container relative z-10 py-32">
           <div className="max-w-4xl space-y-10 relative z-10">
-            {/* Subtle backdrop for text readability */}
-            <div className="absolute -inset-8 bg-black/20 blur-3xl -z-10 rounded-full pointer-events-none" />
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Trusted by 36,000+ towers globally</span>
@@ -39,7 +36,7 @@ export default function Home() {
               AI Powered <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Digital Twins</span>
             </h1>
             
-            <p className="text-2xl md:text-3xl text-white/90 font-light leading-relaxed max-w-2xl drop-shadow-md">
+            <p className="text-2xl md:text-3xl text-white/80 font-light leading-relaxed max-w-2xl drop-shadow-md">
               Unlock the true value of your infrastructure. Accelerate upgrades, reduce costs, and optimize assets with the industry's most advanced digital twin.
             </p>
             
@@ -55,30 +52,28 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* Animated Flights Counter Section */}
       <FlightsCounter />
 
       {/* Executive Context - High Contrast & Asymmetric */}
-      <section className="py-32 bg-white text-black overflow-hidden">
+      <section className="py-32 bg-black text-white overflow-hidden">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-6">
-                <p className="text-sm font-bold tracking-[0.2em] text-blue-600 uppercase">The Problem</p>
+                <p className="text-sm font-bold tracking-[0.2em] text-blue-500 uppercase">The Problem</p>
                 <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.9]">
                   Most digital twins don't move the numbers.
                 </h2>
               </div>
               
-              <div className="space-y-8 text-xl md:text-2xl font-light leading-relaxed text-slate-600">
+              <div className="space-y-8 text-xl md:text-2xl font-light leading-relaxed text-slate-400">
                 <p>
-                  They improve visibility. They reduce some site visits. They make inspection easier. <strong className="text-black font-semibold">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
+                  They improve visibility. They reduce some site visits. They make inspection easier. <strong className="text-white font-semibold">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
                 </p>
                 
                 <div className="pl-8 border-l-4 border-blue-600">
-                  <p className="text-black font-medium italic">
+                  <p className="text-white font-medium italic">
                     "Better pictures alone do not reduce cost or accelerate revenue."
                   </p>
                 </div>
@@ -90,13 +85,13 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out border border-white/10">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Engineering team working on telecom tower infrastructure"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
                   <p className="text-lg font-medium">Embedded in upgrade, colocation, engineering, and compliance workflows.</p>
                 </div>
@@ -107,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* High Impact Metrics - Dark Mode Grid */}
-      <section className="py-32 bg-slate-950 text-white">
+      <section className="py-32 bg-slate-950 text-white border-y border-white/5">
         <div className="container">
           <div className="space-y-20">
             <div className="max-w-3xl">
@@ -144,14 +139,14 @@ export default function Home() {
       <Testimonials />
 
       {/* Global Customer Map Section */}
-      <section className="py-24 md:py-32 bg-slate-50">
+      <section className="py-24 md:py-32 bg-black text-white">
         <div className="container">
           <div className="space-y-16">
             <div className="max-w-2xl">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-white leading-[1.1]">
                 Trusted Globally
               </h2>
-              <p className="text-xl text-slate-600 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
+              <p className="text-xl text-slate-400 mt-6">Deployed across major tower operators and infrastructure providers worldwide</p>
             </div>
 
             <CustomerMap />
@@ -165,10 +160,10 @@ export default function Home() {
                 { name: 'Malaysia', customers: '3+' },
                 { name: 'Oman', customers: '2+' },
               ].map((region) => (
-                <div key={region.name} className="text-center p-6 bg-white rounded-sm border border-slate-200 hover:border-blue-300 transition-colors">
-                  <p className="text-sm font-semibold text-slate-600 mb-2">REGION</p>
-                  <p className="text-2xl font-bold text-foreground mb-1">{region.name}</p>
-                  <p className="text-lg text-blue-600 font-bold">{region.customers} Operators</p>
+                <div key={region.name} className="text-center p-6 bg-white/5 rounded-sm border border-white/10 hover:border-blue-500/50 transition-colors">
+                  <p className="text-sm font-semibold text-slate-400 mb-2">REGION</p>
+                  <p className="text-2xl font-bold text-white mb-1">{region.name}</p>
+                  <p className="text-lg text-blue-400 font-bold">{region.customers} Operators</p>
                 </div>
               ))}
             </div>
@@ -176,48 +171,46 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* Industry Reality - Asymmetric Layout */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-24 md:py-32 bg-slate-950 text-white border-t border-white/5">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-foreground leading-[1.1]">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tighter text-white leading-[1.1]">
                 Telecom infrastructure is no longer simple.
               </h2>
 
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-foreground">The Reality</h3>
+                <h3 className="text-2xl font-bold text-white">The Reality</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-600 font-bold text-xl">•</span>
-                    <span className="text-lg text-foreground">Multi-tenant towers</span>
+                    <span className="text-blue-500 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-300">Multi-tenant towers</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-600 font-bold text-xl">•</span>
-                    <span className="text-lg text-foreground">Constant upgrade cycles</span>
+                    <span className="text-blue-500 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-300">Constant upgrade cycles</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-600 font-bold text-xl">•</span>
-                    <span className="text-lg text-foreground">Tight regulatory constraints</span>
+                    <span className="text-blue-500 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-300">Tight regulatory constraints</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-blue-600 font-bold text-xl">•</span>
-                    <span className="text-lg text-foreground">Zero tolerance for rework</span>
+                    <span className="text-blue-500 font-bold text-xl">•</span>
+                    <span className="text-lg text-slate-300">Zero tolerance for rework</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
+              <div className="aspect-square rounded-sm overflow-hidden shadow-2xl border border-white/10">
                 <video 
                   autoPlay 
                   loop 
                   muted 
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-80"
                 >
                   <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hmqsaTwUsXYiOWku.mp4" type="video/mp4" />
                 </video>
@@ -228,11 +221,11 @@ export default function Home() {
       </section>
 
       {/* Current Workflows - Flipped Asymmetric */}
-      <section className="py-24 md:py-32 bg-slate-50">
+      <section className="py-24 md:py-32 bg-black text-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
-              <div className="aspect-video rounded-sm overflow-hidden shadow-2xl">
+              <div className="aspect-video rounded-sm overflow-hidden shadow-2xl border border-white/10">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
                   alt="Telecom engineer performing site inspection" 
