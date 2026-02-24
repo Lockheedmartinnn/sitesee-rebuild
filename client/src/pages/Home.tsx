@@ -36,20 +36,24 @@ export default function Home() {
             </div>
 
             <h1 className="text-white text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.95] drop-shadow-lg">
-              The operating system for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">telecom infrastructure</span>
+              NexDT: The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Performance Lever</span> for Telecom
             </h1>
             
             <p className="text-2xl md:text-3xl text-white/90 font-light leading-relaxed max-w-2xl drop-shadow-md">
-              Design, validate, deploy, and govern network assets — digitally, accurately, and at scale.
+              Unlock the true value of your infrastructure. Accelerate upgrades, reduce costs, and optimize assets with the industry's most advanced digital twin.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <a href="/contact" className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
-                Talk to us <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="/products/nexdt" className="h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold inline-flex items-center gap-3">
-                See NexDT in action
-              </a>
+              <Link href="/products/nexdt">
+                <a className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
+                  Explore NexDT <ArrowRight className="w-5 h-5" />
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className="h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold inline-flex items-center gap-3">
+                  Talk to Sales
+                </a>
+              </Link>
             </div>
           </div>
         </div>
