@@ -36,7 +36,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-white text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tighter leading-[0.95] drop-shadow-lg">
-              NexDT: The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Performance Lever</span> for Telecom
+              AI Powered <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Digital Twins</span>
             </h1>
             
             <p className="text-2xl md:text-3xl text-white/90 font-light leading-relaxed max-w-2xl drop-shadow-md">
