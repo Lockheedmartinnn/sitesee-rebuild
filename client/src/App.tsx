@@ -18,7 +18,7 @@ import PilotCompanion from "./pages/products/PilotCompanion";
 import AIBoost from "./pages/products/AIBoost";
 import Company from "./pages/Company";
 import Contact from "./pages/Contact";
-import Value from "./pages/Value";
+
 import ROICalculator from "./pages/ROICalculator";
 
 function Router() {
@@ -36,7 +36,7 @@ function Router() {
         <Route path={"/products/scale-points"} component={ScalePoints} />
         <Route path={"/products/pilot-companion"} component={PilotCompanion} />
 
-        <Route path={"/value"} component={Value} />
+        
         <Route path={"/roi-calculator"} component={ROICalculator} />
         <Route path={"/company"} component={Company} />
         <Route path={"/contact"} component={Contact} />

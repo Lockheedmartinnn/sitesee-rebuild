@@ -124,17 +124,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 font-medium">Value</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                      <ListItem href="/value" title="Value Proposition">
-                        How NexDT drives operational efficiency and revenue.
-                      </ListItem>
-                      <ListItem href="/roi-calculator" title="ROI Calculator">
-                        Estimate your annual savings and cashflow benefits.
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent>
+                  <a href="/roi-calculator" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
+                    ROI Calculator
+                  </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <a href="/company" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
@@ -180,7 +172,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <a href="/industries/telco" className="text-lg font-medium hover:text-primary">Telco</a>
                   </div>
                   <div className="h-px bg-border w-full" />
-                  <a href="/value" className="text-lg font-medium hover:text-primary">Value</a>
+                  
                   <a href="/roi-calculator" className="text-lg font-medium hover:text-primary">ROI Calculator</a>
                   <a href="/company" className="text-lg font-medium hover:text-primary">Company</a>
                   <a href="/resources" className="text-lg font-medium hover:text-primary">Resources</a>
