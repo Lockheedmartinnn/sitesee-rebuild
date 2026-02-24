@@ -113,16 +113,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 font-medium">Industries</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                      <ListItem href="/industries/telco" title="Telco">
-                        For tower companies and mobile network operators.
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+
                 <NavigationMenuItem>
                   <Link href="/roi-calculator">
                     <a className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
@@ -168,11 +159,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <a href="/products/capture" className="text-lg font-medium hover:text-primary">Capture</a>
                     <a href="/products/ai-analysis" className="text-lg font-medium hover:text-primary">AI Analysis</a>
                   </div>
-                  <div className="h-px bg-border w-full" />
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-display font-medium text-sm text-muted-foreground uppercase tracking-wider mb-2">Industries</h3>
-                    <a href="/industries/telco" className="text-lg font-medium hover:text-primary">Telco</a>
-                  </div>
+
                   <div className="h-px bg-border w-full" />
                   
                   <a href="/roi-calculator" className="text-lg font-medium hover:text-primary">ROI Calculator</a>

@@ -192,46 +192,53 @@ export default function NexDT() {
                 icon: Radio,
                 title: "Indicative EME Analysis",
                 desc: "ICNIRP 2020 / ARPANSA S-1 conformance modeling without site access. Generate exclusion zones (occupational & public) and validate safety before procurement.",
-                stats: ["ICNIRP 2020", "ARPANSA S-1", "Exclusion Zones"]
+                stats: ["ICNIRP 2020", "ARPANSA S-1", "Exclusion Zones"],
+                link: "/products/ieme"
               },
               {
                 icon: Layers,
                 title: "Single Source of Truth",
                 desc: "One dataset for Engineering, Operations, Real Estate, and RF. Changes made in NexDT propagate instantly to all stakeholders.",
-                stats: ["No data re-entry", "No version conflicts", "Instant propagation"]
+                stats: ["No data re-entry", "No version conflicts", "Instant propagation"],
+                link: "/products/nexdt"
               },
               {
                 icon: Database,
                 title: "BIM-Enabled Equipment Library",
                 desc: "Drag-and-drop equipment placement with complete technical specifications automatically attached: ESA, radiation patterns, weight, dimensions, and vendor part numbers.",
-                stats: ["Vendor Specs", "ESA Values", "Mounting Req"]
+                stats: ["Vendor Specs", "ESA Values", "Mounting Req"],
+                link: "/products/bim"
               },
               {
                 icon: Zap,
                 title: "Scenario Modeling",
                 desc: "Test multiple configurations in hours instead of waiting weeks. Validate structural capacity, ICNIRP conformance, and RF performance before ordering equipment.",
-                stats: ["Test in hours", "Validate before ordering", "Optimize designs"]
+                stats: ["Test in hours", "Validate before ordering", "Optimize designs"],
+                link: "/products/iea"
               },
               {
                 icon: ShieldCheck,
                 title: "Baseline Engineering Integration",
                 desc: "Certified structural engineers provide baseline tower models. NexDT uses these baselines for indicative load analysis—maintaining consistency with prior assessments.",
-                stats: ["Certified Baselines", "Indicative Analysis", "Rapid Iteration"]
+                stats: ["Certified Baselines", "Indicative Analysis", "Rapid Iteration"],
+                link: "/products/iea"
               }
             ].map((feature, idx) => (
-              <div key={idx} className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group">
-                <feature.icon className="w-12 h-12 text-blue-600 mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-4 text-slate-900">{feature.title}</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">{feature.desc}</p>
-                <ul className="space-y-2">
-                  {feature.stats.map((stat, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-slate-500">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                      {stat}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Link key={idx} href={feature.link}>
+                <a className="block p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer h-full hover:border-blue-300">
+                  <feature.icon className="w-12 h-12 text-blue-600 mb-6 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">{feature.title}</h3>
+                  <p className="text-slate-600 mb-6 leading-relaxed">{feature.desc}</p>
+                  <ul className="space-y-2">
+                    {feature.stats.map((stat, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-slate-500">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        {stat}
+                      </li>
+                    ))}
+                  </ul>
+                </a>
+              </Link>
             ))}
           </div>
         </div>

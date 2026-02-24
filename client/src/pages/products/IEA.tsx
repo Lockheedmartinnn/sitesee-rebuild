@@ -100,20 +100,6 @@ export default function IEA() {
                 <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JIbuGIwuPEKCApNE.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Clock className="w-8 h-8 text-amber-400" />
-                    <div>
-                      <div className="text-white font-bold text-lg">Traditional Process</div>
-                      <div className="text-slate-300 text-sm">6-10 Weeks per Iteration</div>
-                    </div>
-                  </div>
-                  <div className="w-full bg-white/20 h-2 rounded-full overflow-hidden">
-                    <div className="bg-amber-500 h-full w-3/4" />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
