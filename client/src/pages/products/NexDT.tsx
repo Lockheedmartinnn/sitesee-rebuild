@@ -28,11 +28,11 @@ export default function NexDT() {
               <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">NexDT Platform</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.95] drop-shadow-lg">
-              The operational digital twin platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">purpose-built for telecom.</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.95] drop-shadow-lg text-white">
+              The operational digital twin platform <span className="text-blue-400">purpose-built for telecom.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-white font-light leading-relaxed max-w-3xl drop-shadow-md">
               NexDT transforms how tower operators design, validate, and approve modifications—moving critical engineering decisions from weeks-long site-visit-dependent workflows into a real-time digital environment.
             </p>
             

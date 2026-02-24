@@ -4,34 +4,34 @@ import { Link } from "wouter";
 
 export default function IEME() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white text-slate-900">
       {/* Hero Section - Video Background */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-transparent">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <video 
             autoPlay 
             loop 
             muted 
             playsInline
-            className="w-full h-full object-cover opacity-100"
+            className="w-full h-full object-cover opacity-60"
           >
             <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/jXFHjHGtYTRgBdVA.mp4" type="video/mp4" />
           </video>
-          {/* Gradient removed for transparency */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
 
         <div className="container relative z-10 py-32">
           <div className="max-w-4xl space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-800/50 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">EME Consistency Analysis</span>
+              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">EME Consistency Analysis</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              Helping you with EME follows <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Before Installation</span>
+              Helping you with EME follows <span className="text-blue-400">Before Installation</span>
             </h1>
             
-            <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
+            <p className="text-xl text-white max-w-3xl leading-relaxed drop-shadow-md">
               You can't move forward with upgrades, colocation, or site commissioning if you're not ICNIRP consistent. SiteSee's EME Analysis eliminates the bottleneck by generating consistent exclusion zones digitally, before site access, before climbs, before delays.
             </p>
             
@@ -107,24 +107,24 @@ export default function IEME() {
       </section>
 
       {/* Consistency Framework Section */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-24 bg-white text-slate-900 border-t border-slate-200">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
               Digital EME Modeling to ARPANSA S-1 & ICNIRP 2020
             </h2>
-            <p className="text-lg text-slate-400">
+            <p className="text-lg text-slate-600">
               SiteSee's EME Analysis generates Indicative Electromagnetic Energy (IEA) Reports that are consistent with the strictest Australian and international standards.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <FileText className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Regulatory Standards</h3>
-              <ul className="space-y-3 text-slate-400 text-sm">
+              <h3 className="text-xl font-bold mb-4 text-slate-900">Regulatory Standards</h3>
+              <ul className="space-y-3 text-slate-600 text-sm">
                 <li className="flex gap-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                   <span>ARPANSA RPS S-1 (2021) Table 4</span>
@@ -140,12 +140,12 @@ export default function IEME() {
               </ul>
             </div>
 
-            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <Activity className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Exposure Limits</h3>
-              <ul className="space-y-3 text-slate-400 text-sm">
+              <h3 className="text-xl font-bold mb-4 text-slate-900">Exposure Limits</h3>
+              <ul className="space-y-3 text-slate-600 text-sm">
                 <li className="flex gap-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                   <span><strong>General Public:</strong> 0.08 W/kg Whole-Body SAR</span>
@@ -161,12 +161,12 @@ export default function IEME() {
               </ul>
             </div>
 
-            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Exclusion Zones</h3>
-              <ul className="space-y-3 text-slate-400 text-sm">
+              <h3 className="text-xl font-bold mb-4 text-slate-900">Exclusion Zones</h3>
+              <ul className="space-y-3 text-slate-600 text-sm">
                 <li className="flex gap-2">
                   <span className="w-3 h-3 rounded-full bg-red-500 shrink-0 mt-1" />
                   <span><strong>Red (Occupational):</strong> Restricted to trained personnel only</span>

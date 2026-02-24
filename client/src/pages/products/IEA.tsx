@@ -4,7 +4,7 @@ import { Link } from "wouter";
 
 export default function IEA() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white text-slate-900">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
@@ -28,10 +28,10 @@ export default function IEA() {
             </div>
 
             <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
-              Indicative Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Assessment (IEA)</span>
+              Indicative Engineering <span className="text-blue-400">Assessment (IEA)</span>
             </h1>
             
-            <p className="text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
+            <p className="text-2xl text-white font-light leading-relaxed max-w-2xl drop-shadow-md">
               Validate structural design changes digitally—before ordering equipment, before engineering sign-off, before discovering you've exceeded tower capacity.
             </p>
             
@@ -120,54 +120,54 @@ export default function IEA() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-24 bg-white text-slate-900 border-t border-slate-200">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
               Predictive Load Analysis in the Digital Twin
             </h2>
-            <p className="text-lg text-slate-400">
+            <p className="text-lg text-slate-600">
               The IEA Tool allows users to test structural design scenarios rapidly and indicatively within NexDT, using baseline structural models provided by certified structural engineers.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <Database className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold mb-3">1. Baseline Model</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-3 text-slate-900">1. Baseline Model</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Certified structural engineer provides baseline configuration: wind speeds, bending moments, shear, and current utilisation.
               </p>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <Layers className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold mb-3">2. Equipment Database</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-3 text-slate-900">2. Equipment Database</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Effective Sail Area (ESA) and height data captured from digital twin, vendor specs, and equipment schedules.
               </p>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <Activity className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold mb-3">3. Drag-and-Drop</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-3 text-slate-900">3. Drag-and-Drop</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Modify tower configuration in NexDT: add antennas, reposition equipment, or test mounting configurations.
               </p>
             </div>
 
-            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500/50 transition-colors">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold mb-3">4. Instant Results</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-3 text-slate-900">4. Instant Results</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Recalculates structural impact using additive techniques. Immediate feedback on structure load, footing load, and tip rotation.
               </p>
             </div>
