@@ -33,10 +33,8 @@ export default function NexDT() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <Link href="/contact">
-                <a className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
+              <Link href="/contact" className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
                   Request Demo <ArrowRight className="w-5 h-5" />
-                </a>
               </Link>
               <a href="#overview" className="h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold inline-flex items-center gap-3">
                 Watch Platform Overview
@@ -90,17 +88,67 @@ export default function NexDT() {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-slate-100 relative">
                 {/* Abstract visualization of bottleneck/chaos */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="inline-block p-4 bg-white rounded-full shadow-lg mb-4">
-                      <FileCheck className="w-12 h-12 text-slate-400" />
+                  <div className="relative w-full h-full bg-slate-100 p-8 flex flex-col justify-center">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-300" />
+                    <div className="flex items-center justify-between mb-8">
+                      <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
+                        <span className="w-3 h-3 rounded-full bg-red-500" />
+                        Traditional
+                      </h3>
+                      <div className="px-3 py-1 bg-red-100 text-red-700 text-sm font-bold rounded-full">180 Days</div>
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-400">Traditional Workflow</h3>
-                    <div className="flex justify-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-red-400 animate-pulse" />
-                      <span className="h-2 w-2 rounded-full bg-red-400 animate-pulse delay-75" />
-                      <span className="h-2 w-2 rounded-full bg-red-400 animate-pulse delay-150" />
+                    
+                    <div className="space-y-6 relative">
+                      {/* Timeline Line */}
+                      <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-slate-300" />
+                      
+                      <div className="relative flex items-start gap-4 opacity-50">
+                        <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center z-10 shrink-0">
+                          <span className="text-slate-400 font-bold">1</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-slate-500">Site Access Request</h4>
+                          <p className="text-sm text-slate-400">Wait 2-4 weeks for scheduling</p>
+                        </div>
+                      </div>
+
+                      <div className="relative flex items-start gap-4 opacity-50">
+                        <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center z-10 shrink-0">
+                          <span className="text-slate-400 font-bold">2</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-slate-500">Manual Survey</h4>
+                          <p className="text-sm text-slate-400">Climb team measurements</p>
+                        </div>
+                      </div>
+
+                      <div className="relative flex items-start gap-4 opacity-50">
+                        <div className="w-10 h-10 rounded-full bg-white border-2 border-slate-300 flex items-center justify-center z-10 shrink-0">
+                          <span className="text-slate-400 font-bold">3</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-slate-500">Data Processing</h4>
+                          <p className="text-sm text-slate-400">Manual report generation</p>
+                        </div>
+                      </div>
+
+                      <div className="relative flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full bg-red-100 border-2 border-red-500 flex items-center justify-center z-10 shrink-0 animate-pulse">
+                          <span className="text-red-600 font-bold">!</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-red-600 text-lg">180 Days Total</h4>
+                          <p className="text-sm text-red-500 font-medium">Traditional Workflow</p>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-slate-500">Weeks of waiting for physical site access</p>
+                    
+                    {/* Comparison Badge */}
+                    <div className="absolute -right-4 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-4 rounded-xl shadow-xl transform rotate-3 border-2 border-white z-20">
+                      <p className="text-xs font-bold uppercase tracking-wider opacity-80 mb-1">With NexDT</p>
+                      <p className="text-3xl font-bold">44 Days</p>
+                      <p className="text-xs font-medium mt-1">Total Turnaround</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -212,7 +260,15 @@ export default function NexDT() {
               </ul>
             </div>
             <div className="bg-slate-100 rounded-2xl aspect-video overflow-hidden shadow-xl">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" alt="Site Capture" className="w-full h-full object-cover" />
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/IwcDrkvTvPwIeTwW.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 
