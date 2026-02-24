@@ -135,10 +135,10 @@ export default function NexDT() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Ruler,
-                title: "Measurement-Grade Foundation",
-                desc: "Digital twins created from autonomous drone capture with surveyed accuracy. Not artistic renderings. Not approximate models. Measurement-grade geometry adequate for engineering sign-off.",
-                stats: ["Position: ±2.9% error", "Bearing: ±2.6° error", "Tilt: ±1.9° error"]
+                icon: Radio,
+                title: "Indicative EME Analysis",
+                desc: "ICNIRP 2020 / ARPANSA S-1 conformance modeling without site access. Generate exclusion zones (occupational & public) and validate safety before procurement.",
+                stats: ["ICNIRP 2020", "ARPANSA S-1", "Exclusion Zones"]
               },
               {
                 icon: Layers,
@@ -187,13 +187,13 @@ export default function NexDT() {
       <section className="py-32 bg-white text-black">
         <div className="container space-y-32">
           
-          {/* DroneSee */}
+          {/* Capture */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-bold uppercase tracking-wider">
                 Capture
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Autonomous Site Capture (DroneSee)</h3>
+              <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Autonomous Site Capture</h3>
               <p className="text-xl text-slate-600 leading-relaxed">
                 Measurement-grade data acquisition without manual surveying. No manual tagging required. No human-in-the-loop flight control. Fully autonomous from takeoff to landing.
               </p>
@@ -212,7 +212,7 @@ export default function NexDT() {
               </ul>
             </div>
             <div className="bg-slate-100 rounded-2xl aspect-video overflow-hidden shadow-xl">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" alt="DroneSee Capture" className="w-full h-full object-cover" />
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" alt="Site Capture" className="w-full h-full object-cover" />
             </div>
           </div>
 

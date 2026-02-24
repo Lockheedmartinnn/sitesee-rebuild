@@ -226,7 +226,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-display font-bold text-lg mb-6">Products</h4>
               <ul className="space-y-3">
                 <li><Link href="/products/nexdt" className="text-muted-foreground hover:text-primary transition-colors">NexDT Ecosystem</Link></li>
-                <li><Link href="/products/capture" className="text-muted-foreground hover:text-primary transition-colors">DroneSee Mission Planner</Link></li>
+                <li><Link href="/products/capture" className="text-muted-foreground hover:text-primary transition-colors">Mission Planner</Link></li>
                 <li><Link href="/products/ai-analysis" className="text-muted-foreground hover:text-primary transition-colors">AI Audit Engine</Link></li>
                 <li><Link href="/products/3d-modeling" className="text-muted-foreground hover:text-primary transition-colors">TowerSee MAX</Link></li>
                 <li><Link href="/products/bim" className="text-muted-foreground hover:text-primary transition-colors">BIM Catalogue</Link></li>

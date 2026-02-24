@@ -11,7 +11,7 @@ export default function Capture() {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg" 
-            alt="DroneSee Mission Planner" 
+            alt="Mission Planner" 
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
@@ -21,7 +21,7 @@ export default function Capture() {
           <div className="max-w-4xl space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">DroneSee Mission Planner</span>
+              <span className="text-sm font-medium text-blue-300 tracking-wide uppercase">Mission Planner</span>
             </div>
 
             <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter leading-[1.1]">
@@ -88,7 +88,7 @@ export default function Capture() {
               Capture data with confidence.
             </h2>
             <p className="text-xl text-blue-100">
-              Streamline your drone operations with DroneSee Mission Planner.
+              Streamline your drone operations with our Mission Planner.
             </p>
             <a href="/contact" className="h-14 px-10 text-lg bg-white text-blue-600 hover:bg-blue-50 border-0 font-bold rounded-full inline-flex items-center gap-2 transition-all hover:scale-105 shadow-lg">
               Get Started Now

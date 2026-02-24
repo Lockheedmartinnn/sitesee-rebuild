@@ -283,7 +283,7 @@ export default function IEME() {
                   <div className="relative pl-8">
                     <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
                     <div className="font-bold text-blue-900">Day 0</div>
-                    <div className="text-sm text-blue-700">Request DroneSee capture</div>
+                    <div className="text-sm text-blue-700">Request Site Capture</div>
                   </div>
                   <div className="relative pl-8">
                     <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
