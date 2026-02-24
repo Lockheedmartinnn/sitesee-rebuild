@@ -269,7 +269,7 @@ export default function NexDT() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/IwcDrkvTvPwIeTwW.mp4" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/CiZkQklyOoTWDScE.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -277,7 +277,15 @@ export default function NexDT() {
           {/* TowerSee MAX */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 bg-slate-100 rounded-2xl aspect-video overflow-hidden shadow-xl">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" alt="TowerSee MAX Interface" className="w-full h-full object-cover" />
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/IwcDrkvTvPwIeTwW.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="order-1 lg:order-2 space-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-bold uppercase tracking-wider">
