@@ -44,15 +44,11 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 pt-8">
-              <Link href="/products/nexdt">
-                <a className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
+              <Link href="/products/nexdt" className="h-16 px-10 text-lg bg-blue-600 text-white hover:bg-blue-700 border-0 font-bold rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]">
                   Explore NexDT <ArrowRight className="w-5 h-5" />
-                </a>
               </Link>
-              <Link href="/contact">
-                <a className="h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold inline-flex items-center gap-3">
+              <Link href="/contact" className="h-16 px-10 text-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold inline-flex items-center gap-3">
                   Talk to Sales
-                </a>
               </Link>
             </div>
           </div>

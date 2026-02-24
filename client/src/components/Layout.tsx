@@ -124,9 +124,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a href="/roi-calculator" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
-                    ROI Calculator
-                  </a>
+                  <Link href="/roi-calculator">
+                    <a className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
+                      ROI Calculator
+                    </a>
+                  </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <a href="/company" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-accent/50 font-medium cursor-pointer")}>
