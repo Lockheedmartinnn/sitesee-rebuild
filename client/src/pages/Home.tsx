@@ -93,7 +93,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
-                  alt="Engineering Team"
+                  alt="Engineering team working on telecom tower infrastructure"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -212,11 +212,15 @@ export default function Home() {
 
             <div className="relative">
               <div className="aspect-square rounded-sm overflow-hidden shadow-2xl">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hmqsaTwUsXYiOWku.mp4" 
-                  alt="Tower structural detail" 
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
                   className="w-full h-full object-cover"
-                />
+                >
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hmqsaTwUsXYiOWku.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
@@ -231,7 +235,7 @@ export default function Home() {
               <div className="aspect-video rounded-sm overflow-hidden shadow-2xl">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/GTsSufCWoapGCDcy.jpg" 
-                  alt="Engineer on site" 
+                  alt="Telecom engineer performing site inspection" 
                   className="w-full h-full object-cover"
                 />
               </div>
