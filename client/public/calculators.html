@@ -22,15 +22,18 @@
         </div>
 
         <!-- Tabs -->
-        <div class="flex justify-center mb-8 border-b border-gray-200">
-            <button onclick="switchTab('operational')" id="tab-operational" class="tab-active px-8 py-4 text-lg font-medium focus:outline-none transition-colors">
+        <div class="flex justify-center mb-8 border-b border-gray-200 overflow-x-auto">
+            <button onclick="switchTab('operational')" id="tab-operational" class="tab-active px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
                 Operational Savings
             </button>
-            <button onclick="switchTab('ev')" id="tab-ev" class="tab-inactive px-8 py-4 text-lg font-medium focus:outline-none transition-colors">
+            <button onclick="switchTab('ev')" id="tab-ev" class="tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
                 EV Uplift
             </button>
-            <button onclick="switchTab('workflow')" id="tab-workflow" class="tab-inactive px-8 py-4 text-lg font-medium focus:outline-none transition-colors">
-                Capture Workflow
+            <button onclick="switchTab('traditional')" id="tab-traditional" class="tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
+                Traditional Workflow
+            </button>
+            <button onclick="switchTab('sitesee')" id="tab-sitesee" class="tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
+                SiteSee Workflow
             </button>
         </div>
 
@@ -149,32 +152,32 @@
             </div>
         </div>
 
-        <!-- Workflow Calculator -->
-        <div id="content-workflow" class="hidden">
+        <!-- Traditional Workflow Calculator -->
+        <div id="content-traditional" class="hidden">
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1 space-y-6">
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Manual Workflow Inputs</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Manual Process Inputs</h3>
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Travel to Site (Hours)</label>
-                                <input type="number" id="wf-travel" value="2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcWorkflow()">
+                                <input type="number" id="trad-travel" value="2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Site Access/Safety (Hours)</label>
-                                <input type="number" id="wf-access" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcWorkflow()">
+                                <input type="number" id="trad-access" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Climb & Capture (Hours)</label>
-                                <input type="number" id="wf-climb" value="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcWorkflow()">
+                                <input type="number" id="trad-climb" value="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Report Generation (Hours)</label>
-                                <input type="number" id="wf-report" value="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcWorkflow()">
+                                <input type="number" id="trad-report" value="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Hourly Rate ($)</label>
-                                <input type="number" id="wf-rate" value="150" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcWorkflow()">
+                                <input type="number" id="trad-rate" value="150" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
                             </div>
                         </div>
                     </div>
@@ -182,20 +185,19 @@
 
                 <div class="lg:col-span-2 space-y-6">
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Workflow Comparison (Per Site)</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Traditional Workflow Analysis</h2>
                         
                         <div class="space-y-8">
-                            <!-- Manual Bar -->
                             <div>
                                 <div class="flex justify-between text-sm font-medium text-gray-600 mb-2">
-                                    <span>Manual Process</span>
-                                    <span id="wf-manual-total">10 Hours</span>
+                                    <span>Total Time per Site</span>
+                                    <span id="trad-total-time">10 Hours</span>
                                 </div>
                                 <div class="h-12 bg-gray-100 rounded-full overflow-hidden flex">
-                                    <div id="bar-travel" class="h-full bg-red-400" style="width: 20%"></div>
-                                    <div id="bar-access" class="h-full bg-red-500" style="width: 10%"></div>
-                                    <div id="bar-climb" class="h-full bg-red-600" style="width: 40%"></div>
-                                    <div id="bar-report" class="h-full bg-red-700" style="width: 30%"></div>
+                                    <div id="trad-bar-travel" class="h-full bg-red-400" style="width: 20%"></div>
+                                    <div id="trad-bar-access" class="h-full bg-red-500" style="width: 10%"></div>
+                                    <div id="trad-bar-climb" class="h-full bg-red-600" style="width: 40%"></div>
+                                    <div id="trad-bar-report" class="h-full bg-red-700" style="width: 30%"></div>
                                 </div>
                                 <div class="flex justify-between text-xs text-gray-500 mt-2">
                                     <div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-400 rounded-full"></div>Travel</div>
@@ -205,32 +207,65 @@
                                 </div>
                             </div>
 
-                            <!-- SiteSee Bar -->
+                            <div class="mt-8 pt-8 border-t border-gray-100">
+                                <div class="text-sm text-gray-500">Total Cost per Site</div>
+                                <div class="text-4xl font-bold text-red-600" id="trad-total-cost">$1,500</div>
+                                <p class="text-sm text-gray-400 mt-2">Includes labor costs for travel, access, climbing, and reporting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SiteSee Workflow Calculator -->
+        <div id="content-sitesee" class="hidden">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Autonomous Process Inputs</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Flight Time (Minutes)</label>
+                                <input type="number" id="ss-flight" value="30" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcSiteSee()">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Processing Time (Minutes)</label>
+                                <input type="number" id="ss-process" value="0" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" disabled>
+                                <p class="text-xs text-gray-500 mt-1">Automated cloud processing (0 labor hours)</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Hourly Rate ($)</label>
+                                <input type="number" id="ss-rate" value="150" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcSiteSee()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">SiteSee Workflow Analysis</h2>
+                        
+                        <div class="space-y-8">
                             <div>
                                 <div class="flex justify-between text-sm font-medium text-gray-600 mb-2">
-                                    <span>SiteSee Autonomous Capture</span>
-                                    <span id="wf-sitesee-total">0.5 Hours</span>
+                                    <span>Total Labor Time per Site</span>
+                                    <span id="ss-total-time">0.5 Hours</span>
                                 </div>
                                 <div class="h-12 bg-gray-100 rounded-full overflow-hidden flex items-center">
-                                    <div class="h-full bg-green-500 flex items-center justify-center text-white font-bold text-sm" style="width: 5%">
+                                    <div class="h-full bg-green-500 flex items-center justify-center text-white font-bold text-sm" style="width: 100%">
                                         <span class="px-2">Flight</span>
                                     </div>
                                 </div>
                                 <div class="text-xs text-gray-500 mt-2">
-                                    <span class="text-green-600 font-medium">95% Time Savings</span> - Autonomous flight completes in ~30 mins. No climbing, no manual reporting.
+                                    <span class="text-green-600 font-medium">Automated Capture</span> - No climbing, no manual reporting.
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="mt-8 pt-8 border-t border-gray-100 grid grid-cols-2 gap-8">
-                            <div>
-                                <div class="text-sm text-gray-500">Cost per Site (Manual)</div>
-                                <div class="text-3xl font-bold text-red-600" id="wf-cost-manual">$1,500</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-500">Cost per Site (SiteSee)</div>
-                                <div class="text-3xl font-bold text-green-600" id="wf-cost-sitesee">$75</div>
-                                <div class="text-xs text-gray-400 mt-1">*Based on 0.5hr flight time</div>
+                            <div class="mt-8 pt-8 border-t border-gray-100">
+                                <div class="text-sm text-gray-500">Total Labor Cost per Site</div>
+                                <div class="text-4xl font-bold text-green-600" id="ss-total-cost">$75</div>
+                                <p class="text-sm text-gray-400 mt-2">Significantly reduced labor costs due to autonomous flight and automated processing.</p>
                             </div>
                         </div>
                     </div>
@@ -241,12 +276,12 @@
 
     <script>
         function switchTab(tab) {
-            ['operational', 'ev', 'workflow'].forEach(t => {
+            ['operational', 'ev', 'traditional', 'sitesee'].forEach(t => {
                 document.getElementById(`content-${t}`).classList.add('hidden');
-                document.getElementById(`tab-${t}`).className = 'tab-inactive px-8 py-4 text-lg font-medium focus:outline-none transition-colors';
+                document.getElementById(`tab-${t}`).className = 'tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap';
             });
             document.getElementById(`content-${tab}`).classList.remove('hidden');
-            document.getElementById(`tab-${tab}`).className = 'tab-active px-8 py-4 text-lg font-medium focus:outline-none transition-colors';
+            document.getElementById(`tab-${tab}`).className = 'tab-active px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap';
         }
 
         function formatCurrency(num) {
@@ -261,11 +296,10 @@
             const visits = parseFloat(document.getElementById('op-visits').value) || 0;
             const visitCost = parseFloat(document.getElementById('op-visit-cost').value) || 0;
 
-            // Calculation Logic (Simplified for demo)
             const cashflow = (license * (days / 365)) * sites; 
             const savings = (visits * visitCost * colos) * sites;
-            const productivity = 275000 * sites; // Placeholder logic based on user input
-            const esg = 167 * sites; // Placeholder logic
+            const productivity = 275000 * sites; 
+            const esg = 167 * sites; 
 
             const total = cashflow + savings + productivity + esg;
 
@@ -281,42 +315,47 @@
             const rent = parseFloat(document.getElementById('ev-rent').value) || 0;
             const tenancy = parseFloat(document.getElementById('ev-tenancy').value) || 0;
             
-            // Simple EV Uplift Model: (Rent * Tenancy * Towers) * 0.15 (Efficiency Factor) * 15 (Multiple)
             const uplift = (rent * tenancy * towers) * 0.15 * 15;
             
             document.getElementById('ev-total').innerText = formatCurrency(uplift);
         }
 
-        function calcWorkflow() {
-            const travel = parseFloat(document.getElementById('wf-travel').value) || 0;
-            const access = parseFloat(document.getElementById('wf-access').value) || 0;
-            const climb = parseFloat(document.getElementById('wf-climb').value) || 0;
-            const report = parseFloat(document.getElementById('wf-report').value) || 0;
-            const rate = parseFloat(document.getElementById('wf-rate').value) || 0;
+        function calcTraditional() {
+            const travel = parseFloat(document.getElementById('trad-travel').value) || 0;
+            const access = parseFloat(document.getElementById('trad-access').value) || 0;
+            const climb = parseFloat(document.getElementById('trad-climb').value) || 0;
+            const report = parseFloat(document.getElementById('trad-report').value) || 0;
+            const rate = parseFloat(document.getElementById('trad-rate').value) || 0;
 
-            const totalManualHours = travel + access + climb + report;
-            const manualCost = totalManualHours * rate;
-            
-            const siteseeHours = 0.5; // Fixed 30 mins
-            const siteseeCost = siteseeHours * rate;
+            const totalHours = travel + access + climb + report;
+            const totalCost = totalHours * rate;
 
-            // Update Text
-            document.getElementById('wf-manual-total').innerText = totalManualHours + " Hours";
-            document.getElementById('wf-cost-manual').innerText = formatCurrency(manualCost);
-            document.getElementById('wf-cost-sitesee').innerText = formatCurrency(siteseeCost);
+            document.getElementById('trad-total-time').innerText = totalHours + " Hours";
+            document.getElementById('trad-total-cost').innerText = formatCurrency(totalCost);
 
-            // Update Bars
-            const total = totalManualHours;
-            document.getElementById('bar-travel').style.width = (travel / total * 100) + '%';
-            document.getElementById('bar-access').style.width = (access / total * 100) + '%';
-            document.getElementById('bar-climb').style.width = (climb / total * 100) + '%';
-            document.getElementById('bar-report').style.width = (report / total * 100) + '%';
+            const total = totalHours || 1; // Avoid div by zero
+            document.getElementById('trad-bar-travel').style.width = (travel / total * 100) + '%';
+            document.getElementById('trad-bar-access').style.width = (access / total * 100) + '%';
+            document.getElementById('trad-bar-climb').style.width = (climb / total * 100) + '%';
+            document.getElementById('trad-bar-report').style.width = (report / total * 100) + '%';
+        }
+
+        function calcSiteSee() {
+            const flightMins = parseFloat(document.getElementById('ss-flight').value) || 0;
+            const rate = parseFloat(document.getElementById('ss-rate').value) || 0;
+
+            const totalHours = flightMins / 60;
+            const totalCost = totalHours * rate;
+
+            document.getElementById('ss-total-time').innerText = totalHours.toFixed(1) + " Hours";
+            document.getElementById('ss-total-cost').innerText = formatCurrency(totalCost);
         }
 
         // Init
         calcOperational();
         calcEV();
-        calcWorkflow();
+        calcTraditional();
+        calcSiteSee();
     </script>
 </body>
 </html>
