@@ -1,5 +1,10 @@
-- [ ] **Restore Homepage**: Ensure `client/src/pages/Home.tsx` includes:
-    - [ ] "AI Powered Digital Twin" Hero
-    - [ ] "Customer Testimonials" Section
-    - [ ] "Maps" Section
-- [ ] **Save Checkpoint**: Create a new checkpoint.
+- [ ] **Reconstruct Homepage**:
+    - [ ] **Hero Section**: Keep current video/overlay, update text to "AI Powered Digital Twins" with specific buttons.
+    - [ ] **Stats Section**: "Production scale. Not a pilot." with 3,000+ graphic.
+    - [ ] **Problem Section**: "Most digital twins don't move the numbers" with specific copy.
+    - [ ] **Metrics Grid**: "Proven at scale" with 44 Days, 80%, 5K+ Tonnes, 30K+.
+    - [ ] **Customer Story**: "Transforming Operations at Forty South" with video player.
+    - [ ] **Testimonials**: "Trusted by Industry Leaders" with 3 Nick Clarke quotes.
+    - [ ] **Map Section**: "Trusted Globally" with world map.
+    - [ ] **Reality Section**: "Telecom infrastructure is no longer simple" with tower scan.
+    - [ ] **Workflow Section**: "Current workflows are breaking" with meeting room image.
