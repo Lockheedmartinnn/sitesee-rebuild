@@ -162,11 +162,16 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700">
-                <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Digital Twin Dashboard" 
-                  className="w-full h-auto"
-                />
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-auto object-cover"
+                >
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/IwcDrkvTvPwIeTwW.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
                   <p className="text-white text-lg font-medium">
                     Embedded in upgrade, colocation, engineering, and compliance workflows.
@@ -239,16 +244,15 @@ export default function Home() {
             
             <div className="relative group cursor-pointer">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video flex items-center justify-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop" 
-                  alt="Forty South Video Thumbnail" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="h-20 w-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg z-10 group-hover:scale-110 transition-transform">
-                  <Play className="h-8 w-8 text-white ml-1" fill="currentColor" />
-                </div>
-                <div className="absolute bottom-4 right-4 text-white/50 font-bold text-xl">descript</div>
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-video flex items-center justify-center group">
+                <video 
+                  className="w-full h-full object-cover"
+                  controls
+                  poster="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop"
+                >
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/xAwnnCEjojpMCWRP.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
