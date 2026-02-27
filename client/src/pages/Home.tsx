@@ -380,14 +380,16 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-slate-100 rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/home/ubuntu/upload/search_images/cOmq6v4M0lp6.png" 
-                  alt="Complex Tower Infrastructure" 
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop";
-                  }}
-                />
+                >
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/hjlmFcwAToROSLdf.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -400,14 +402,16 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
               <div className="aspect-video bg-slate-100 rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/home/ubuntu/upload/search_images/CxmUas5g0s8E.png" 
-                  alt="Meeting Room Workflow" 
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop";
-                  }}
-                />
+                >
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TnWnQknlSkMFaotq.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
             <div className="order-1 lg:order-2">
