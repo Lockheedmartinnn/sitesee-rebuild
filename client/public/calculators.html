@@ -3,359 +3,680 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteSee ROI & Workflow Calculators</title>
+    <title>SiteSee Calculators</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .tab-active { border-bottom: 2px solid #2563EB; color: #2563EB; }
-        .tab-inactive { border-bottom: 2px solid transparent; color: #6B7280; }
-        .tab-inactive:hover { color: #374151; }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #2563eb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background .15s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #1d4ed8;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { 
+            border-bottom-color: #2563eb; 
+            color: #2563eb; 
+            background-color: #eff6ff;
+        }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">SiteSee Value Calculators</h1>
-            <p class="text-xl text-gray-600">Estimate savings, enterprise value uplift, and workflow efficiency gains.</p>
-        </div>
+<body class="bg-slate-50 min-h-screen flex flex-col">
 
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">S</div>
+                <h1 class="text-xl font-bold text-slate-900">SiteSee Calculators</h1>
+            </div>
+            <div class="text-sm text-slate-500">v2.5</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto px-4 py-8">
+        
         <!-- Tabs -->
-        <div class="flex justify-center mb-8 border-b border-gray-200 overflow-x-auto">
-            <button onclick="switchTab('operational')" id="tab-operational" class="tab-active px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
-                Operational Savings
+        <div class="bg-white rounded-t-xl border border-slate-200 border-b-0 overflow-hidden flex flex-wrap">
+            <button onclick="switchTab('operational')" id="tab-operational" class="tab-btn active flex-1 py-4 px-6 text-sm font-medium text-slate-600 border-b-2 border-transparent hover:text-slate-900 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                NexDT Value Calculator
             </button>
-            <button onclick="switchTab('ev')" id="tab-ev" class="tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
-                EV Uplift
+            <button onclick="switchTab('ev')" id="tab-ev" class="tab-btn flex-1 py-4 px-6 text-sm font-medium text-slate-600 border-b-2 border-transparent hover:text-slate-900 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                EBITDA & EV Uplift
             </button>
-            <button onclick="switchTab('traditional')" id="tab-traditional" class="tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
+            <button onclick="switchTab('traditional')" id="tab-traditional" class="tab-btn flex-1 py-4 px-6 text-sm font-medium text-slate-600 border-b-2 border-transparent hover:text-slate-900 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 Traditional Workflow
             </button>
-            <button onclick="switchTab('sitesee')" id="tab-sitesee" class="tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap">
+            <button onclick="switchTab('sitesee')" id="tab-sitesee" class="tab-btn flex-1 py-4 px-6 text-sm font-medium text-slate-600 border-b-2 border-transparent hover:text-slate-900 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                 SiteSee Workflow
             </button>
         </div>
 
-        <!-- Operational Calculator -->
-        <div id="content-operational" class="block">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Inputs -->
-                <div class="lg:col-span-1 space-y-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                            Portfolio & Financials
-                        </h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Number of Sites</label>
-                                <input type="number" id="op-sites" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcOperational()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Annual Colocations per Site</label>
-                                <input type="number" id="op-colos" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcOperational()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Avg. Year-1 License ($)</label>
-                                <input type="number" id="op-license" value="25000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcOperational()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Revenue Acceleration (Days)</label>
-                                <input type="number" id="op-days" value="90" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcOperational()">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            Operational Efficiency
-                        </h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Site Visits Avoided per Colo</label>
-                                <input type="number" id="op-visits" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcOperational()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Savings per Site Visit ($)</label>
-                                <input type="number" id="op-visit-cost" value="800" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcOperational()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Results -->
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-blue-600 text-white p-8 rounded-2xl shadow-lg">
-                        <h2 class="text-2xl font-bold mb-2">Total Annual Estimated Benefit</h2>
-                        <div class="text-5xl font-bold mb-4" id="op-total">$0</div>
-                        <p class="text-blue-100">Combined value from cashflow acceleration, operational savings, and productivity gains.</p>
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                            <div class="text-sm text-gray-500 mb-1">Cashflow Acceleration</div>
-                            <div class="text-2xl font-bold text-gray-900" id="op-cashflow">$0</div>
-                            <div class="text-xs text-green-600 mt-1">Year 1 Additional Cash Flow</div>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                            <div class="text-sm text-gray-500 mb-1">Operational Savings</div>
-                            <div class="text-2xl font-bold text-gray-900" id="op-savings">$0</div>
-                            <div class="text-xs text-green-600 mt-1">Direct cost reduction</div>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                            <div class="text-sm text-gray-500 mb-1">Engineering Productivity</div>
-                            <div class="text-2xl font-bold text-gray-900" id="op-productivity">$0</div>
-                            <div class="text-xs text-green-600 mt-1">Efficiency gains</div>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                            <div class="text-sm text-gray-500 mb-1">ESG / Carbon Value</div>
-                            <div class="text-2xl font-bold text-gray-900" id="op-esg">$0</div>
-                            <div class="text-xs text-green-600 mt-1">CO₂ reduction value</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- EV Calculator -->
-        <div id="content-ev" class="hidden">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-1 space-y-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Portfolio Inputs</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Number of Towers</label>
-                                <input type="number" id="ev-towers" value="100" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcEV()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Tenancy Ratio</label>
-                                <input type="number" id="ev-tenancy" value="1.5" step="0.1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcEV()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Annual Rent per Tenant ($)</label>
-                                <input type="number" id="ev-rent" value="25000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcEV()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-gray-900 text-white p-8 rounded-2xl shadow-lg">
-                        <h2 class="text-2xl font-bold mb-2">Total Enterprise Value Uplift</h2>
-                        <div class="text-5xl font-bold mb-4 text-blue-400" id="ev-total">$0</div>
-                        <p class="text-gray-400">Estimated increase in portfolio valuation based on accelerated revenue realization.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Traditional Workflow Calculator -->
-        <div id="content-traditional" class="hidden">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-1 space-y-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Manual Process Inputs</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Travel to Site (Hours)</label>
-                                <input type="number" id="trad-travel" value="2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Site Access/Safety (Hours)</label>
-                                <input type="number" id="trad-access" value="1" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Climb & Capture (Hours)</label>
-                                <input type="number" id="trad-climb" value="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Report Generation (Hours)</label>
-                                <input type="number" id="trad-report" value="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Hourly Rate ($)</label>
-                                <input type="number" id="trad-rate" value="150" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcTraditional()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Traditional Workflow Analysis</h2>
+        <!-- Tab Contents -->
+        <div class="bg-white rounded-b-xl border border-slate-200 shadow-sm min-h-[600px]">
+            
+            <!-- 1. NexDT Value Calculator (Operational) -->
+            <div id="content-operational" class="tab-content active p-8">
+                <div class="grid lg:grid-cols-12 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+                    <!-- Inputs -->
+                    <div class="lg:col-span-5 space-y-8">
                         
-                        <div class="space-y-8">
-                            <div>
-                                <div class="flex justify-between text-sm font-medium text-gray-600 mb-2">
-                                    <span>Total Time per Site</span>
-                                    <span id="trad-total-time">10 Hours</span>
+                        <!-- Portfolio & Financials -->
+                        <div>
+                            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Portfolio & Financial Inputs</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Number of Sites</label>
+                                    <input type="number" id="op-sites" value="1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
                                 </div>
-                                <div class="h-12 bg-gray-100 rounded-full overflow-hidden flex">
-                                    <div id="trad-bar-travel" class="h-full bg-red-400" style="width: 20%"></div>
-                                    <div id="trad-bar-access" class="h-full bg-red-500" style="width: 10%"></div>
-                                    <div id="trad-bar-climb" class="h-full bg-red-600" style="width: 40%"></div>
-                                    <div id="trad-bar-report" class="h-full bg-red-700" style="width: 30%"></div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Colocations</label>
+                                    <input type="number" id="op-colos" value="1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
                                 </div>
-                                <div class="flex justify-between text-xs text-gray-500 mt-2">
-                                    <div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-400 rounded-full"></div>Travel</div>
-                                    <div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-500 rounded-full"></div>Access</div>
-                                    <div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-600 rounded-full"></div>Climb</div>
-                                    <div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-700 rounded-full"></div>Report</div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Avg. Year-1 Licence ($)</label>
+                                    <input type="number" id="op-license" value="25000" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
                                 </div>
-                            </div>
-
-                            <div class="mt-8 pt-8 border-t border-gray-100">
-                                <div class="text-sm text-gray-500">Total Cost per Site</div>
-                                <div class="text-4xl font-bold text-red-600" id="trad-total-cost">$1,500</div>
-                                <p class="text-sm text-gray-400 mt-2">Includes labor costs for travel, access, climbing, and reporting.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SiteSee Workflow Calculator -->
-        <div id="content-sitesee" class="hidden">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-1 space-y-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Autonomous Process Inputs</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Flight Time (Minutes)</label>
-                                <input type="number" id="ss-flight" value="30" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcSiteSee()">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Processing Time (Minutes)</label>
-                                <input type="number" id="ss-process" value="0" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" disabled>
-                                <p class="text-xs text-gray-500 mt-1">Automated cloud processing (0 labor hours)</p>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Hourly Rate ($)</label>
-                                <input type="number" id="ss-rate" value="150" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" oninput="calcSiteSee()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6">SiteSee Workflow Analysis</h2>
-                        
-                        <div class="space-y-8">
-                            <div>
-                                <div class="flex justify-between text-sm font-medium text-gray-600 mb-2">
-                                    <span>Total Labor Time per Site</span>
-                                    <span id="ss-total-time">0.5 Hours</span>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Escalation (%)</label>
+                                    <input type="number" id="op-escalation" value="3.0" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
                                 </div>
-                                <div class="h-12 bg-gray-100 rounded-full overflow-hidden flex items-center">
-                                    <div class="h-full bg-green-500 flex items-center justify-center text-white font-bold text-sm" style="width: 100%">
-                                        <span class="px-2">Flight</span>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Inflation (%)</label>
+                                    <input type="number" id="op-inflation" value="2.5" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">WACC (%)</label>
+                                    <input type="number" id="op-wacc" value="8" step="0.5" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Tax Rate (%)</label>
+                                    <input type="number" id="op-tax-rate" value="30" step="1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="space-y-2 pt-2">
+                                    <div class="flex justify-between">
+                                        <label class="text-sm font-medium text-slate-700">Revenue Acceleration (Days)</label>
+                                        <span id="op-days-display" class="text-sm font-bold text-blue-600">150</span>
                                     </div>
+                                    <input type="range" id="op-days" min="0" max="365" value="150" oninput="syncDays('op')">
                                 </div>
-                                <div class="text-xs text-gray-500 mt-2">
-                                    <span class="text-green-600 font-medium">Automated Capture</span> - No climbing, no manual reporting.
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Analysis Horizon (Years)</label>
+                                    <input type="number" id="op-horizon" value="15" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-px bg-slate-100"></div>
+
+                        <!-- Operational Efficiency -->
+                        <div>
+                            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Operational Efficiency</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Site Visits Avoided</label>
+                                    <input type="number" id="op-visits" value="1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Savings per Site Visit ($)</label>
+                                    <input type="number" id="op-savings-visit" value="800" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Avg. Visits per Colo (Traditional)</label>
+                                    <input type="number" id="op-climbs" value="3" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-px bg-slate-100"></div>
+
+                        <!-- Engineering & ESG -->
+                        <div>
+                            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Engineering & ESG</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Engineering Productivity ($)</label>
+                                    <input type="number" id="op-eng-prod-input" value="0" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">CO2 Reduction (Tonnes)</label>
+                                    <input type="number" id="op-co2" value="50" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Carbon Price ($/Tonne)</label>
+                                    <input type="number" id="op-carbon-price" value="50" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateOpCalc()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outputs -->
+                    <div class="lg:col-span-7 lg:pl-8 pt-8 lg:pt-0">
+                        <div class="sticky top-24 space-y-6">
+                            <div class="bg-slate-900 rounded-xl p-6 text-white shadow-lg">
+                                <h3 class="text-sm font-medium text-slate-400 mb-1">Total Annual Estimated Benefit</h3>
+                                <div class="text-4xl font-bold" id="op-total-benefit">$0</div>
+                                <div class="mt-4 text-xs text-slate-400">
+                                    *Includes Cashflow Acceleration (Year 1), Operational Savings, FTR Improvements, and ESG benefits.
                                 </div>
                             </div>
 
-                            <div class="mt-8 pt-8 border-t border-gray-100">
-                                <div class="text-sm text-gray-500">Total Labor Cost per Site</div>
-                                <div class="text-4xl font-bold text-green-600" id="ss-total-cost">$75</div>
-                                <p class="text-sm text-gray-400 mt-2">Significantly reduced labor costs due to autonomous flight and automated processing.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+                                    <div class="text-xs font-bold text-slate-500 uppercase mb-1">Cashflow Acceleration</div>
+                                    <div class="text-2xl font-bold text-slate-900" id="op-cashflow-accel">$0</div>
+                                    <div class="text-xs text-green-600 mt-1">Year 1 Benefit</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+                                    <div class="text-xs font-bold text-slate-500 uppercase mb-1">Baseline Visit Efficiency</div>
+                                    <div class="text-2xl font-bold text-slate-900" id="op-savings">$0</div>
+                                    <div class="text-xs text-slate-400 mt-1">Operational Savings</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+                                    <div class="text-xs font-bold text-slate-500 uppercase mb-1">Rework / Return Visits</div>
+                                    <div class="text-2xl font-bold text-slate-900" id="op-ftr">$0</div>
+                                    <div class="text-xs text-slate-400 mt-1">FTR Improvement</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+                                    <div class="text-xs font-bold text-slate-500 uppercase mb-1">Engineering Productivity</div>
+                                    <div class="text-2xl font-bold text-slate-900" id="op-eng-prod">$0</div>
+                                </div>
+                                <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm col-span-2">
+                                    <div class="text-xs font-bold text-slate-500 uppercase mb-1">ESG Impact</div>
+                                    <div class="text-2xl font-bold text-slate-900" id="op-esg">$0</div>
+                                    <div class="text-xs text-slate-400 mt-1">Annualized Carbon Savings</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 2. EBITDA & EV Uplift -->
+            <div id="content-ev" class="tab-content p-8">
+                <div class="grid lg:grid-cols-12 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+                    <!-- Inputs -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Financial Inputs</h3>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">WACC (%)</label>
+                                    <input type="number" id="ev-wacc" value="8.0" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Rent ($)</label>
+                                    <input type="number" id="ev-rent" value="25000" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Rent Escalator (%)</label>
+                                    <input type="number" id="ev-escalator" value="3.0" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Annual Inflation (%)</label>
+                                    <input type="number" id="ev-inflation" value="2.5" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Lease Term (Years)</label>
+                                    <input type="number" id="ev-term" value="10" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="space-y-2 pt-2">
+                                    <div class="flex justify-between">
+                                        <label class="text-sm font-medium text-slate-700">Rent Commencement Acceleration (Days)</label>
+                                        <span id="ev-days-display" class="text-sm font-bold text-blue-600">150</span>
+                                    </div>
+                                    <input type="range" id="ev-days" min="0" max="365" value="150" oninput="syncDays('ev')">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Rent Payment Frequency</label>
+                                    <input type="number" id="ev-freq" value="1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Tax Rate (%)</label>
+                                    <input type="number" id="ev-tax" value="25.0" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 items-center">
+                                    <label class="text-sm font-medium text-slate-700">Operating Margin (%)</label>
+                                    <input type="number" id="ev-margin" value="80.0" step="0.1" class="text-right font-bold text-blue-600 bg-slate-50 border border-slate-200 rounded px-2 py-1 focus:outline-none focus:border-blue-500 w-full" oninput="updateEvCalc()">
+                                </div>
+                                <div class="space-y-2 pt-2">
+                                    <div class="flex justify-between">
+                                        <label class="text-sm font-medium text-slate-700">Enterprise Valuation EBITDA Multiple</label>
+                                        <span id="ev-multiple-display" class="text-sm font-bold text-blue-600">15x</span>
+                                    </div>
+                                    <input type="range" id="ev-multiple" min="1" max="30" value="15" oninput="updateEvCalc()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outputs -->
+                    <div class="lg:col-span-7 lg:pl-8 pt-8 lg:pt-0">
+                        <div class="sticky top-24 space-y-6">
+                            <div class="bg-slate-900 rounded-xl p-6 text-white shadow-lg">
+                                <h3 class="text-sm font-medium text-slate-400 mb-1">Enterprise Valuation Uplift</h3>
+                                <div class="text-4xl font-bold" id="ev-uplift">$0</div>
+                                <div class="mt-4 text-xs text-slate-400">
+                                    Based on EBITDA Multiple applied to the Net Present Value (NPV) of accelerated revenue.
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="text-sm font-bold text-slate-500 uppercase">NPV of Revenue Acceleration</div>
+                                    <div class="text-2xl font-bold text-slate-900" id="ev-npv">$0</div>
+                                </div>
+                                <div class="text-xs text-slate-400">
+                                    Calculated using the Fisher Equation method for WACC benefit over the lease term.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Traditional Workflow -->
+            <div id="content-traditional" class="tab-content p-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-lg font-bold text-slate-900">Traditional Workflow</h3>
+                        <div class="flex gap-8">
+                            <div class="text-right">
+                                <div class="text-xs font-bold text-slate-500 uppercase">Total Time</div>
+                                <div class="text-2xl font-bold text-red-600" id="trad-total-days">0 Days</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs font-bold text-slate-500 uppercase">Total Cost</div>
+                                <div class="text-2xl font-bold text-slate-900" id="trad-total-cost">$0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8 border-l-4 border-slate-200 ml-2 pl-8 py-2" id="trad-workflow-container">
+                        <!-- Steps injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. SiteSee Workflow -->
+            <div id="content-sitesee" class="tab-content p-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-lg font-bold text-slate-900">SiteSee Workflow</h3>
+                        <div class="flex gap-8">
+                            <div class="text-right">
+                                <div class="text-xs font-bold text-slate-500 uppercase">Total Time</div>
+                                <div class="text-2xl font-bold text-green-600" id="sitesee-total-days">0 Days</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs font-bold text-slate-500 uppercase">Total Cost</div>
+                                <div class="text-2xl font-bold text-slate-900" id="sitesee-total-cost">$0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8 border-l-4 border-slate-200 ml-2 pl-8 py-2" id="sitesee-workflow-container">
+                        <!-- Steps injected via JS -->
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </main>
 
     <script>
-        function switchTab(tab) {
-            ['operational', 'ev', 'traditional', 'sitesee'].forEach(t => {
-                document.getElementById(`content-${t}`).classList.add('hidden');
-                document.getElementById(`tab-${t}`).className = 'tab-inactive px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap';
+        // --- State ---
+        const state = {
+            op: {
+                sites: 1,
+                colos: 1,
+                license: 25000,
+                escalation: 3.0,
+                inflation: 2.5,
+                wacc: 8.0,
+                taxRate: 30,
+                days: 150,
+                horizon: 15,
+                visits: 1,
+                savingsVisit: 800,
+                climbs: 3,
+                engProd: 0,
+                co2: 50,
+                carbonPrice: 50
+            },
+            ev: {
+                wacc: 8.0,
+                rent: 25000,
+                escalator: 3.0,
+                inflation: 2.5,
+                term: 10,
+                days: 150,
+                freq: 1,
+                tax: 25.0,
+                margin: 80.0,
+                multiple: 15
+            },
+            workflow: {
+                traditional: [
+                    { name: "Site Selection & Acquisition", days: 30, cost: 2000, desc: "Initial site identification and lease negotiation." },
+                    { name: "Site Survey & Audit", days: 14, cost: 1500, desc: "Physical site visit and manual measurements." },
+                    { name: "Structural Analysis", days: 21, cost: 3500, desc: "Engineering assessment of tower capacity." },
+                    { name: "Construction Drawings", days: 28, cost: 4000, desc: "Detailed CAD drawings for installation." },
+                    { name: "Permitting & Approvals", days: 45, cost: 1000, desc: "Local council and regulatory approvals." },
+                    { name: "Construction & Installation", days: 30, cost: 2500, desc: "Physical installation of equipment." },
+                    { name: "Closeout Package", days: 14, cost: 800, desc: "Final documentation and as-built verification." }
+                ],
+                sitesee: [
+                    { name: "Site Selection & Acquisition", days: 15, cost: 1000, desc: "Accelerated via digital twin portfolio visibility." },
+                    { name: "Autonomous Capture", days: 1, cost: 500, desc: "Drone-based capture and automated processing." },
+                    { name: "AI Analysis & Engineering", days: 5, cost: 800, desc: "Automated structural analysis and reporting." },
+                    { name: "Digital Design", days: 7, cost: 500, desc: "Auto-generated construction drawings." },
+                    { name: "Permitting & Approvals", days: 30, cost: 1000, desc: "Faster approvals with accurate digital data." },
+                    { name: "Construction & Installation", days: 25, cost: 2500, desc: "Reduced rework and site visits." },
+                    { name: "Digital Closeout", days: 2, cost: 200, desc: "Instant verification against digital twin." }
+                ]
+            }
+        };
+
+        // --- Tab Switching ---
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById('content-' + tabId).classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }
+
+        // --- Sync Days ---
+        function syncDays(source) {
+            const val = document.getElementById(source + '-days').value;
+            document.getElementById(source + '-days-display').innerText = val;
+            // Trigger calculation immediately
+            if (source === 'op') updateOpCalc();
+            else updateEvCalc();
+        }
+
+        // --- Operational Calculator ---
+        function updateOpCalc() {
+            // Get inputs
+            state.op.sites = parseFloat(document.getElementById('op-sites').value) || 0;
+            state.op.colos = parseFloat(document.getElementById('op-colos').value) || 0;
+            state.op.license = parseFloat(document.getElementById('op-license').value) || 0;
+            state.op.escalation = parseFloat(document.getElementById('op-escalation').value) || 0;
+            state.op.inflation = parseFloat(document.getElementById('op-inflation').value) || 0;
+            state.op.wacc = parseFloat(document.getElementById('op-wacc').value) || 0;
+            state.op.taxRate = parseFloat(document.getElementById('op-tax-rate').value) || 0;
+            state.op.days = parseFloat(document.getElementById('op-days').value) || 0;
+            state.op.horizon = parseFloat(document.getElementById('op-horizon').value) || 0;
+            state.op.visits = parseFloat(document.getElementById('op-visits').value) || 0;
+            state.op.savingsVisit = parseFloat(document.getElementById('op-savings-visit').value) || 0;
+            state.op.climbs = parseFloat(document.getElementById('op-climbs').value) || 0;
+            state.op.engProd = parseFloat(document.getElementById('op-eng-prod-input').value) || 0;
+            state.op.co2 = parseFloat(document.getElementById('op-co2').value) || 0;
+            state.op.carbonPrice = parseFloat(document.getElementById('op-carbon-price').value) || 0;
+
+            // Update displays
+            document.getElementById('op-days-display').innerText = state.op.days;
+
+            // Calculations
+            
+            // 1. Cashflow Acceleration (Year 1)
+            // Formula: Colos * License * (Days/365)
+            const cashflowAccel = state.op.colos * state.op.license * (state.op.days / 365);
+
+            // 2. NPV of Revenue Acceleration (Fisher Logic over Horizon)
+            let npvAccel = 0;
+            const wacc = state.op.wacc / 100;
+            const escalator = state.op.escalation / 100;
+            const daysFraction = state.op.days / 365;
+            
+            // Apply Inflation to WACC? (Fisher Equation: Real WACC = (1+WACC)/(1+Inflation) - 1)
+            // If user wants "apply inflation", we adjust the discount rate.
+            const inflation = state.op.inflation / 100;
+            const realWacc = ((1 + wacc) / (1 + inflation)) - 1;
+            
+            // Apply Tax to WACC? (Post-Tax WACC = WACC * (1 - Tax))
+            // Or apply Tax to Cash Flows?
+            // Let's apply Tax to the Cash Flows (Incremental Revenue)
+            const taxRate = state.op.taxRate / 100;
+
+            for (let year = 1; year <= state.op.horizon; year++) {
+                const escalatedLicence = state.op.license * Math.pow(1 + escalator, year - 1);
+                const revenueWithAccel = escalatedLicence;
+                const rentPrev = year === 1 ? 0 : (state.op.license * Math.pow(1 + escalator, year - 2));
+                const revenueWithoutAccel = (rentPrev * daysFraction) + (escalatedLicence * (1 - daysFraction));
+                const incrementalRevenue = revenueWithAccel - revenueWithoutAccel;
+                
+                // Apply Tax to Incremental Revenue
+                const afterTaxRevenue = incrementalRevenue * (1 - taxRate);
+                
+                // WACC Benefit on After-Tax Revenue
+                const waccBenefit = afterTaxRevenue * realWacc; // Using Real WACC
+                
+                // Discount back using Real WACC
+                const pvWaccBenefit = waccBenefit / Math.pow(1 + realWacc, year);
+                npvAccel += pvWaccBenefit;
+            }
+            npvAccel *= state.op.colos; // Apply to all colos
+
+            // 3. Operational Savings (Baseline)
+            // Formula: Visits * Savings/Visit
+            // Apply Tax & Inflation? User said "apply tax and inflation on the operational savings".
+            // Assuming this means escalating the savings over the horizon and discounting back?
+            // Or just applying tax to the Year 1 value?
+            // "apply tax and inflation on the operational savings" implies a multi-year view or a tax-adjusted view.
+            // Given the context of "NPV is too low", let's assume we need to show the NPV of Op Savings too?
+            // But the UI shows "Annual Estimated Benefit".
+            // Let's stick to the simple Year 1 value but Tax Adjusted as requested.
+            // Op Savings (After Tax) = (Visits * Savings) * (1 - TaxRate)
+            const taxFactor = (1 - (state.op.taxRate / 100));
+            const opSavings = (state.op.visits * state.op.savingsVisit) * taxFactor;
+
+            // 4. Engineering Productivity
+            const engProd = state.op.engProd * taxFactor;
+
+            // 5. FTR (Rework Avoidance)
+            const ftr = Math.max(0, (state.op.climbs - 1) * state.op.savingsVisit) * taxFactor;
+
+            // 6. ESG
+            // Formula: (CO2 * Price) / Horizon
+            // ESG is usually not taxed? But let's apply it for consistency if requested "everything".
+            const esg = ((state.op.co2 * state.op.carbonPrice) / state.op.horizon) * taxFactor;
+
+            // Total Benefit (Year 1 Cashflow based)
+            const total = cashflowAccel + opSavings + engProd + ftr + esg;
+
+            // Update DOM
+            document.getElementById('op-cashflow-accel').innerHTML = '$' + Math.round(cashflowAccel).toLocaleString() + '<br><span class="text-xs text-slate-400 font-normal">NPV: $' + Math.round(npvAccel).toLocaleString() + '</span>';
+            document.getElementById('op-savings').innerText = '$' + Math.round(opSavings).toLocaleString();
+            document.getElementById('op-eng-prod').innerText = '$' + Math.round(engProd).toLocaleString();
+            document.getElementById('op-ftr').innerText = '$' + Math.round(ftr).toLocaleString();
+            document.getElementById('op-esg').innerText = '$' + Math.round(esg).toLocaleString();
+            document.getElementById('op-total-benefit').innerText = '$' + Math.round(total).toLocaleString();
+        }
+
+        // --- EV Calculator ---
+        function updateEvCalc() {
+            // Get inputs
+            state.ev.wacc = parseFloat(document.getElementById('ev-wacc').value) || 0;
+            state.ev.rent = parseFloat(document.getElementById('ev-rent').value) || 0;
+            state.ev.escalator = parseFloat(document.getElementById('ev-escalator').value) || 0;
+            state.ev.inflation = parseFloat(document.getElementById('ev-inflation').value) || 0;
+            state.ev.term = parseFloat(document.getElementById('ev-term').value) || 0;
+            state.ev.days = parseFloat(document.getElementById('ev-days').value) || 0;
+            state.ev.freq = parseFloat(document.getElementById('ev-freq').value) || 0;
+            state.ev.tax = parseFloat(document.getElementById('ev-tax').value) || 0;
+            state.ev.margin = parseFloat(document.getElementById('ev-margin').value) || 0;
+            state.ev.multiple = parseFloat(document.getElementById('ev-multiple').value) || 0;
+
+            // Update displays
+            document.getElementById('ev-days-display').innerText = state.ev.days;
+            document.getElementById('ev-multiple-display').innerText = state.ev.multiple + 'x';
+
+            // Calculations - Detailed NPV Table Logic (Fisher Equation)
+            let totalNPV = 0;
+            const wacc = state.ev.wacc / 100;
+            const escalator = state.ev.escalator / 100;
+            const daysFraction = state.ev.days / 365;
+            
+            // Apply Inflation & Tax to EV NPV as well?
+            // If user complained "when I edit tax nothing changes", we MUST apply it here too.
+            const inflation = state.ev.inflation / 100;
+            const realWacc = ((1 + wacc) / (1 + inflation)) - 1;
+            const taxRate = state.ev.tax / 100;
+
+            for (let year = 1; year <= state.ev.term; year++) {
+                const escalatedLicence = state.ev.rent * Math.pow(1 + escalator, year - 1);
+                const revenueWithAccel = escalatedLicence;
+                const rentPrev = year === 1 ? 0 : (state.ev.rent * Math.pow(1 + escalator, year - 2));
+                const revenueWithoutAccel = (rentPrev * daysFraction) + (escalatedLicence * (1 - daysFraction));
+                const incrementalRevenue = revenueWithAccel - revenueWithoutAccel;
+                
+                // Apply Tax
+                const afterTaxRevenue = incrementalRevenue * (1 - taxRate);
+                
+                // WACC Benefit
+                const waccBenefit = afterTaxRevenue * realWacc;
+                
+                // Discount
+                const pvWaccBenefit = waccBenefit / Math.pow(1 + realWacc, year);
+                totalNPV += pvWaccBenefit;
+            }
+
+            // EV Uplift Calculation
+            // Formula: (Annual Rent * Margin * Days/365) * Multiple
+            // Does EV Uplift use Tax/Inflation? Usually EBITDA is Pre-Tax.
+            // But if user wants "everything", maybe we tax adjust the EBITDA?
+            // No, EV is usually based on EBITDA. Let's keep EV Uplift as Pre-Tax EBITDA Multiple.
+            // BUT, if the user insists, we can apply tax. Let's stick to standard EBITDA multiple for now unless explicitly asked.
+            // The user said "apply tax and inflation on the operational savings".
+            // For EV Uplift page, they said "when I edit tax nothing changes".
+            // So I applied Tax/Inflation to the NPV part above.
+            
+            const annualEbitdaImpact = state.ev.rent * (state.ev.margin / 100) * (state.ev.days / 365);
+            const evUplift = annualEbitdaImpact * state.ev.multiple;
+
+            // Update DOM
+            document.getElementById('ev-uplift').innerText = '$' + evUplift.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('ev-npv').innerText = '$' + totalNPV.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+
+        // --- Workflow Render ---
+        function renderWorkflows() {
+            // Traditional
+            const tradContainer = document.getElementById('trad-workflow-container');
+            tradContainer.innerHTML = '';
+            let tradTotalDays = 0;
+            let tradTotalCost = 0;
+
+            state.workflow.traditional.forEach((step, index) => {
+                tradTotalDays += step.days;
+                tradTotalCost += step.cost;
+                tradContainer.innerHTML += `
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-red-500 border-4 border-white shadow-sm"></div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-slate-900">${step.name}</h4>
+                                <div class="text-right">
+                                    <div class="font-bold text-red-600">${step.days} Days</div>
+                                    <div class="text-xs font-medium text-slate-500">$${step.cost.toLocaleString()}</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-3">${step.desc}</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs font-medium text-slate-400">Time (Days)</label>
+                                    <input type="number" value="${step.days}" class="w-full text-sm font-bold text-slate-700 bg-slate-50 border border-slate-200 rounded px-2 py-1" onchange="updateWorkflow('traditional', ${index}, 'days', this.value)">
+                                </div>
+                                <div>
+                                    <label class="text-xs font-medium text-slate-400">Cost ($)</label>
+                                    <input type="number" value="${step.cost}" class="w-full text-sm font-bold text-slate-700 bg-slate-50 border border-slate-200 rounded px-2 py-1" onchange="updateWorkflow('traditional', ${index}, 'cost', this.value)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             });
-            document.getElementById(`content-${tab}`).classList.remove('hidden');
-            document.getElementById(`tab-${tab}`).className = 'tab-active px-6 py-4 text-lg font-medium focus:outline-none transition-colors whitespace-nowrap';
+            document.getElementById('trad-total-days').innerText = tradTotalDays + ' Days';
+            document.getElementById('trad-total-cost').innerText = '$' + tradTotalCost.toLocaleString();
+
+            // SiteSee
+            const siteseeContainer = document.getElementById('sitesee-workflow-container');
+            siteseeContainer.innerHTML = '';
+            let siteseeTotalDays = 0;
+            let siteseeTotalCost = 0;
+
+            state.workflow.sitesee.forEach((step, index) => {
+                siteseeTotalDays += step.days;
+                siteseeTotalCost += step.cost;
+                siteseeContainer.innerHTML += `
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-green-500 border-4 border-white shadow-sm"></div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-slate-900">${step.name}</h4>
+                                <div class="text-right">
+                                    <div class="font-bold text-green-600">${step.days} Days</div>
+                                    <div class="text-xs font-medium text-slate-500">$${step.cost.toLocaleString()}</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-3">${step.desc}</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs font-medium text-slate-400">Time (Days)</label>
+                                    <input type="number" value="${step.days}" class="w-full text-sm font-bold text-slate-700 bg-slate-50 border border-slate-200 rounded px-2 py-1" onchange="updateWorkflow('sitesee', ${index}, 'days', this.value)">
+                                </div>
+                                <div>
+                                    <label class="text-xs font-medium text-slate-400">Cost ($)</label>
+                                    <input type="number" value="${step.cost}" class="w-full text-sm font-bold text-slate-700 bg-slate-50 border border-slate-200 rounded px-2 py-1" onchange="updateWorkflow('sitesee', ${index}, 'cost', this.value)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('sitesee-total-days').innerText = siteseeTotalDays + ' Days';
+            document.getElementById('sitesee-total-cost').innerText = '$' + siteseeTotalCost.toLocaleString();
         }
 
-        function formatCurrency(num) {
-            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(num);
+        function updateWorkflow(type, index, field, value) {
+            state.workflow[type][index][field] = parseFloat(value) || 0;
+            renderWorkflows();
         }
 
-        function calcOperational() {
-            const sites = parseFloat(document.getElementById('op-sites').value) || 0;
-            const colos = parseFloat(document.getElementById('op-colos').value) || 0;
-            const license = parseFloat(document.getElementById('op-license').value) || 0;
-            const days = parseFloat(document.getElementById('op-days').value) || 0;
-            const visits = parseFloat(document.getElementById('op-visits').value) || 0;
-            const visitCost = parseFloat(document.getElementById('op-visit-cost').value) || 0;
+        // --- Event Listeners for Instant Updates ---
+        document.querySelectorAll('.calc-input').forEach(input => {
+            input.addEventListener('input', (e) => {
+                if (e.target.id.startsWith('op-')) updateOpCalc();
+                if (e.target.id.startsWith('ev-')) updateEvCalc();
+            });
+        });
 
-            const cashflow = (license * (days / 365)) * sites; 
-            const savings = (visits * visitCost * colos) * sites;
-            const productivity = 275000 * sites; 
-            const esg = 167 * sites; 
+        // --- Init ---
+        updateOpCalc();
+        updateEvCalc();
+        renderWorkflows();
 
-            const total = cashflow + savings + productivity + esg;
-
-            document.getElementById('op-total').innerText = formatCurrency(total);
-            document.getElementById('op-cashflow').innerText = formatCurrency(cashflow);
-            document.getElementById('op-savings').innerText = formatCurrency(savings);
-            document.getElementById('op-productivity').innerText = formatCurrency(productivity);
-            document.getElementById('op-esg').innerText = formatCurrency(esg);
-        }
-
-        function calcEV() {
-            const towers = parseFloat(document.getElementById('ev-towers').value) || 0;
-            const rent = parseFloat(document.getElementById('ev-rent').value) || 0;
-            const tenancy = parseFloat(document.getElementById('ev-tenancy').value) || 0;
-            
-            const uplift = (rent * tenancy * towers) * 0.15 * 15;
-            
-            document.getElementById('ev-total').innerText = formatCurrency(uplift);
-        }
-
-        function calcTraditional() {
-            const travel = parseFloat(document.getElementById('trad-travel').value) || 0;
-            const access = parseFloat(document.getElementById('trad-access').value) || 0;
-            const climb = parseFloat(document.getElementById('trad-climb').value) || 0;
-            const report = parseFloat(document.getElementById('trad-report').value) || 0;
-            const rate = parseFloat(document.getElementById('trad-rate').value) || 0;
-
-            const totalHours = travel + access + climb + report;
-            const totalCost = totalHours * rate;
-
-            document.getElementById('trad-total-time').innerText = totalHours + " Hours";
-            document.getElementById('trad-total-cost').innerText = formatCurrency(totalCost);
-
-            const total = totalHours || 1; // Avoid div by zero
-            document.getElementById('trad-bar-travel').style.width = (travel / total * 100) + '%';
-            document.getElementById('trad-bar-access').style.width = (access / total * 100) + '%';
-            document.getElementById('trad-bar-climb').style.width = (climb / total * 100) + '%';
-            document.getElementById('trad-bar-report').style.width = (report / total * 100) + '%';
-        }
-
-        function calcSiteSee() {
-            const flightMins = parseFloat(document.getElementById('ss-flight').value) || 0;
-            const rate = parseFloat(document.getElementById('ss-rate').value) || 0;
-
-            const totalHours = flightMins / 60;
-            const totalCost = totalHours * rate;
-
-            document.getElementById('ss-total-time').innerText = totalHours.toFixed(1) + " Hours";
-            document.getElementById('ss-total-cost').innerText = formatCurrency(totalCost);
-        }
-
-        // Init
-        calcOperational();
-        calcEV();
-        calcTraditional();
-        calcSiteSee();
     </script>
 </body>
 </html>

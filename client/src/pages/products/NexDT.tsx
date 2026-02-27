@@ -348,7 +348,7 @@ export default function NexDT() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JIbuGIwuPEKCApNE.mp4" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/vhiuiItIqaPHpYQe.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

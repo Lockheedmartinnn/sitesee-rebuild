@@ -15,7 +15,7 @@ export default function BIM() {
             playsInline
             className="w-full h-full object-cover opacity-60"
           >
-            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/QehCaTWswdxBeCUo.mp4" type="video/mp4" />
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/MLtNKrDSbxoofJqP.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
@@ -193,7 +193,7 @@ export default function BIM() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/QehCaTWswdxBeCUo.mp4" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/MLtNKrDSbxoofJqP.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">

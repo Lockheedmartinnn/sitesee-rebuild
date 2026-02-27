@@ -15,7 +15,7 @@ export default function IEA() {
             playsInline
             className="w-full h-full object-cover opacity-60"
           >
-            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JIbuGIwuPEKCApNE.mp4" type="video/mp4" />
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/ffsUPZvEPSLQQVKy.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
@@ -44,6 +44,28 @@ export default function IEA() {
               <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full bg-white/5 border-white/20 text-white hover:bg-white/10 hover:text-white">
                 Download IEA Guide
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full Video Section */}
+      <section className="py-16 bg-slate-950">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">See IEA in Action</h2>
+              <p className="text-slate-400">Watch the full demonstration with audio commentary.</p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900 aspect-video">
+              <video 
+                controls
+                className="w-full h-full object-contain"
+                poster="/iea-poster.jpg"
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/ffsUPZvEPSLQQVKy.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -97,7 +119,7 @@ export default function IEA() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
               >
-                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/JIbuGIwuPEKCApNE.mp4" type="video/mp4" />
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/ffsUPZvEPSLQQVKy.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
             </div>
