@@ -1,8 +1,4 @@
-- [ ] **Find Product Pages**: Locate the IEA and Edinburgh/EME product pages in `client/src/pages`.
-- [ ] **Update IEA Page**:
-    - [ ] Hero: `MonopoleIEA.mp4` (Auto-play, Muted, Loop).
-    - [ ] Section: Add manual-play video player for full version.
-- [ ] **Update Edinburgh Page**:
-    - [ ] Hero: `edinburgh_rooftop_final.mp4` (Auto-play, Muted, Loop).
-    - [ ] Section: Add manual-play video player for full version.
-- [ ] **Package & Deliver**: Update the ZIP file and provide a live preview link.
+- [ ] **Update BIM Page**:
+    - [ ] Hero: `MonopoleIEA.mp4#t=47,97` (Auto-play, Muted, Loop).
+    - [ ] Explanation Section: `MonopoleIEA.mp4#t=47,97` (Manual-play).
+- [ ] **Save Checkpoint**: Create a new checkpoint.

@@ -46,7 +46,7 @@ export default function Home() {
             className="w-full h-full object-cover"
             poster="/hero-poster.jpg" // Add a poster image if available
           >
-            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/ffsUPZvEPSLQQVKy.mp4" type="video/mp4" />
+            <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/WWIySGXvDveoWmug.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -135,55 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Edinburgh Rooftop Showcase Section */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 group">
-                <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
-                <video 
-                  controls
-                  className="w-full h-auto rounded-2xl"
-                  poster="/edinburgh-poster.jpg"
-                >
-                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/IwJzNuBTvKycaiKm.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                Live Case Study
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Edinburgh Rooftop Analysis</h2>
-              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                See how SiteSee transforms complex urban rooftop environments into clear, actionable digital twins. Our AI automatically identifies equipment, measures dimensions, and detects potential structural issues without a single site visit.
-              </p>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Automated equipment inventory",
-                  "Millimeter-accurate measurements",
-                  "Remote structural integrity assessment",
-                  "Seamless integration with existing workflows"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-slate-300">
-                    <CheckCircle2 className="h-5 w-5 text-blue-500 mr-3" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Button variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white">
-                View Full Case Study
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="py-24 bg-slate-950 border-t border-slate-900">
