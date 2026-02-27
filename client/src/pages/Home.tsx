@@ -169,7 +169,7 @@ export default function Home() {
                   playsInline
                   className="w-full h-auto object-cover"
                 >
-                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/IwcDrkvTvPwIeTwW.mp4" type="video/mp4" />
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/xAhWqjKuMDCftmvn.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
@@ -250,7 +250,7 @@ export default function Home() {
                   controls
                   poster="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop"
                 >
-                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/xAwnnCEjojpMCWRP.mp4" type="video/mp4" />
+                  <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/FGOqvIIoXVFlpQKM.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
