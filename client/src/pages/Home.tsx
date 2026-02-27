@@ -135,6 +135,109 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Customer Testimonials Section */}
+      <section className="py-24 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Trusted by Industry Leaders</h2>
+            <p className="text-slate-400 text-lg">See what our partners say about transforming their operations with SiteSee.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "SiteSee's digital twin technology has revolutionized how we manage our tower assets. The accuracy is incredible.",
+                author: "Sarah Jenkins",
+                role: "CTO, TowerCo Global"
+              },
+              {
+                quote: "We reduced our site visits by 70% and accelerated our 5G rollout significantly thanks to the remote analysis capabilities.",
+                author: "Michael Chen",
+                role: "Director of Operations, NextGen Mobile"
+              },
+              {
+                quote: "The ability to visualize and analyze our entire portfolio from a single dashboard is a game-changer for our engineering team.",
+                author: "David Rodriguez",
+                role: "VP of Engineering, InfraStructure Inc."
+              }
+            ].map((testimonial, i) => (
+              <Card key={i} className="bg-slate-950 border-slate-800 p-6">
+                <CardContent className="pt-6">
+                  <div className="mb-4 text-blue-500">
+                    <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" /></svg>
+                  </div>
+                  <p className="text-slate-300 mb-6 italic">"{testimonial.quote}"</p>
+                  <div>
+                    <div className="font-bold text-white">{testimonial.author}</div>
+                    <div className="text-sm text-slate-500">{testimonial.role}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Global Portfolio Map Section */}
+      <section className="py-24 bg-slate-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-blue-900/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <Globe className="h-4 w-4" />
+                Global Coverage
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Visualize Your Entire Portfolio</h2>
+              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                From a single tower to a nationwide network, SiteSee provides a unified geospatial view of all your assets. Track status, identify issues, and manage maintenance schedules on an interactive 3D map.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Real-time asset status tracking",
+                  "Geospatial filtering and search",
+                  "Integrated weather and terrain data",
+                  "Direct access to digital twins from map view"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-slate-300">
+                    <CheckCircle2 className="h-5 w-5 text-blue-500 mr-3" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 rounded-full">
+                Explore the Map
+              </Button>
+            </div>
+            <div className="relative h-[400px] bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl group">
+              {/* Placeholder for Map Visualization */}
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              
+              {/* Interactive Elements Overlay */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-blue-500/30 rounded-full blur-xl animate-pulse"></div>
+                  <div className="relative bg-slate-950/80 backdrop-blur-md border border-blue-500/50 p-4 rounded-xl shadow-2xl">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="h-3 w-3 rounded-full bg-emerald-500 animate-pulse"></div>
+                      <span className="text-white font-bold text-sm">Site ID: UK-LON-042</span>
+                    </div>
+                    <div className="text-xs text-slate-400">Status: Operational</div>
+                    <div className="text-xs text-slate-400">Last Scan: 2 days ago</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Map Controls UI Mockup */}
+              <div className="absolute top-4 right-4 flex flex-col gap-2">
+                <div className="w-8 h-8 bg-slate-900/80 backdrop-blur border border-slate-700 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors cursor-pointer">+</div>
+                <div className="w-8 h-8 bg-slate-900/80 backdrop-blur border border-slate-700 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors cursor-pointer">-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* CTA Section */}

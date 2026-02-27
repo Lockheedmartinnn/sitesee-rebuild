@@ -1,4 +1,5 @@
-- [ ] **Update BIM Page**:
-    - [ ] Hero: `MonopoleIEA.mp4#t=47,97` (Auto-play, Muted, Loop).
-    - [ ] Explanation Section: `MonopoleIEA.mp4#t=47,97` (Manual-play).
+- [ ] **Restore Homepage**: Ensure `client/src/pages/Home.tsx` includes:
+    - [ ] "AI Powered Digital Twin" Hero
+    - [ ] "Customer Testimonials" Section
+    - [ ] "Maps" Section
 - [ ] **Save Checkpoint**: Create a new checkpoint.
