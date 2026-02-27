@@ -248,7 +248,7 @@ export default function Home() {
                 <video 
                   className="w-full h-full object-cover"
                   controls
-                  poster="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop"
+                  
                 >
                   <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/FGOqvIIoXVFlpQKM.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
