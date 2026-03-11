@@ -4,7 +4,8 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import Home from "@/pages/Home";
+import Banners from "@/pages/Banners";
 import Layout from "./components/Layout";
 import Telco from "./pages/industries/Telco";
 import NexDT from "./pages/products/NexDT";
@@ -25,7 +26,8 @@ function Router() {
   return (
     <Layout>
       <Switch>
-        <Route path={"/"} component={Home} />
+        <Route path="/" component={Home} />
+      <Route path="/banners" component={Banners} />
         <Route path={"/industries/telco"} component={Telco} />
         <Route path={"/products/nexdt"} component={NexDT} />
         <Route path={"/products/iea"} component={IEA} />
