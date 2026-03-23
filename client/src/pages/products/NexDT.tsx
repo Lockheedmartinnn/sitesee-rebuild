@@ -163,20 +163,7 @@ export default function NexDT() {
         </div>
       </section>
 
-      {/* NexDT Solution Statement */}
-      <section className="py-32 bg-slate-50 text-slate-900 border-y border-slate-200">
-        <div className="container max-w-5xl text-center space-y-12">
-          <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tighter text-slate-900">
-            NexDT: Digital Twin as <span className="text-blue-600">Operational System</span>
-          </h2>
-          <p className="text-2xl md:text-3xl text-slate-600 font-light leading-relaxed">
-            NexDT is not a visualization platform. It's not a document repository. It's not a passive 3D model you look at occasionally.
-          </p>
-          <p className="text-2xl md:text-3xl text-slate-900 font-medium leading-relaxed">
-            NexDT is where tower modifications are designed, validated, and approved—digitally, before site access, before equipment procurement, before committing capital.
-          </p>
-        </div>
-      </section>
+
 
       {/* What Makes NexDT Different */}
       <section className="py-32 bg-white text-slate-900">
