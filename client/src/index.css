@@ -4,8 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Inter", sans-serif;
-  --font-display: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -46,76 +45,75 @@
 }
 
 :root {
-  /* The Monolith Design System */
-  --primary: #0053db;
-  --primary-foreground: #f8f7ff;
-  --sidebar-primary: #0053db;
-  --sidebar-primary-foreground: #f8f7ff;
-  --chart-1: #0053db;
-  --chart-2: #618bff;
-  --chart-3: #dbe1ff;
-  --chart-4: #0048bf;
-  --chart-5: #003798;
-  --radius: 0px;
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --card: #0a0a0a;
-  --card-foreground: #ffffff;
-  --popover: #0a0a0a;
-  --popover-foreground: #ffffff;
-  --secondary: rgba(255, 255, 255, 0.15);
-  --secondary-foreground: #ffffff;
-  --muted: #1a1a1a;
-  --muted-foreground: #a3a3a3;
-  --accent: #1a1a1a;
-  --accent-foreground: #ffffff;
-  --destructive: #9f403d;
-  --destructive-foreground: #fff7f6;
-  --border: #b2b2b2;
-  --input: #b2b2b2;
-  --ring: #0053db;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #b2b2b2;
-  --sidebar-ring: #0053db;
+  /* Bentley-style: Calm, enterprise palette */
+  --primary: oklch(0.35 0.15 260);
+  --primary-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.35 0.15 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --chart-1: oklch(0.35 0.15 260);
+  --chart-2: oklch(0.45 0.12 260);
+  --chart-3: oklch(0.55 0.1 260);
+  --chart-4: oklch(0.65 0.08 260);
+  --chart-5: oklch(0.75 0.06 260);
+  --radius: 0.25rem;
+  --background: oklch(0.98 0 0);
+  --foreground: oklch(0.2 0.01 0);
+  --card: oklch(0.98 0 0);
+  --card-foreground: oklch(0.2 0.01 0);
+  --popover: oklch(0.98 0 0);
+  --popover-foreground: oklch(0.2 0.01 0);
+  --secondary: oklch(0.95 0.002 0);
+  --secondary-foreground: oklch(0.3 0.01 0);
+  --muted: oklch(0.92 0.001 0);
+  --muted-foreground: oklch(0.5 0.01 0);
+  --accent: oklch(0.35 0.15 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.001 0);
+  --input: oklch(0.9 0.001 0);
+  --ring: oklch(0.35 0.15 260);
+  --sidebar: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.2 0.01 0);
+  --sidebar-accent: oklch(0.92 0.001 0);
+  --sidebar-accent-foreground: oklch(0.2 0.01 0);
+  --sidebar-border: oklch(0.9 0.001 0);
+  --sidebar-ring: oklch(0.35 0.15 260);
 }
 
 .dark {
-  /* The Monolith Design System - Dark Mode */
-  --primary: #618bff;
-  --primary-foreground: #003798;
-  --sidebar-primary: #618bff;
-  --sidebar-primary-foreground: #003798;
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --card: #0a0a0a;
-  --card-foreground: #ffffff;
-  --popover: #0a0a0a;
-  --popover-foreground: #ffffff;
-  --secondary: rgba(255, 255, 255, 0.15);
-  --secondary-foreground: #ffffff;
-  --muted: #1a1a1a;
-  --muted-foreground: #a3a3a3;
-  --accent: #1a1a1a;
-  --accent-foreground: #ffffff;
-  --destructive: #fe8983;
-  --destructive-foreground: #4e0309;
-  --border: #5f5f5f;
-  --input: #5f5f5f;
-  --ring: #618bff;
-  --chart-1: #618bff;
-  --chart-2: #0053db;
-  --chart-3: #dbe1ff;
-  --chart-4: #0048bf;
-  --chart-5: #003798;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #5f5f5f;
-  --sidebar-ring: #618bff;
+  --primary: oklch(0.35 0.15 260);
+  --primary-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.35 0.15 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --background: oklch(0.12 0.01 0);
+  --foreground: oklch(0.95 0.01 0);
+  --card: oklch(0.16 0.01 0);
+  --card-foreground: oklch(0.95 0.01 0);
+  --popover: oklch(0.16 0.01 0);
+  --popover-foreground: oklch(0.95 0.01 0);
+  --secondary: oklch(0.2 0.01 0);
+  --secondary-foreground: oklch(0.8 0.01 0);
+  --muted: oklch(0.25 0.01 0);
+  --muted-foreground: oklch(0.7 0.01 0);
+  --accent: oklch(0.35 0.15 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.65 0.18 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.25 0.01 0);
+  --input: oklch(0.25 0.01 0);
+  --ring: oklch(0.35 0.15 260);
+  --chart-1: oklch(0.35 0.15 260);
+  --chart-2: oklch(0.45 0.12 260);
+  --chart-3: oklch(0.55 0.1 260);
+  --chart-4: oklch(0.65 0.08 260);
+  --chart-5: oklch(0.75 0.06 260);
+  --sidebar: oklch(0.16 0.01 0);
+  --sidebar-foreground: oklch(0.95 0.01 0);
+  --sidebar-accent: oklch(0.25 0.01 0);
+  --sidebar-accent-foreground: oklch(0.95 0.01 0);
+  --sidebar-border: oklch(0.25 0.01 0);
+  --sidebar-ring: oklch(0.35 0.15 260);
 }
 
 @layer base {
@@ -126,22 +124,22 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   .font-display {
-    font-family: "Inter", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
   }
   h1 {
-    @apply font-display tracking-[-0.02em] font-semibold text-5xl md:text-[3.5rem] leading-[1.1] capitalize;
+    @apply font-display tracking-tight font-bold text-5xl md:text-7xl lg:text-8xl leading-[1.1];
   }
   h2 {
-    @apply font-display tracking-[-0.02em] font-semibold text-4xl md:text-5xl leading-[1.1] capitalize;
+    @apply font-display tracking-tight font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.2];
   }
   h3 {
-    @apply font-display tracking-[-0.01em] font-medium text-2xl md:text-3xl leading-[1.2];
+    @apply font-display tracking-tight font-bold text-2xl md:text-3xl;
   }
   h4, h5, h6 {
-    @apply font-display tracking-tight font-medium leading-[1.2];
+    @apply font-display tracking-tight font-bold;
   }
   p {
-    @apply leading-[1.6] text-base md:text-lg font-normal text-foreground/80;
+    @apply leading-relaxed text-base md:text-lg;
   }
   code, pre, .font-mono {
     @apply font-mono;
@@ -188,44 +186,26 @@
     }
   }
 
-  /* The Monolith Design System Components */
-  .monolith-shadow {
-    box-shadow: none;
-  }
-  
-  .glass-panel {
-    @apply bg-white/80 backdrop-blur-xl border-none;
-  }
-  
-  .dark .glass-panel {
-    @apply bg-black/80 backdrop-blur-xl border-none;
+  /* Bentley-style KPI display */
+  .kpi-number {
+    @apply text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter text-primary;
   }
 
-  .btn-primary {
-    @apply bg-primary text-white px-8 py-4 text-base font-medium hover:bg-[#0048c1] transition-colors rounded-none;
+  .kpi-label {
+    @apply text-base md:text-lg text-muted-foreground font-medium tracking-wide uppercase;
   }
 
-  .btn-secondary {
-    @apply border border-white/15 text-white px-8 py-4 text-base font-medium hover:bg-white/5 transition-colors rounded-none bg-transparent;
-  }
-  
-  .dark .btn-secondary {
-    @apply border border-white/15 text-white hover:bg-white/5;
+  /* Enterprise separator */
+  .separator-line {
+    @apply h-px bg-border;
   }
 
-  .surface-lowest {
-    @apply bg-[#0a0a0a];
+  /* Calm button styles */
+  .btn-enterprise {
+    @apply px-8 py-4 font-semibold tracking-wide uppercase text-sm border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-300 rounded-none;
   }
-  
-  .surface-low {
-    @apply bg-[#111111];
-  }
-  
-  .dark .surface-lowest {
-    @apply bg-[#0a0a0a];
-  }
-  
-  .dark .surface-low {
-    @apply bg-[#111111];
+
+  .btn-enterprise-primary {
+    @apply px-8 py-4 font-semibold tracking-wide uppercase text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 rounded-none;
   }
 }

@@ -11,7 +11,7 @@ export default function Contact() {
       <PageHeader 
         title="Contact Us" 
         subtitle="Ready to transform your infrastructure management? Get in touch with our team today."
-        backgroundImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/mItwEHtgdHfmlgKd.jpg"
+        backgroundImage="/images/hero-drone-tower.jpg"
         className="py-20 md:py-24"
       />
 

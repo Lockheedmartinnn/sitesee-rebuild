@@ -9,7 +9,7 @@ export default function Telco() {
       <PageHeader 
         title="Telecommunication Infrastructure Intelligence" 
         subtitle="Apply artificial intelligence to drone captured data enabling infrastructure owners to make informed decisions, reduce operational costs & improve safety."
-        backgroundImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/eFVGENrXEJZAfIXF.jpg"
+        backgroundImage="/images/hero-drone-tower-v2.jpg"
       >
         <Link href="/contact">
           <Button size="lg" className="rounded-none bg-primary text-white hover:bg-primary/90 border-0 font-semibold">
@@ -38,7 +38,7 @@ export default function Telco() {
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-600/20 blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/TfKFCVcvhcpbvBhW.jpg" 
+                src="/images/tower-structural-detail.jpg" 
                 alt="Tower structural detail" 
                 className="relative w-full rounded-sm border border-border shadow-2xl"
               />
@@ -54,7 +54,7 @@ export default function Telco() {
             <div className="order-2 lg:order-1 relative group">
               <div className="absolute -inset-4 bg-gradient-to-l from-primary/20 to-blue-600/20 blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/aoyVPyFMYDMEaibe.jpg" 
+                src="/images/digital-interface-clean.jpg" 
                 alt="Digital interface" 
                 className="relative w-full rounded-sm border border-border shadow-2xl"
               />
