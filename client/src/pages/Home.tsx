@@ -67,9 +67,9 @@ export default function Home() {
               <span className="text-primary">Digital Twins</span>
             </h1>
             
-              <p className="text-xl md:text-2xl text-white/80 max-w-2xl mb-10 leading-[1.6] font-medium">
-                Unlock the true value of your infrastructure. Accelerate upgrades, reduce costs, and optimize assets with the industry's most advanced digital twin.
-              </p>
+            <p className="text-xl md:text-2xl text-white/80 max-w-2xl mb-10 leading-[1.6] font-medium">
+              Unlock the true value of your infrastructure. Accelerate upgrades, reduce costs, and optimize assets with the industry's most advanced digital twin.
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Button size="lg" className="btn-primary h-14">

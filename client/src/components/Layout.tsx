@@ -31,8 +31,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Header */}
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-          isScrolled ? "bg-background/80 backdrop-blur-md border-border py-3" : "bg-transparent py-5"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          isScrolled ? "bg-background/80 backdrop-blur-md py-3" : "bg-transparent py-5"
         )}
       >
         <div className="container flex items-center justify-between">
@@ -52,7 +52,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 font-medium">Products</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr] bg-white text-black">
                       <li className="row-span-4">
                         <NavigationMenuLink asChild>
                           <a
@@ -63,10 +63,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                               <img 
                                 src="/images/nexdt-logo.png" 
                                 alt="NexDT" 
-                                className="h-8 w-auto object-contain brightness-0 invert"
+                                className="h-8 w-auto object-contain brightness-0"
                               />
                             </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
+                            <p className="text-sm leading-tight text-black/70">
                               The Next Generation Digital Twin Ecosystem for critical infrastructure.
                             </p>
                           </a>
@@ -75,7 +75,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       
                       <div className="grid grid-cols-2 gap-3">
                         <div className="space-y-3">
-                          <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2">Next Gen</h4>
+                          <h4 className="font-medium text-sm text-black/50 uppercase tracking-wider pl-2">Next Gen</h4>
                           <ListItem href="/products/nexdt" title="NexDT">
                             Digital Twin Platform
                           </ListItem>
@@ -91,7 +91,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         </div>
 
                         <div className="space-y-3">
-                          <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2">Capture</h4>
+                          <h4 className="font-medium text-sm text-black/50 uppercase tracking-wider pl-2">Capture</h4>
                           <ListItem href="/products/capture" title="Mission Planner">
                             Drone Capture
                           </ListItem>
@@ -102,7 +102,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                             Precision Scaling
                           </ListItem>
                           
-                          <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider pl-2 pt-2">AI Analysis</h4>
+                          <h4 className="font-medium text-sm text-black/50 uppercase tracking-wider pl-2 pt-2">AI Analysis</h4>
                           <ListItem href="/products/ai-analysis" title="AI Audit Engine">
                             Defect Detection
                           </ListItem>

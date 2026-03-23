@@ -362,6 +362,30 @@ export default function NexDT() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">Integrated Workflow: Design to Approval</h2>
           
           <div className="grid md:grid-cols-2 gap-12">
+            {/* NexDT */}
+            <div className="p-8 rounded-2xl bg-blue-900/20 border border-blue-500/30">
+              <h3 className="text-2xl font-bold text-white mb-6">NexDT Parallel Workflow</h3>
+              <div className="space-y-4 relative pl-8 border-l border-blue-500">
+                {[
+                  "Day 0: Access existing digital twin",
+                  "Day 1-2: Design modification in NexDT (Drag-and-drop)",
+                  "Day 2-3: Parallel validation (IEA & EME)",
+                  "Day 4: Export optimized design for sign-off",
+                  "Week 2: Certified structural sign-off",
+                  "Week 2-3: Regulatory approval"
+                ].map((step, i) => (
+                  <div key={i} className="relative">
+                    <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                    <p className="text-lg font-medium">{step}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 pt-8 border-t border-blue-500/30">
+                <p className="text-3xl font-bold text-blue-400">Total: 2-3 Weeks</p>
+                <p className="text-blue-200">Unlimited design iterations. 10-13 weeks saved.</p>
+              </div>
+            </div>
+
             {/* Traditional */}
             <div className="p-8 rounded-2xl bg-white/5 border border-white/10 opacity-70">
               <h3 className="text-2xl font-bold text-slate-400 mb-6">Traditional Serial Process</h3>
@@ -384,30 +408,6 @@ export default function NexDT() {
               <div className="mt-8 pt-8 border-t border-white/10">
                 <p className="text-3xl font-bold text-red-400">Total: 12-16 Weeks</p>
                 <p className="text-slate-400">Single redesign iteration</p>
-              </div>
-            </div>
-
-            {/* NexDT */}
-            <div className="p-8 rounded-2xl bg-blue-900/20 border border-blue-500/30">
-              <h3 className="text-2xl font-bold text-white mb-6">NexDT Parallel Workflow</h3>
-              <div className="space-y-4 relative pl-8 border-l border-blue-500">
-                {[
-                  "Day 0: Access existing digital twin",
-                  "Day 1-2: Design modification in NexDT (Drag-and-drop)",
-                  "Day 2-3: Parallel validation (IEA & EME)",
-                  "Day 4: Export optimized design for sign-off",
-                  "Week 2: Certified structural sign-off",
-                  "Week 2-3: Regulatory approval"
-                ].map((step, i) => (
-                  <div key={i} className="relative">
-                    <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
-                    <p className="text-lg font-medium">{step}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 pt-8 border-t border-blue-500/30">
-                <p className="text-3xl font-bold text-blue-400">Total: 2-3 Weeks</p>
-                <p className="text-blue-200">Unlimited design iterations. 10-13 weeks saved.</p>
               </div>
             </div>
           </div>
