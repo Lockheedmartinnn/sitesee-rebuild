@@ -243,8 +243,10 @@ export default function Home() {
               <div className="relative rounded-none overflow-hidden bg-surface-lowest aspect-video flex items-center justify-center group border border-border/10">
                 <video 
                   className="w-full h-full object-cover transition-all duration-700"
-                  controls
-                  
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 >
                   <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/FGOqvIIoXVFlpQKM.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -353,7 +355,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="text-6xl md:text-8xl font-black text-foreground mb-12 leading-[0.85] uppercase tracking-tighter">
+              <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-foreground mb-12 leading-[0.85] uppercase tracking-tighter">
                 Telecom <br/>
                 infrastructure is <br/>
                 no longer simple.
