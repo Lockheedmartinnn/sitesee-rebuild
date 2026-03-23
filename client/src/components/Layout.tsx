@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-transparent backdrop-blur-md py-3" : "bg-transparent py-5"
+          isScrolled ? "bg-white/90 backdrop-blur-md py-3 shadow-sm" : "bg-white py-5"
         )}
       >
         <div className="container flex items-center justify-between">
@@ -41,7 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src="/images/sitesee-logo.png" 
                 alt="SiteSee" 
-                className="h-20 w-auto object-contain brightness-0 invert" 
+                className="h-20 w-auto object-contain brightness-0" 
               />
             </a>
 
@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 text-white font-medium">Products</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent hover:bg-black/5 text-black font-medium">Products</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr] bg-white text-black">
                       <li className="row-span-4">
@@ -116,18 +116,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
                 <NavigationMenuItem>
                   <Link href="/roi-calculator">
-                    <a className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white font-medium cursor-pointer")}>
+                    <a className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-black/5 text-black font-medium cursor-pointer")}>
                       ROI Calculator
                     </a>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a href="/company" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white font-medium cursor-pointer")}>
+                  <a href="/company" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-black/5 text-black font-medium cursor-pointer")}>
                     Company
                   </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a href="/resources" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white font-medium cursor-pointer")}>
+                  <a href="/resources" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-black/5 text-black font-medium cursor-pointer")}>
                     Resources
                   </a>
                 </NavigationMenuItem>
@@ -137,8 +137,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="/login" className="text-sm font-medium text-white hover:text-primary transition-colors">Login</a>
-            <a href="/contact" className="rounded-none font-medium px-6 py-2 border border-white/20 bg-transparent text-white hover:bg-white/10 transition-all duration-300 inline-flex items-center gap-2">
+            <a href="/login" className="text-sm font-medium text-black hover:text-primary transition-colors">Login</a>
+            <a href="/contact" className="rounded-none font-medium px-6 py-2 border border-primary bg-primary text-white hover:bg-primary/90 transition-all duration-300 inline-flex items-center gap-2">
               Contact Us
             </a>
           </div>

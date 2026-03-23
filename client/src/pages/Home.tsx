@@ -62,9 +62,9 @@ export default function Home() {
               TRUSTED BY 36,000+ TOWERS GLOBALLY
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-semibold tracking-[-0.02em] mb-8 text-white leading-[1.1]">
+            <h1 className="text-7xl md:text-9xl font-black tracking-tighter mb-8 text-white leading-[0.85] uppercase">
               AI Powered <br/>
-              Digital Twins
+              <span className="text-primary">Digital Twins</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 max-w-2xl mb-10 leading-[1.6] font-medium">
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section - "Production scale. Not a pilot." */}
-      <section className="py-48 bg-surface-low relative overflow-hidden">
+      <section className="py-32 bg-surface-low relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
@@ -115,12 +115,12 @@ export default function Home() {
                 NexDT is running in live production environments, managing critical infrastructure decisions every single day.
               </p>
               
-              <div className="grid grid-cols-2 gap-8">
-                <div className="bg-surface-lowest border-l-4 border-primary p-8">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-surface-lowest border-l-4 border-primary p-8 monolith-shadow">
                   <div className="text-4xl font-black text-foreground mb-2">150%</div>
                   <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.3em]">YoY Growth</div>
                 </div>
-                <div className="bg-surface-lowest border-l-4 border-primary p-8">
+                <div className="bg-surface-lowest border-l-4 border-primary p-8 monolith-shadow">
                   <div className="text-4xl font-black text-foreground mb-2">18 mo</div>
                   <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.3em]">Live Operations</div>
                 </div>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Problem Section - "Most digital twins don't move the numbers" */}
-      <section className="py-48 bg-surface-lowest text-foreground">
+      <section className="py-32 bg-surface-lowest text-foreground">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
@@ -148,7 +148,7 @@ export default function Home() {
                 <strong className="text-foreground font-black block mt-2">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
               </p>
               
-              <div className="border-l-4 border-primary pl-8 py-4 mb-8 bg-surface-low">
+              <div className="border-l-4 border-primary pl-8 py-4 mb-10 bg-surface-low">
                 <p className="text-2xl font-black text-foreground tracking-tight">
                   "Better pictures alone do not reduce cost or accelerate revenue."
                 </p>
@@ -158,8 +158,8 @@ export default function Home() {
                 NexDT is different. It's a next-generation digital twin designed to reduce operating cost, accelerate revenue, and enable wireless infrastructure portfolios to scale without proportional increases in complexity or headcount.
               </p>
             </div>
-            <div className="relative lg:-ml-20 lg:mt-32">
-              <div className="relative rounded-none overflow-hidden">
+            <div className="relative">
+              <div className="relative rounded-none overflow-hidden monolith-shadow">
                 <video 
                   autoPlay 
                   loop 
@@ -182,7 +182,7 @@ export default function Home() {
       </section>
 
       {/* Metrics Grid - "Proven at scale" */}
-      <section className="py-48 bg-surface-low">
+      <section className="py-32 bg-surface-low">
         <div className="container mx-auto px-4">
           <div className="mb-20">
             <h3 className="text-xs font-black uppercase tracking-[0.4em] text-primary mb-4">Proven at scale</h3>
@@ -199,7 +199,7 @@ export default function Home() {
               { value: "5K+", label: "Tonnes", sub: "CO₂ Avoided Across the estate", color: "text-foreground" },
               { value: "30K+", label: "Climbs Avoided", sub: "High-risk climbs", color: "text-foreground" }
             ].map((metric, i) => (
-              <div key={i} className="bg-surface-lowest p-12 border-t-4 border-primary group hover:-translate-y-2 transition-transform duration-300">
+              <div key={i} className="bg-surface-lowest p-8 border-t-4 border-primary monolith-shadow group hover:-translate-y-2 transition-transform duration-300">
                 <div className={`text-5xl font-black tracking-tighter mb-4 ${metric.color}`}>{metric.value}</div>
                 <div className="text-lg font-black text-foreground mb-2 uppercase tracking-tight">{metric.label}</div>
                 <div className="text-sm text-muted-foreground font-medium">{metric.sub}</div>
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Customer Story - Forty South */}
-      <section className="py-48 bg-background text-foreground">
+      <section className="py-32 bg-background text-foreground">
         <div className="container mx-auto px-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.3em] mb-12">
             <span className="h-2 w-2 rounded-none bg-primary"></span>
@@ -239,14 +239,12 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="relative group cursor-pointer">
+            <div className="relative group cursor-pointer monolith-shadow">
               <div className="relative rounded-none overflow-hidden bg-surface-lowest aspect-video flex items-center justify-center group border border-border/10">
                 <video 
                   className="w-full h-full object-cover transition-all duration-700"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                  controls
+                  
                 >
                   <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663319993959/FGOqvIIoXVFlpQKM.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -258,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials - "Trusted by Industry Leaders" */}
-      <section className="py-48 bg-surface-lowest">
+      <section className="py-32 bg-surface-lowest">
         <div className="container mx-auto px-4">
           <div className="mb-20">
             <h3 className="text-xs font-black uppercase tracking-[0.4em] text-primary mb-4">Testimonials</h3>
@@ -284,7 +282,7 @@ export default function Home() {
                 role: "CEO, FortySouth"
               }
             ].map((t, i) => (
-              <div key={i} className="bg-surface-low border-l-4 border-primary p-12 h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
+              <div key={i} className="bg-surface-low border-l-4 border-primary p-8 h-full flex flex-col monolith-shadow hover:-translate-y-2 transition-transform duration-300">
                 <div className="text-primary/30 mb-6">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" />
@@ -302,14 +300,14 @@ export default function Home() {
       </section>
 
       {/* Map Section - "Trusted Globally" */}
-      <section className="py-48 bg-surface-low">
+      <section className="py-32 bg-surface-low">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mb-12">
             <h2 className="text-6xl md:text-8xl font-black text-foreground mb-6 uppercase tracking-tighter leading-[0.85]">Trusted Globally</h2>
             <p className="text-xl text-foreground/80 font-medium">Deployed across major tower operators and infrastructure providers worldwide</p>
           </div>
           
-          <div className="relative w-full aspect-[2/1] bg-surface-lowest rounded-none overflow-hidden border border-border/10">
+          <div className="relative w-full aspect-[2/1] bg-surface-lowest rounded-none overflow-hidden border border-border/10 monolith-shadow">
             {/* Map Placeholder Image */}
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/2000px-World_map_blank_without_borders.svg.png" 
@@ -341,7 +339,7 @@ export default function Home() {
             ))}
             
             {/* Map Controls */}
-            <div className="absolute top-8 left-8 bg-surface-lowest rounded-none border border-border/10 p-1 flex flex-col gap-1">
+            <div className="absolute top-8 left-8 bg-surface-lowest rounded-none border border-border/10 p-1 flex flex-col gap-1 monolith-shadow">
               <button className="p-2 hover:bg-muted rounded-none text-foreground font-bold transition-colors">+</button>
               <div className="h-px bg-border/10 w-full"></div>
               <button className="p-2 hover:bg-muted rounded-none text-foreground font-bold transition-colors">-</button>
@@ -351,11 +349,11 @@ export default function Home() {
       </section>
 
       {/* Reality Section - "Telecom infrastructure is no longer simple" */}
-      <section className="py-48 bg-surface-lowest">
+      <section className="py-32 bg-surface-lowest">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-foreground mb-12 leading-[0.85] uppercase tracking-tighter">
+              <h2 className="text-6xl md:text-8xl font-black text-foreground mb-12 leading-[0.85] uppercase tracking-tighter">
                 Telecom <br/>
                 infrastructure is <br/>
                 no longer simple.
@@ -378,7 +376,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-surface-low rounded-none overflow-hidden border border-border/10">
+              <div className="aspect-square bg-surface-low rounded-none overflow-hidden monolith-shadow border border-border/10">
                 <video 
                   autoPlay 
                   loop 
@@ -396,11 +394,11 @@ export default function Home() {
       </section>
 
       {/* Workflow Section - "Current workflows are breaking" */}
-      <section className="py-48 bg-surface-low">
+      <section className="py-32 bg-surface-low">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
-              <div className="aspect-video bg-surface-lowest rounded-none overflow-hidden border border-border/10">
+              <div className="aspect-video bg-surface-lowest rounded-none overflow-hidden monolith-shadow border border-border/10">
                 <video 
                   autoPlay 
                   loop 
