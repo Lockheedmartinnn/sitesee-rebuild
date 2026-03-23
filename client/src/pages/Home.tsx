@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section - "Production scale. Not a pilot." */}
-      <section className="py-64 bg-surface-low relative overflow-hidden">
+      <section className="py-48 bg-surface-low relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
@@ -115,12 +115,12 @@ export default function Home() {
                 NexDT is running in live production environments, managing critical infrastructure decisions every single day.
               </p>
               
-              <div className="grid grid-cols-2 gap-12">
-                <div className="bg-surface-lowest border-l-4 border-primary p-12">
+              <div className="grid grid-cols-2 gap-8">
+                <div className="bg-surface-lowest border-l-4 border-primary p-8">
                   <div className="text-4xl font-black text-foreground mb-2">150%</div>
                   <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.3em]">YoY Growth</div>
                 </div>
-                <div className="bg-surface-lowest border-l-4 border-primary p-12">
+                <div className="bg-surface-lowest border-l-4 border-primary p-8">
                   <div className="text-4xl font-black text-foreground mb-2">18 mo</div>
                   <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.3em]">Live Operations</div>
                 </div>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Problem Section - "Most digital twins don't move the numbers" */}
-      <section className="py-64 bg-surface-lowest text-foreground">
+      <section className="py-48 bg-surface-lowest text-foreground">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
@@ -148,7 +148,7 @@ export default function Home() {
                 <strong className="text-foreground font-black block mt-2">But for most tower owners, the underlying workflows, costs, and timelines remain largely unchanged.</strong>
               </p>
               
-              <div className="border-l-4 border-primary pl-8 py-4 mb-10 bg-surface-low">
+              <div className="border-l-4 border-primary pl-8 py-4 mb-8 bg-surface-low">
                 <p className="text-2xl font-black text-foreground tracking-tight">
                   "Better pictures alone do not reduce cost or accelerate revenue."
                 </p>
@@ -182,7 +182,7 @@ export default function Home() {
       </section>
 
       {/* Metrics Grid - "Proven at scale" */}
-      <section className="py-64 bg-surface-low">
+      <section className="py-48 bg-surface-low">
         <div className="container mx-auto px-4">
           <div className="mb-20">
             <h3 className="text-xs font-black uppercase tracking-[0.4em] text-primary mb-4">Proven at scale</h3>
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Customer Story - Forty South */}
-      <section className="py-64 bg-background text-foreground">
+      <section className="py-48 bg-background text-foreground">
         <div className="container mx-auto px-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.3em] mb-12">
             <span className="h-2 w-2 rounded-none bg-primary"></span>
@@ -256,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials - "Trusted by Industry Leaders" */}
-      <section className="py-64 bg-surface-lowest">
+      <section className="py-48 bg-surface-lowest">
         <div className="container mx-auto px-4">
           <div className="mb-20">
             <h3 className="text-xs font-black uppercase tracking-[0.4em] text-primary mb-4">Testimonials</h3>
@@ -300,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* Map Section - "Trusted Globally" */}
-      <section className="py-64 bg-surface-low">
+      <section className="py-48 bg-surface-low">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mb-12">
             <h2 className="text-6xl md:text-8xl font-black text-foreground mb-6 uppercase tracking-tighter leading-[0.85]">Trusted Globally</h2>
@@ -349,7 +349,7 @@ export default function Home() {
       </section>
 
       {/* Reality Section - "Telecom infrastructure is no longer simple" */}
-      <section className="py-64 bg-surface-lowest">
+      <section className="py-48 bg-surface-lowest">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
@@ -394,7 +394,7 @@ export default function Home() {
       </section>
 
       {/* Workflow Section - "Current workflows are breaking" */}
-      <section className="py-64 bg-surface-low">
+      <section className="py-48 bg-surface-low">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
