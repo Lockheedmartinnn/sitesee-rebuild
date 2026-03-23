@@ -46,75 +46,76 @@
 }
 
 :root {
-  /* Bentley-style: Calm, enterprise palette */
-  --primary: oklch(0.35 0.15 260);
-  --primary-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.35 0.15 260);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --chart-1: oklch(0.35 0.15 260);
-  --chart-2: oklch(0.45 0.12 260);
-  --chart-3: oklch(0.55 0.1 260);
-  --chart-4: oklch(0.65 0.08 260);
-  --chart-5: oklch(0.75 0.06 260);
-  --radius: 0.25rem;
-  --background: oklch(0.98 0 0);
-  --foreground: oklch(0.2 0.01 0);
-  --card: oklch(0.98 0 0);
-  --card-foreground: oklch(0.2 0.01 0);
-  --popover: oklch(0.98 0 0);
-  --popover-foreground: oklch(0.2 0.01 0);
-  --secondary: oklch(0.95 0.002 0);
-  --secondary-foreground: oklch(0.3 0.01 0);
-  --muted: oklch(0.92 0.001 0);
-  --muted-foreground: oklch(0.5 0.01 0);
-  --accent: oklch(0.35 0.15 260);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.9 0.001 0);
-  --input: oklch(0.9 0.001 0);
-  --ring: oklch(0.35 0.15 260);
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.2 0.01 0);
-  --sidebar-accent: oklch(0.92 0.001 0);
-  --sidebar-accent-foreground: oklch(0.2 0.01 0);
-  --sidebar-border: oklch(0.9 0.001 0);
-  --sidebar-ring: oklch(0.35 0.15 260);
+  /* The Monolith Design System */
+  --primary: #0053db;
+  --primary-foreground: #f8f7ff;
+  --sidebar-primary: #0053db;
+  --sidebar-primary-foreground: #f8f7ff;
+  --chart-1: #0053db;
+  --chart-2: #618bff;
+  --chart-3: #dbe1ff;
+  --chart-4: #0048bf;
+  --chart-5: #003798;
+  --radius: 0px;
+  --background: #f9f9f9;
+  --foreground: #323232;
+  --card: #ffffff;
+  --card-foreground: #323232;
+  --popover: #ffffff;
+  --popover-foreground: #323232;
+  --secondary: #5f5f62;
+  --secondary-foreground: #faf8fc;
+  --muted: #f3f3f3;
+  --muted-foreground: #5f5f5f;
+  --accent: #e2e2e2;
+  --accent-foreground: #323232;
+  --destructive: #9f403d;
+  --destructive-foreground: #fff7f6;
+  --border: #b2b2b2;
+  --input: #b2b2b2;
+  --ring: #0053db;
+  --sidebar: #f9f9f9;
+  --sidebar-foreground: #323232;
+  --sidebar-accent: #e2e2e2;
+  --sidebar-accent-foreground: #323232;
+  --sidebar-border: #b2b2b2;
+  --sidebar-ring: #0053db;
 }
 
 .dark {
-  --primary: oklch(0.35 0.15 260);
-  --primary-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.35 0.15 260);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --background: oklch(0.12 0.01 0);
-  --foreground: oklch(0.95 0.01 0);
-  --card: oklch(0.16 0.01 0);
-  --card-foreground: oklch(0.95 0.01 0);
-  --popover: oklch(0.16 0.01 0);
-  --popover-foreground: oklch(0.95 0.01 0);
-  --secondary: oklch(0.2 0.01 0);
-  --secondary-foreground: oklch(0.8 0.01 0);
-  --muted: oklch(0.25 0.01 0);
-  --muted-foreground: oklch(0.7 0.01 0);
-  --accent: oklch(0.35 0.15 260);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.65 0.18 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.01 0);
-  --input: oklch(0.25 0.01 0);
-  --ring: oklch(0.35 0.15 260);
-  --chart-1: oklch(0.35 0.15 260);
-  --chart-2: oklch(0.45 0.12 260);
-  --chart-3: oklch(0.55 0.1 260);
-  --chart-4: oklch(0.65 0.08 260);
-  --chart-5: oklch(0.75 0.06 260);
-  --sidebar: oklch(0.16 0.01 0);
-  --sidebar-foreground: oklch(0.95 0.01 0);
-  --sidebar-accent: oklch(0.25 0.01 0);
-  --sidebar-accent-foreground: oklch(0.95 0.01 0);
-  --sidebar-border: oklch(0.25 0.01 0);
-  --sidebar-ring: oklch(0.35 0.15 260);
+  /* The Monolith Design System - Dark Mode */
+  --primary: #618bff;
+  --primary-foreground: #003798;
+  --sidebar-primary: #618bff;
+  --sidebar-primary-foreground: #003798;
+  --background: #0e0e0e;
+  --foreground: #f9f9f9;
+  --card: #1a1a1a;
+  --card-foreground: #f9f9f9;
+  --popover: #1a1a1a;
+  --popover-foreground: #f9f9f9;
+  --secondary: #e4e2e6;
+  --secondary-foreground: #3f3f43;
+  --muted: #2a2a2a;
+  --muted-foreground: #9d9d9d;
+  --accent: #323232;
+  --accent-foreground: #f9f9f9;
+  --destructive: #fe8983;
+  --destructive-foreground: #4e0309;
+  --border: #5f5f5f;
+  --input: #5f5f5f;
+  --ring: #618bff;
+  --chart-1: #618bff;
+  --chart-2: #0053db;
+  --chart-3: #dbe1ff;
+  --chart-4: #0048bf;
+  --chart-5: #003798;
+  --sidebar: #0e0e0e;
+  --sidebar-foreground: #f9f9f9;
+  --sidebar-accent: #323232;
+  --sidebar-accent-foreground: #f9f9f9;
+  --sidebar-border: #5f5f5f;
+  --sidebar-ring: #618bff;
 }
 
 @layer base {
@@ -125,13 +126,13 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   .font-display {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Inter", sans-serif;
   }
   h1 {
-    @apply font-display tracking-tight font-bold text-5xl md:text-7xl lg:text-8xl leading-[1.1];
+    @apply font-display tracking-tighter font-black text-6xl md:text-8xl leading-[0.9] uppercase;
   }
   h2 {
-    @apply font-display tracking-tight font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.2];
+    @apply font-display tracking-tight font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1];
   }
   h3 {
     @apply font-display tracking-tight font-bold text-2xl md:text-3xl;
@@ -140,7 +141,7 @@
     @apply font-display tracking-tight font-bold;
   }
   p {
-    @apply leading-relaxed text-base md:text-lg;
+    @apply leading-[1.6] text-base md:text-lg font-light;
   }
   code, pre, .font-mono {
     @apply font-mono;
@@ -187,26 +188,44 @@
     }
   }
 
-  /* Bentley-style KPI display */
-  .kpi-number {
-    @apply text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter text-primary;
+  /* The Monolith Design System Components */
+  .monolith-shadow {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  }
+  
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border-none;
+  }
+  
+  .dark .glass-panel {
+    @apply bg-black/80 backdrop-blur-xl border-none;
   }
 
-  .kpi-label {
-    @apply text-base md:text-lg text-muted-foreground font-medium tracking-wide uppercase;
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-[#0048c1] transition-colors rounded-none;
   }
 
-  /* Enterprise separator */
-  .separator-line {
-    @apply h-px bg-border;
+  .btn-secondary {
+    @apply border border-border/15 text-foreground px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-muted transition-colors rounded-none;
+  }
+  
+  .dark .btn-secondary {
+    @apply border border-border/30 text-foreground hover:bg-white/10;
   }
 
-  /* Calm button styles */
-  .btn-enterprise {
-    @apply px-8 py-4 font-semibold tracking-wide uppercase text-sm border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-300 rounded-none;
+  .surface-lowest {
+    @apply bg-[#ffffff];
   }
-
-  .btn-enterprise-primary {
-    @apply px-8 py-4 font-semibold tracking-wide uppercase text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 rounded-none;
+  
+  .surface-low {
+    @apply bg-[#f3f3f3];
+  }
+  
+  .dark .surface-lowest {
+    @apply bg-[#0e0e0e];
+  }
+  
+  .dark .surface-low {
+    @apply bg-[#1a1a1a];
   }
 }
